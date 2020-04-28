@@ -16,7 +16,7 @@
 // const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // // Replace with your app's client ID, redirect URI and desired scopes
-// const clientId = 'b6ce36d62a8246c1b73f73fa4d28cfb5';
+// const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
 // const redirectUri = 'https://kpjbuchik.github.io/streaming-prototype/';
 // const scopes = [
 //   'user-read-email'
@@ -67,18 +67,15 @@ $(document).ready(
 
     function getNewReleases() {
 
-        var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
         var queryUrl = "https://api.spotify.com/v1/browse/new-releases"
 
 
         $.ajax({
             url: queryUrl,
-            method: "GET",
-            headers: {
-                'Authorization': 'Bearer ' + accessToken
-            },
-        }).then(function (response) {
-
+            type: "GET",
+            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            success: function (response) {
+    
             console.log(response)
             // for (let i = 0; i < 6 + 1; i++) {
 
@@ -120,8 +117,9 @@ $(document).ready(
 
 
 
-        })
-    }
+        }
+    })
+}
 )
 
 
@@ -129,17 +127,14 @@ $(document).ready(
 
     function getTop() {
 
-        var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
         var queryUrl = "https://api.spotify.com/v1/me/albums?limit=50&offset=5"
 
 
         $.ajax({
             url: queryUrl,
-            method: "GET",
-            headers: {
-                'Authorization': 'Bearer ' + accessToken
-            },
-        }).then(function (response) {
+            type: "GET",
+            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            success: function (response) {
             console.log(response)
 
             var check = Math.floor(Math.random() * 20)
@@ -214,9 +209,9 @@ $(document).ready(
             $(".on-this-day-artist-name3").html(response.items[22].album.artists[0].name)
 
 
-
-        })
-    }
+        }
+    })
+}
 )
 
 
@@ -224,17 +219,15 @@ $(document).ready(
 function getPlaylists() {
 
 
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
+  
     var queryUrl = "https://api.spotify.com/v1/me/playlists"
 
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-    }).then(function (response) {
-        $("ul").text(response.items[0].name)
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
+    $("ul").text(response.items[0].name)
         $("ul").attr("value", response.items[0].id)
         $("ul").on("click", function () {
             $(".album-cover-page").attr("src", response.items[0].images[0].url)
@@ -423,9 +416,8 @@ function getPlaylists() {
         })
 
 
-        console.log(response.items.name)
-
-    });
+    }
+})
 }
 
 
@@ -436,17 +428,14 @@ function getPlaylistTracks() {
         var playlistId = $(this).attr("value")
 
 
-        var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
         var queryUrl = "https://api.spotify.com/v1/playlists/" + playlistId + "/tracks"
 
         $.ajax({
             url: queryUrl,
-            method: "GET",
-            headers: {
-                'Authorization': 'Bearer ' + accessToken
-            },
-        }).then(function (response) {
-            console.log(response)
+            type: "GET",
+            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            success: function (response) {
+                console.log(response)
             for (let i = 0; i < response.items.length + 1; i++) {
                 let newTime = timeConversion(response.items[i].track.duration_ms)
                 let trackTime = $("<p>").text(newTime).addClass("track-time")
@@ -520,10 +509,10 @@ function getPlaylistTracks() {
                 })
 
             }
-        })
-
-    });
-
+        }
+    })
+    })
+    
 
 }
 
@@ -612,16 +601,14 @@ $(".pancakes").on("click", function (event) {
 //get artists top tracks and album covers
 function searchSpotify(id) {
 
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
+   
     var queryUrl = "https://api.spotify.com/v1/artists/" + id + "/top-tracks?country=us"
 
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-    }).then(function (response) {
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
 
         console.log(response)
 
@@ -695,9 +682,11 @@ function searchSpotify(id) {
 
         // $(".preview-player").html('<source src=' +response.tracks[0].preview_url + 'type="audio/mpeg"></source>')
         console.log(response.tracks[0].preview_url)
-    })
-}
+    }
+});
 
+
+}
 
 
 
@@ -705,15 +694,13 @@ function searchSpotify(id) {
 function searchSpotifyName() {
     var inputArtist = $(".validationDefault01").val().trim() || $(".validationDefault02").val().trim() || $(".validationDefault03").val().trim() || $(".by-artist-album").text() || $(".playlist-artist").val();
 
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
+   
     var queryUrl = "https://api.spotify.com/v1/search?q=" + inputArtist + "&type=artist&limit=1"
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-    }).then(function (response) {
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
         $(".header-image").css("background-image", "url(" + response.artists.items[0].images[0].url + ")")
 
         var artistName = (response.artists.items[0].name)
@@ -756,23 +743,22 @@ function searchSpotifyName() {
         searchSpotifyNameClone(response.artists.items[0].id)
         getPlaylistTracks(response.artists.items[0].id)
 
-    })
-
+    }
+});
 
 
 }
 
 
+
 function searchSpotifyNameClone(id) {
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
+
     var queryUrl = "https://api.spotify.com/v1/artists/" + id
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-    }).then(function (response) {
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
         $(".header-image").css("background-image", "url(" + response.images[0].url + ")")
 
         var artistName = (response.name)
@@ -856,13 +842,11 @@ function searchSpotifyNameClone(id) {
         // $(".band-header").text(response.artists.items[0].name)
 
 
+    }
+});
 
-
-    })
 
 }
-
-
 
 
 
@@ -873,16 +857,14 @@ function searchSpotifyNameClone(id) {
 function searchAlbumCovers(id) {
 
 
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
+   
     var queryUrl = "https://api.spotify.com/v1/artists/" + id + "/albums?market=us&limit=10"
 
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        }
-    }).then(function (response) {
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
 
         $(".image-results").attr("src", response.items[0].images[0].url)
         $(".image-results").attr("value", response.items[0].id)
@@ -920,12 +902,12 @@ function searchAlbumCovers(id) {
 
         console.log(response.items[0].images[0].url)
         console.log(response)
-
-
-    })
+    }
+});
 
 
 }
+
 
 $(document).ready(
 
@@ -933,17 +915,14 @@ $(document).ready(
         $(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").click(function () {
 
             var albumId = $(this).attr("value");
-            var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
             var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
 
             $.ajax({
                 url: queryUrl,
-                method: "GET",
-                headers: {
-                    'Authorization': 'Bearer ' + accessToken
-                },
-            }).then(function (response) {
-                console.log(response)
+                type: "GET",
+                beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+                success: function (response) {
+                        console.log(response)
                 for (let i = 0; i < response.items.length + 1; i++) {
 
                     let tracklistDiv = $("<div>")
@@ -1007,27 +986,23 @@ $(document).ready(
 
                 }
 
-
-            })
-
-        })
-
-    }
+            }
+        });
+        
+        
+        }
 )
 $(document).ready(
     function getAlbumInfo() {
         $(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").on("click", function () {
             var albumId = $(this).attr("value");
-            var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
             var queryUrl = "https://api.spotify.com/v1/albums/" + albumId
 
             $.ajax({
                 url: queryUrl,
-                method: "GET",
-                headers: {
-                    'Authorization': 'Bearer ' + accessToken
-                },
-            }).then(function (response) {
+                type: "GET",
+                beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+                success: function (response) {
                 console.log(response)
 
                 $(".track-list").on("click", function (event) {
@@ -1061,26 +1036,22 @@ $(document).ready(
                 })
 
 
-            })
-
-        })
-
-
-    }
+            }
+        });
+        
+        
+        }
 )
 //get artists related artists
 function searchRelatedArtists(id) {
 
-    var accessToken = "BQAesWR5w8u2YtZuJ-snn3Eqbq0y9fEznGN4lfKnCqU5dO0nkYZhyR-XBB5naxbjLVRXzd8WuK_6AzZDHK0rOyk3J-YH4oqIFFkYN6Ciu6_98VxaDL_-2UMXfliF0scTGFHz1piL3uBgXZXzg_03qiZtpDf4UEeWYiZE49eogcOjAhJfJmZ7k7JQz-mOQalubZ9rWHm8fINTy8MPOOsJSltfX2OM2_bL2LZ3_-IpBukfWmVrWJ_CbG1vY8nLJjSaH3AWiofZcVM"
     var queryUrl = "https://api.spotify.com/v1/artists/" + id + "/related-artists"
 
     $.ajax({
         url: queryUrl,
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
-    }).then(function (response) {
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
 
 
 
@@ -1130,9 +1101,11 @@ function searchRelatedArtists(id) {
         })
 
 
-    })
-}
+    }
+});
 
+
+}
 
 function timeConversion(ms) {
     var minutes = Math.floor(ms / 60000);
