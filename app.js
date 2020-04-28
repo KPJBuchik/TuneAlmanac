@@ -17,9 +17,9 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
-const redirectUri = 'https://kpjbuchik.github.io/streaming-prototype/';
+const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
 const scopes = [
-  'user-read-email'
+  'user-library-read'
 
 ];
 
