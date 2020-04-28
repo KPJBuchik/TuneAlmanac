@@ -1,0 +1,24 @@
+<svg id="Component_70_1" data-name="Component 70 – 1" xmlns="http://www.w3.org/2000/svg" width="254" height="254" viewBox="0 0 254 254">
+  <g id="Rectangle_738" data-name="Rectangle 738" fill="#121212" stroke="#121212" stroke-width="1">
+    <rect width="254" height="254" stroke="none"/>
+    <rect x="0.5" y="0.5" width="253" height="253" fill="none"/>
+  </g>
+  <g id="streaminglogo" transform="translate(64.43 38.03)">
+    <path id="Path_3440" data-name="Path 3440" d="M150.85,354.11a58.5,58.5,0,0,0,9-31.23c0-31.79-25.07-57.56-56-57.56a41.86,41.86,0,0,0-13.08,1.58l4.85,8.25" transform="translate(-89.2 -264.32)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_3441" data-name="Path 3441" d="M94.53,273.61l6.08,9s51.45,2.38,31.66,50.66L176.35,394" transform="translate(-89.2 -264.32)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_3442" data-name="Path 3442" d="M205.12,313.19" transform="translate(-89.2 -264.32)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_3443" data-name="Path 3443" d="M123,289.29s23.81,8.57,13.62,43.09l39.76,61.76-8.65,8.65-52.64-48.68" transform="translate(-89.2 -264.32)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_3444" data-name="Path 3444" d="M173.72,396.79" transform="translate(-89.2 -264.32)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <text id="T" transform="matrix(0.984, -0.181, 0.181, 0.984, 40.76, 172.68)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">T</tspan></text>
+    <text id="u" transform="translate(51.52 170.81) rotate(-15.97)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">u</tspan></text>
+    <text id="n" transform="translate(62.82 167.51) rotate(-23.1)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">n</tspan></text>
+    <text id="e" transform="translate(73.41 162.87) rotate(-29.57)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">e</tspan></text>
+    <text id="A" transform="matrix(0.774, -0.633, 0.633, 0.774, 84, 156.76)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">A</tspan></text>
+    <text id="l" transform="translate(94.87 147.55) rotate(-46.27)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">l</tspan></text>
+    <text id="m" transform="matrix(0.574, -0.819, 0.819, 0.574, 100.19, 142.41)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">m</tspan></text>
+    <text id="a-2" data-name="a" transform="matrix(0.404, -0.915, 0.915, 0.404, 109.9, 127.86)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">a</tspan></text>
+    <text id="n-2" data-name="n" transform="translate(114.59 116.95) rotate(-75.98)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">n</tspan></text>
+    <text id="a-3" data-name="a" transform="translate(117.39 105.24) rotate(-85.996)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">a</tspan></text>
+    <text id="c" transform="translate(118 93.74) rotate(-95.143)" fill="#8b1737" font-size="18" font-family="HoeflerText-BlackItalic, Hoefler Text" font-weight="800" font-style="italic"><tspan x="0" y="0">c</tspan></text>
+  </g>
+</svg>

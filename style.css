@@ -1,0 +1,1034 @@
+body{overflow-x:hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-container {
+    background-color: #012121;
+    width: 100%;
+    height: 1vh;
+    display: inline-grid;
+  
+    grid-gap: 1px;
+    grid-template-columns:246.297px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
+   
+  }
+  .grid-container2 {
+    background-color: #012121;
+    width: 520%;
+    height: 1vh;
+    display: none;
+    grid-gap: 1px;
+    grid-template-columns:246.297px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
+    position: relative;
+    top: -700px;
+   
+  }
+  .grid-container3 {
+    background-color: #012121;
+    width: 520%;
+    height: 1vh;
+    display: none;
+    grid-gap: 1px;
+    grid-template-columns:246.297px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
+    position: relative;
+    top: -705px;
+  }
+  
+  .grid-container4 {   background-color: #012121;
+    width: 520%;
+    height: 1vh;
+    display: none;
+    grid-gap: 1px;
+    grid-template-columns:246.297px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
+    position: relative;
+    top: -701px;
+  }
+
+  .a {
+    background-color: #121212 !important;
+    color: #B3B3B3;
+  }
+
+  .a {
+    grid-column: 1 / 3;
+    grid-row: 1 / 10;
+    max-width: 200px;
+  }
+
+  .c {
+    grid-column: 2 / 10;
+    grid-row: 1 / 10;
+    background: rgb(1,33,33);
+    background: linear-gradient(180deg, rgba(1,33,33,1) 0%, rgba(4,36,36,1) 2%, rgba(85,106,106,1) 100%);
+        overflow-x:hidden;
+    margin-left:-50px;
+    white-space:none;
+ }
+
+
+  .e {
+    grid-column: 2 / 10;
+    grid-row: 9/ 11;  
+    max-height:112.11px;
+    background-color:#282828;
+    position: relative;
+    margin-left:-50px;
+    top:-2px;
+  }
+
+
+  ::-webkit-scrollbar-track{
+  color:#707070 !important;
+  width:.5em;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:  #AF0300;
+    border-radius: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-track-piece{ background-color:#707070;}
+  ::-webkit-scrollbar {
+    background-color: #AF0300 !important;
+    width:.5em;
+  }
+  .validationDefault01, .validationDefault02, .validationDefault03, .validationDefault04{    width: 100px;
+    border: 3px solid #AF0300;
+    border-right: 3px solid #AF0300;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    width:100px;
+    position:absolute;
+    left:50px;
+    margin-top:2px;
+      border-radius: 5px;
+
+  }
+.submit-button{
+  position: absolute;
+  height: 20px;
+  width: 50px;
+  left: 170px;
+  top: 6px;
+  height: 21px;
+}
+.submit-button{
+  position: absolute;
+  height: 20px;
+  width: 50px;
+  left: 170px;
+  top: 6px;
+  height: 21px;
+}
+
+.album-cover{height:20%;
+width:200px;
+padding-left:0px;
+}
+
+.timestamp{float:left;}
+
+.play-button{    margin-left: 40%;
+  margin-top: -35%;
+  position: relative;
+  top: 125px;}
+.play-button:hover{cursor:pointer;}
+
+.next-track{    position: relative;
+  top: -50px;}
+
+.previous-track{transform: scaleX(-1);
+  position: relative;
+  top: -50px;
+margin-left:-115px;}
+
+.next-track:hover, .previous-track:hover, .repeat:hover, .shuffle:hover{cursor:pointer;}
+.back-button{margin-left:20px;
+margin-top:10px;}
+.forward-button{transform:scaleX(-1);
+margin-left:20px;}
+
+.home{margin-left:20px;
+margin-right:20px;
+margin-top: -20px;
+cursor:pointer}
+
+.browse{margin-right:20px;
+  margin-top: -20px;
+cursor:pointer}
+
+.user-image{background-color:white;
+
+border-radius:50%;
+margin-right: 180px;
+float:right;
+margin-top:10px;
+}
+.user-image2{border-radius:50%;
+height:50px;
+width:50px;}
+
+.user-name{margin-right: -80px;
+  margin-top: 15px;
+  font-family: "geeza pro";
+  float: right;}
+
+.repeat{position: relative;
+  right: 45px;
+  top: -20px;}
+
+
+.shuffle{position: relative;
+  top: -20px;
+  left: 85px;}
+
+.now-playing-artist{color:#707070;
+display:inline;}
+.now-playing-song{color:#707070;
+display:inline;
+}
+
+.controls{margin-top: 10px;}
+
+.sound-controls{float:right;
+margin-right:170px;
+margin-top:-50px;}
+
+.pair{margin-left:10px;}
+
+.header-image{
+  height:200px;
+width:100%;
+object-fit: fill;
+border-color:#153232;
+}
+.header-image3{
+  height:200px;
+width:100%;
+object-fit: fill;
+border-color:#153232;
+}
+.header-image2{
+  height:200px;
+width:100%;
+object-fit: fill;
+border-color:#153232;
+}
+
+.clubopen {width:100%;
+  height:100%;
+  filter: hue-rotate(180deg) saturate(2);
+}
+
+.header-image {
+  background-size: cover;
+  background-position: center;
+}
+.header-image {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply) {
+  .header-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .header-image:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+    mix-blend-mode: multiply;
+  }
+}
+.header-controls{
+  position:relative; 
+  top:-200px;
+  color:white;
+}
+
+
+.band-header{position:absolute;
+  font-size:5em;
+  margin-left:20px;
+  font-weight:bolder;
+ font-family: "Hoefler Text";
+ color:#153232;
+top:135px;}
+
+.band-header2{position:absolute;
+  font-size:5em;
+  margin-left:20px;
+  font-weight:bolder;
+ font-family: "Hoefler Text";
+ color:#153232;
+ text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
+top:200px;}
+
+hr{background-color:#707070;
+opacity:.5}
+
+.artist-play{position:absolute;
+  background-color:#AF0300;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,43,1) 37%, rgba(49,185,84,1) 75%, rgba(44,255,0,1) 100%);
+  border-style:none;
+  z-index:2;
+  height:35px;
+  width:100px;
+  border-radius:4px;
+  top:100px;
+right:550px;
+color:white;}
+
+.overview{color:white;
+  position:absolute;
+top:140px;
+font-size:1.5em;
+right:50px;
+font-family:"Helvetica Neue";
+word-spacing:100px;}
+
+.top-releases{position:relative;
+top:245px;
+font-size:1.5em;
+left:20px;
+margin-right: 702px;}
+
+.top-albums{  
+  width: 120px;
+  background-color: #555;
+  display:inline-flex;
+position:relative;
+font-family:"geeza pro";
+
+margin-top:25px;
+top:-50px;
+}
+.top-albums:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+  .top-album2{
+    margin-top:40px;
+  }
+
+  .top-songs{float: right;
+  font-size: 1.5em;
+  margin-right: 490px;
+  /* margin-top: -225px; */
+  display: block;
+  position: relative;
+  top: -220px;}
+
+.popular-songs{
+  position: initial;
+  font-family:"geeza pro";
+
+  font-size:20px!important;
+color:#A0A0A0;
+margin-right: -250px !important;
+white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+.popular-songs:hover{cursor:pointer;
+color:white;}
+
+.time-duration{display:inline-block !important;
+  
+}
+
+.timez{color:#A0A0A0;
+  position: relative;
+  left: 500px;
+  top: -260px;
+  line-height:2.4;
+  font-size:20px;
+  }
+
+.fans-like{
+  margin-top:10px !important;
+  margin-left: 435px !important;
+    font-size: 1.5em !important;
+}
+.circles{margin-left:425px;}
+.related-artists{    position: absolute;
+  top: 500px;
+  font-family:"geeza pro";
+}
+
+.related-circle:hover{cursor:pointer}
+.related-circle{
+  margin-left:10px;
+display:inline-block;
+  width:120px;
+height:120px;
+border-radius:50%;
+background-color:white;}
+.related-img{  width:120px;
+  height:120px;
+border-radius:50%;}
+
+.name1{
+  position: relative;
+  left: 8px;
+  }
+
+
+.tab {
+  transform: rotate(-90deg);
+  height: 50px;
+  width: 150px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: #707070;
+  position: absolute;
+  left: 480px;
+  display: inline-block;
+  z-index: 2;
+  margin-left: 700px;
+}
+.tab:before { 
+
+  height: 50px;
+  width: 70px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #707070;
+  content: "";
+  position: absolute;
+  left: 104px;
+  top: 0px;
+  -webkit-transform: skewX(40deg);
+  transform: skewX(40deg);
+  z-index: -1;
+}
+
+
+.tab2 {
+  transform: rotate(-90deg);
+  height: 50px;
+  width: 150px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: #707070;
+  position: absolute;
+  left: 480px;
+  top:395px;
+  display: inline-block;
+  z-index: 2;
+  margin-left: 700px;
+}
+.tab2:before { 
+
+  height: 50px;
+  width: 70px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #707070;
+  content: "";
+  position: absolute;
+  left: 104px;
+  top: 0px;
+  -webkit-transform: skewX(40deg);
+  transform: skewX(40deg);
+  z-index: -1;
+}
+.fa-users{transform: rotate(90deg);
+font-size:2em;
+position:absolute;
+top:10px;
+left:60px;
+color:#AF0300;
+
+}
+
+.fa-cog{font-size:2em;
+  position:absolute;
+  top:10px;
+  left:70px;
+  color:#AF0300;}
+
+body{background-color:#282828;;}
+
+
+.image-results{  width: 120px;
+  height:120px;
+}
+
+.image-results:hover{cursor:pointer;}
+.release-names{font-size:10px;
+  position:absolute;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:90px;
+
+}
+
+.album-name{    font-size: 10px;
+  display: inline;
+  bottom: 180px;
+
+}
+.album-name2{font-size: 10px;
+  bottom: 180px;
+  left:125px;
+}
+.album-name3{
+  bottom:180px;
+  left:250px;
+}
+.album-name4{
+  bottom:25px;
+}
+.album-name5{
+  bottom:25px;
+  left:125px;
+
+}
+
+.album-name6{
+  left:180px;
+  bottom:25px;
+
+
+}
+
+.album-name6{
+  bottom:25px;
+  left:250px;
+}
+
+
+.artist-name{
+  font-size:10px;
+  display:inline-flex;
+  margin-left:25px;
+  margin-right:25px;
+  position:relative;
+}
+
+
+.name2{left:20px;}
+.name3{left:10px;}
+.name4{left:10px;}
+
+#preview-player{
+  display:none;
+}
+
+#video-controls{    position: relative;
+  left: 90px;
+  top: -22.5px;
+}
+
+.fa-volume-up{color:#AF0300;
+  margin-left: 60px;
+  
+}
+
+
+.eq-button{color:green;
+  text-decoration:none ;
+  border-style:none !important;
+  padding: 0px !important;
+  background-color: #282828;
+position:absolute;
+top:32px;
+color:#5E5E5E;
+right:50px;;
+}
+
+
+.lists{margin-left:-35px;;
+float:left}
+
+
+.vl2 {
+  border-left: 1px solid #707070;;
+  height: 500px;
+  position: absolute;
+  right: 662px;
+  top: 210px;
+  opacity:.5;
+}
+
+/* index.html */
+/* index.html */
+/* index.html */
+/* index.html */
+
+
+
+.genre-img{
+  filter:grayscale(100%);}
+.playground:hover{filter:grayscale(100%);
+cursor:pointer;}
+
+.genre-img:hover{
+  filter:grayscale(50%)
+}
+#title{margin-right: 120px;
+  margin-top: 20px;
+}
+.genre-icon{
+  top:-200px;
+  position:relative;
+  display:block;
+margin:auto auto;}
+.juicebox{   
+  top: -220px;
+  left: 16px;}
+
+.genre-square{height:220px;
+width:220px;
+cursor:pointer;
+grid-auto-rows: inherit;}
+
+.genre-square1{  
+  
+    margin-top: -5px;
+  margin-left: -5px;}
+
+   .genre-board{
+     margin-left:76px;
+     margin-top: -140px;
+     display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-template-rows: repeat(2, 220px);
+    grid-gap: 15px;}
+
+
+    h3
+    {
+      margin-top:-200px;
+      text-align:center;
+      color:white;
+      font-family:"geeza pro";
+      position:relative;}
+
+.browse2{   
+  font-size:3em;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-family: "Hoefler Text";
+  color:#032626;
+  text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
+ top:200px;}
+ 
+.genre-header{position:absolute;
+  text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
+  font-family: "Hoefler Text";
+  color:#153232;
+  left:280px;
+  top: 100px;}
+.sidebar{overflow:auto;
+  font-family:"geeza pro";
+      width: 198px;
+height:500px;}
+
+
+ul:hover{cursor:pointer;
+color:white;}
+#custom-seekbar
+{  
+  background-color:#707070;
+  cursor: pointer;
+  height: 2px;
+  margin-left:25%;
+  margin-top:-10px;
+  outline: thin solid #707070;
+  overflow: hidden;
+  position: absolute;
+  width: 400px;
+}
+#custom-seekbar span
+{
+  background-color: #AF0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 0px;
+}
+
+
+.modal-content{height:270px;
+  width:514px;
+  border-color: #707070;
+  border-width: 5px;
+  border-radius:58px;
+  background-color:#282828;
+  
+}
+
+
+.modal{border-style:solid white !important}
+
+
+.eq{ -webkit-appearance: slider-vertical;
+  margin-right: -50px;
+  margin-top:40px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: slider-vertical;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+.switch {
+  position: absolute;
+  top:-5px;
+  left:50px;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+}
+
+.switch2 {left:140px;}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #AF0300;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #AF0300;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(45px);
+  -ms-transform: translateX(45px);
+  transform: translateX(45px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+ .ticks{background-color:red;}
+
+
+.row1-text{margin-top: -185px;
+font-size:33px;}
+
+
+.row2-text{    margin-top: -218px;
+font-size:33px;}
+
+.pop-punk-text{margin-top:-200px;}
+
+.country-text{margin-top:-185px;
+}
+
+.psych-text{margin-top:-195px;}
+
+.morning-text{margin-top:-190px;}
+
+.rock-text{    margin-top: -158px;}
+
+.jazz-text{margin-top:-220px;}
+
+.metal-text{margin-top:-200px;
+
+}
+
+.noise-rock-text{    margin-top: -190px;}
+
+/* album cover page */
+.album-page-title{font-size:14px;}
+.album-page-name{font-size:24px;}
+.album-cover-page{width:225px;
+height:225px;
+margin-top:-150px;
+margin-left:20px;
+box-shadow: 4px 4px 12px;
+}
+
+
+.album-info{    color: white;
+  font-size: 1em;
+  margin-top: -180px;
+  margin-left: 255px;
+  line-height:10px;
+}
+
+.track-list{   margin-top: 100px;
+  margin-left:20px;
+color:#B9B9B9;
+line-height:.5px !important;
+}
+.track, .playlist-track{line-height:10px;
+  font-size: 14px;
+  list-style-type:none;
+  display:inline;
+
+}
+.track-time{position: relative;
+  top: -5px;
+  left: 950px;}
+.track:hover, .playlist-track:hover, .playlist-artist:hover{
+  cursor:pointer;
+  color:white;
+}
+.track-list-symbols{color:#707070;
+  position: relative;
+  top: 80px;
+  left: 20px;}
+.track-number{font-size: 14px;}
+  .clock{position: relative;
+    left: 950px;}
+
+.release-date{color:#858585;
+margin-top:16px;}
+
+.more-albums-by{display:flex;
+margin-top:100px;}
+.more-albums{
+  margin-left:12px;
+  margin-bottom:200px;
+  height:165px;
+width:165px;
+background-color:white;}
+
+.more-a-b-a{color:white;
+margin-left:20px;}
+
+.by-artist-album:hover{cursor:pointer;
+color:grey;}
+.by-artist-album{display:inline;}
+.by{color:#858585;
+display:inline;}
+.label{color:#B3B3B3;
+font-size:8px;
+margin-left:20px;}
+/* home page */
+
+.recent-album-cover{width:148px;
+height:148px;
+margin:2px;
+
+}
+.recent-album-cover4  {       margin-top: -115px;}
+/* .recent-album-cover2{    margin-top: 20px;}
+.recent-album-cover5{    margin-top: 20px;}
+.recent-album-cover3{margin-top: 20px;}
+.recent-album-cover6{margin-top: 20px;} */
+
+.recently-played{display: grid;
+  position:relative;
+  left:40px;
+  top:-120px;
+  margin-right: 900px;}
+
+  .recently-played2{display: grid;
+    position: relative;
+    top: -609px;
+    left: 200px;
+    margin-right: 900px;
+  }
+
+.on-this-day{position: relative;
+  top: -200px;
+  /* display: inline-block; */
+  margin-top: -955px;
+      margin-left: 420px;
+}
+
+.on-this-day-album-name{
+  color:white;
+  font-family:'geeza pro';
+  line-height:-1px;
+
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:80%;
+}
+
+.on-this-day-artist-name{
+  font-size:13px;
+  color:white;
+  font-family: 'geeza pro';
+margin-top:-20px;
+}
+
+
+
+.on-this-day-cover{width:182px;
+  height:182px;
+  margin-right: 3px;
+  margin-top: -90px;
+
+}
+
+.picks-for-you{margin-left: 392px;
+  margin-top: -200px;}
+
+
+.album-picks-for-you{width:116px;
+height:116px;
+margin-left:28px;
+padding-top:5px;}
+
+#new-releases{
+  position: relative;
+  top: -635px;
+  margin: 0px;
+  right: 165px;
+}
+.new-release-album-name{    color: white;
+  line-height:1vw;
+  margin-top:5px;
+  font-size:16px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:60%;
+
+}
+
+.new-release-artist-name{    font-size: 13px;
+  color: #B3B3B3;
+line-height:1px;}
+
+.jump-in{    position: absolute;
+  top:80px;}
+
+
+  .image-results:hover, .on-this-day-cover:hover, .album-picks-for-you:hover, .recent-album-cover:hover{cursor:pointer;
+    filter: drop-shadow(2px 2px 2px black); 
+  }
+
+  .navigation-line{position: absolute;
+    top: 50px;
+    margin-left: -63px;}
+
+
+.move-up{       margin-top: -50px;
+margin-bottom:200px;}
+
+.test1{display:inline-block;}
+
+.pick{display:inline-block;}
+
+.picks-album{    margin-left: 28px;
+  color:white;
+  font-size:12px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:100px;
+  padding-right:0px;
+}
+
+.picks-artist{margin-left:28px;
+margin-top:-20px;
+font-size:10px;
+color:#B3B3B3}
+
+.saved{    color: white;
+  font-size: 24px;
+  font-family: 'geeza pro';
+  margin-left: 26px;
+}
+
+
+.vl {
+  border-left: 1px solid #707070;
+  height: 100px;
+  position: absolute;
+  left:580px;
+  top:100px;
+  z-index:0;
+  opacity:.3;
+}
+
+
+.search-form{  width: 100%;
+  display: flex;
+  
+}
+
+.searchButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #AF0300;
+  background: #AF0300;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  position:absolute;
+  margin-top:2px;
+  left:25px;
+  border-radius: 5px 0 0 5px;
+
+
+}
+
+
+.construction{height:200px;
+width:150px;
+margin-left:150px;}
