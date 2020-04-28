@@ -166,18 +166,15 @@ cursor:pointer}
   margin-top: -20px;
 cursor:pointer}
 
-.user-image{background-color:white;
-
-border-radius:50%;
-margin-right: 180px;
-float:right;
-margin-top:10px;
-}
+.user-image{
+    margin-right: 180px;
+    float: right;
+    margin-top: 10px;}
 .user-image2{border-radius:50%;
 height:50px;
 width:50px;}
 
-.user-name{margin-right: -80px;
+.user-name{margin-right: -95px;
   margin-top: 15px;
   font-family: "geeza pro";
   float: right;}
