@@ -1400,7 +1400,7 @@ function changeGain(sliderVal, nbFilter) {
 
 
 
-
+//updatE?
 
 //dynamically generate holders for images and text (maybe?)
 
