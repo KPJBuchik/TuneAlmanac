@@ -19,7 +19,7 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
 const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
 const scopes = [
-  'user-library-read'
+  'user-read-email','user-library-read'
 
 ];
 
@@ -922,7 +922,7 @@ $(document).ready(
                 type: "GET",
                 beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
                 success: function (response) {
-                        console.log(response)
+                                console.log(response)
                 for (let i = 0; i < response.items.length + 1; i++) {
 
                     let tracklistDiv = $("<div>")
@@ -987,11 +987,14 @@ $(document).ready(
                 }
 
             }
-        });
+        })
+        })
         
-        
-        }
-)
+    
+    }
+    
+    )
+
 $(document).ready(
     function getAlbumInfo() {
         $(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").on("click", function () {
@@ -1035,13 +1038,14 @@ $(document).ready(
 
                 })
 
-
             }
-        });
+        })
+        })
         
-        
-        }
-)
+    
+    }
+    
+    )
 //get artists related artists
 function searchRelatedArtists(id) {
 
@@ -1099,7 +1103,6 @@ function searchRelatedArtists(id) {
             searchAlbumCovers(response.artists[3].id);
             searchSpotifyNameClone(response.artists[3].id); //this one doesn't work
         })
-
 
     }
 });
