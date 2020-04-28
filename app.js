@@ -51,7 +51,7 @@ function getUserProfile() {
         success: function (response) {
             console.log("1" + response)
             $(".user-name").text(response.display_name)
-            $(".user-image").attr("src", response.images[0].url)
+            $(".user-image2").attr("src", response.images[0].url)
         }
     });
 
