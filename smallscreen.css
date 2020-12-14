@@ -1,3 +1,7 @@
+
+body{overflow-x:hidden;
+}
+
 .grid-container {
     background-color: #012121;
     width: 100%;
@@ -736,14 +740,15 @@ display:none;}
   }
   
   
-  .album-info{    color: white;
+  .album-info{   color: white;
     font-size: 1em;
     /* margin-top: -180px; */
     /* margin-left: 255px; */
     line-height: 10px;
-    position: absolute;
-    left: -25px;
-    top: 510px;
+    left: -225px;
+    position: relative;
+    top: 200px;
+    margin-bottom: 120px;
   }
   
   .track-list{   margin-top: 100px;
