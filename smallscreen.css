@@ -512,7 +512,9 @@ display:none;  }
   
   
   
-  .genre-img{
+  .genre-img{height:220px;
+    width:220px;
+    
     filter:grayscale(100%);}
   .playground:hover{filter:grayscale(100%);
   cursor:pointer;}
@@ -529,21 +531,20 @@ display:none;}
     top: -220px;
     left: 16px;}
   
-  .genre-square{height:120px;
-  width:120px;
-  display: block;
-  grid-auto-rows: inherit;}
+  .genre-square{height:220px;
+    width:220px;
+}
   
-  .genre-square1{  
-    
-      margin-top: -5px;
-    margin-left: -5px;}
+  .genre-square1{  display:none;
+    }
   
-     .genre-board{
-        margin-left: 50px;
-        display: list-item;
-
-        padding-top: 10px;
+     .genre-board{    margin-left: 50px;
+      margin-top:50px;
+      display: grid;
+      grid-gap: 0px;
+      grid-template-columns: none;
+      grid-template-rows: none;
+  
 
      }
       h3
@@ -569,7 +570,9 @@ display:none;}
     font-family: "Hoefler Text";
     color: #153232;
     margin-left: -225px;
-    margin-top: -160px;}
+    margin-top: -160px;
+    top: 20px;
+  }
   .sidebar{overflow:auto;
     font-family:"geeza pro";
         width: 198px;
@@ -704,11 +707,13 @@ display:none;}
   
   
   .row1-text{margin-top: -185px;
-  font-size:33px;}
+  font-size:33px;
+}
   
   
   .row2-text{    margin-top: -218px;
-  font-size:33px;}
+  font-size:33px;
+}
   
   .pop-punk-text{margin-top:-200px;}
   
@@ -813,11 +818,8 @@ display:none;}
   .recent-album-cover3{margin-top: 20px;}
   .recent-album-cover6{margin-top: 20px;} */
   
-  .recently-played{display:list-item;
-       position: absolute;
-    left: 300px;
-    top:100px;
-    margin-right: 900px;}
+  .recently-played{display:none;
+  }
   
     .recently-played2{display: list-item;
       position: absolute;
@@ -827,11 +829,12 @@ display:none;}
       margin-right: 900px;
     }
   
-  .on-this-day{position: relative;
-    top: -200px;
-    /* display: inline-block; */
+  .on-this-day{    position: relative;
+    top: 80px;
+    display: inline-block;
     margin-top: -955px;
-        margin-left: 420px;
+    left: 0px;
+    margin-left: 20px;
   }
   
   .on-this-day-album-name{
@@ -854,15 +857,15 @@ display:none;}
   
   
   
-  .on-this-day-cover{width:182px;
-    height:182px;
+  .on-this-day-cover{    width: 90px;
+    height: 90px;
     margin-right: 3px;
     margin-top: -90px;
   
   }
   
-  .picks-for-you{margin-left: 392px;
-    margin-top: -200px;}
+  .picks-for-you{    margin-left: 0px;
+    margin-top: 100px;}
   
   
   .album-picks-for-you{width:116px;
