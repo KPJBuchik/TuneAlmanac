@@ -12,7 +12,7 @@
     width: 520%;
     height: 1vh;
     grid-gap: 1px;
-    display: inline-grid;
+    display: none;
 
     grid-template-columns:246.297px;
     grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
