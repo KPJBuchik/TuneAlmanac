@@ -1035,8 +1035,32 @@ width:150px;
 margin-left:150px;}
 
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+
+
+@media screen and (min-width: 1400px) {
+  .c{
+    width: 1370px;
+  }
+  .grid-container{width: 1370px;}
+  .tab{display:none;}
+  .tab2{display:none;}
+  .play-button{top: 180px;}
+  
 }
+@media screen and (min-width: 1600px) {
+  .c {
+    width: 1570px;
+  }
+  .grid-container{width:1570px;}
+  .play-button{top: 200px;}
+
+}
+@media screen and (min-width: 1900px) {
+  .c {
+    width: 1870px;
+  }
+  .grid-container{width:1900px;}
+  .play-button{top: 220px;}
+
+}
+
