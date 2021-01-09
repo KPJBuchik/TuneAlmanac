@@ -84,8 +84,8 @@ $(document).ready(
 
             document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
 
-            document.querySelector(".new-release-album-name1").innerHTML(response.albums.items[0].name)
-            document.querySelector(".new-release-artist-name1").innerHTML(response.albums.items[0].artists[0].name)
+            document.querySelector(".new-release-album-name1").innerHTML=(response.albums.items[0].name)
+            document.querySelector(".new-release-artist-name1").innerHTML=(response.albums.items[0].artists[0].name)
 
             $(".recent-album-cover2").attr("src", response.albums.items[1].images[0].url)
             $(".recent-album-cover2").attr("value", response.albums.items[1].id)
