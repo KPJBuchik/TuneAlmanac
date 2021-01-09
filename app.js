@@ -1028,7 +1028,7 @@ $(document).ready(
 
                     document.querySelector(".by-artist-album").addEventListener("click", function (event) {
                         event.preventDefault();
-                        let backToArtist = document.querySelector(".by-artist-album").innerText = ()
+                        let backToArtist = document.querySelector(".by-artist-album").innerText()
                         searchSpotifyNameClone(response.artists[0].id)
                         searchRelatedArtists(response.artists[0].id)
                         searchSpotify(response.artists[0].id);
