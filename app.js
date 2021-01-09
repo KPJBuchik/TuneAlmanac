@@ -153,7 +153,7 @@ $(document).ready(
             document.querySelector(".picks-artist1").innerHTML=(response.items[check].album.artists[0].name)
 
             document.querySelector(".album-picks-for-you2").setAttribute("src", response.items[check2].album.images[0].url)
-            document.querySelector(".album-picks-for-you2").setAttribut("value", response.items[check2].album.id)
+            document.querySelector(".album-picks-for-you2").setAttribute("value", response.items[check2].album.id)
             document.querySelector(".picks-album2").innerHTML=(response.items[check2].album.name)
             document.querySelector(".picks-artist2").innerHTML=(response.items[check2].album.artists[0].name)
 
@@ -229,16 +229,16 @@ function getPlaylists() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-    $("ul").text(response.items[0].name)
-        $("ul").attr("value", response.items[0].id)
+document.querySelector("ul").innerText=(response.items[0].name)
+document.querySelector("ul").setAttribute("value", response.items[0].id)
         $("ul").on("click", function () {
-            $(".album-cover-page").attr("src", response.items[0].images[0].url)
-            $(".album-page-name").text(response.items[0].name)
-            $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
+            document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
+            document.querySelector(".album-page-name").innerText=(response.items[0].name)
+            document.querySelector(".by-artist-album").innerText=("Created by" + " " + response.items[0].owner.display_name)
 
 
         })
-        $("ul:nth-child(2)").text(response.items[1].name)
+        document.querySelector("ul:nth-child(2)").innerText=(response.items[1].name)
         $("ul:nth-child(2)").attr("value", response.items[1].id)
         $("ul:nth-child(2)").on("click", function () {
             $(".album-cover-page").attr("src", response.items[1].images[0].url)
