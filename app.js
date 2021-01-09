@@ -712,7 +712,7 @@ function searchSpotifyName() {
             if (artistSplit.length === 1) {
                 document.querySelector(".band-header").innerText = (artistSplit)
                 document.querySelector(".band-header2").innerText = (artistSplit)
-                document.querySelector(".band-header2").style.transform = "scale(-1) rotate(180deg)")
+                document.querySelector(".band-header2").style.transform = "scale(-1) rotate(180deg)"
 
             }
             if (artistSplit.length === 2) {
