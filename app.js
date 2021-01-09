@@ -81,10 +81,10 @@ $(document).ready(
             // for (let i = 0; i < 6 + 1; i++) {
 
             document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
-            
+
             document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
 
-            document.querySelector(".new-release-album-name1").innerHTML(response.albums.items[0].name)
+            $(".new-release-album-name1").html(response.albums.items[0].name)
             $(".new-release-artist-name1").html(response.albums.items[0].artists[0].name)
 
             $(".recent-album-cover2").attr("src", response.albums.items[1].images[0].url)
