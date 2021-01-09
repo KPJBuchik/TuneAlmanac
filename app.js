@@ -474,8 +474,8 @@ function getPlaylistTracks() {
 
 
                     document.querySelector(".playlist-artist").addEventListener("click", function () {
-                        document.querySelector(".grid-container2").style("display", "inline-grid")
-                        document.querySelector(".grid-container3").style("display", "none")
+                        document.querySelector(".grid-container2").style.display =  "inline-grid";
+                        document.querySelector(".grid-container3").style.display =  "none"
                         document.querySelector(".track-list").empty();
                         searchSpotifyNameClone(response.items[i].track.artists[0].id)
                         searchRelatedArtists(response.items[i].track.artists[0].id)
@@ -524,9 +524,9 @@ document.querySelector(".genre-img").addEventListener("click", function (event) 
     event.preventDefault()
     document.querySelector(".album-page-title").innerText = ("Playlist")
 
-    document.querySelector(".grid-container3").style("display", "inline-grid")
-    document.querySelector(".grid-container").style("display", "hidden")
-    document.querySelector(".grid-container2").style("display", "hidden");
+    document.querySelector(".grid-container3").style.display =  "inline-grid";
+    document.querySelector(".grid-container").style.display =  "hidden";
+    document.querySelector(".grid-container2").style.display =  "hidden";
     getPlaylistTracks()
 
 })
@@ -703,7 +703,7 @@ function searchSpotifyName() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            document.querySelector(".header-image").style("background-image", "url(" + response.artists.items[0].images[0].url + ")")
+            document.querySelector(".header-image").style.backgroundImage =  "url(" + response.artists.items[0].images[0].url + ")"
 
             var artistName = (response.artists.items[0].name)
             var artistArray = artistName.split("")
@@ -712,13 +712,13 @@ function searchSpotifyName() {
             if (artistSplit.length === 1) {
                 document.querySelector(".band-header").innerText = (artistSplit)
                 document.querySelector(".band-header2").innerText = (artistSplit)
-                document.querySelector(".band-header2").style.transform = "scale(-1) rotate(180deg)"
+                document.querySelector(".band-header2").style.transform = "scale(-1) rotate(180deg)";
 
             }
             if (artistSplit.length === 2) {
                 document.querySelector(".band-header").innerText = (artistSplit[0])
                 document.querySelector(".band-header2").innerText = (artistSplit[1])
-                document.querySelector(".band-header2").style.transform = "none"
+                document.querySelector(".band-header2").style.transform = "none";
 
 
             }
@@ -1034,8 +1034,8 @@ $(document).ready(
                         searchSpotify(response.artists[0].id);
                         searchAlbumCovers(response.artists[0].id);
 
-                        document.querySelector(".grid-container2").style("display", "inline-grid")
-                        document.querySelector(".grid-container3").style("display", "none")
+                        document.querySelector(".grid-container2").style.display =  "inline-grid";
+                        document.querySelector(".grid-container3").style.display =  "none";
                         document.querySelector(".track-list").empty()
 
                     })
@@ -1120,9 +1120,9 @@ function timeConversiaddEventListener(ms) {
 
 document.querySelector(".home").addEventListener("click", function (event) {
     event.preventDefault();
-    document.querySelector(".grid-container4").style("display", "inline-grid")
-    document.querySelector(".grid-container").style("display", "hidden")
-    document.querySelector(".grid-container2").style("display", "hidden")
+    document.querySelector(".grid-container4").style.display =  "inline-grid";
+    document.querySelector(".grid-container").style.display =  "hidden";
+    document.querySelector(".grid-container2").style.display =  "hidden";
 
 
 })
@@ -1131,10 +1131,10 @@ document.querySelector("ul").addEventListener("click", function (event) {
     event.preventDefault();
     console.log("JESUS")
 
-    document.querySelector(".grid-container3").style("display", "inline-grid")
-    document.querySelector(".grid-container").style("display", "hidden")
-    document.querySelector(".grid-container2").style("display", "hidden")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container3").style.display =  "inline-grid"
+    document.querySelector(".grid-container").style.display =  "hidden"
+    document.querySelector(".grid-container2").style.display =  "hidden"
+    document.querySelector(".grid-container4").style.display =  "none"
 
     document.querySelector(".track-list").empty()
     getPlaylistTracks();
@@ -1145,7 +1145,7 @@ document.querySelector("ul").addEventListener("click", function (event) {
 
 document.querySelector(".top-albums").addEventListener("click", function () {
 
-    document.querySelector(".grid-container3").style("display", "inline-grid")
+    document.querySelector(".grid-container3").style.display =  "inline-grid"
     getAlbumInfo()
     getAlbumTracklist();
     searchAlbumCovers();
@@ -1154,8 +1154,8 @@ document.querySelector(".top-albums").addEventListener("click", function () {
 
 })
 document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").addEventListener("click", function () {
-    document.querySelector(".grid-container3").style("display", "inline-grid")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container3").style.display =  "inline-grid"
+    document.querySelector(".grid-container4").style.display =  "none"
     document.querySelector(".track-list").empty()
 
 })
@@ -1164,10 +1164,10 @@ document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you
 
 document.querySelector(".browse").addEventListener("click", function (event) {
     event.preventDefault();
-    document.querySelector(".grid-container").style("display", "inline-grid")
-    document.querySelector(".grid-container3").style("display", "none")
-    document.querySelector(".grid-container2").style("display", "none")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container").style.display =  "inline-grid"
+    document.querySelector(".grid-container3").style.display =  "none"
+    document.querySelector(".grid-container2").style.display =  "none"
+    document.querySelector(".grid-container4").style.display =  "none"
 
     document.querySelector(".track-list").empty()
 
@@ -1214,9 +1214,9 @@ document.querySelector(".submit-button, .searchButton").addEventListener("click"
         searchAlbumCovers();
 
     }
-    document.querySelector(".grid-container2").style("display", "inline-grid")
-    document.querySelector(".grid-container3").style("display", "none")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container2").style.display =  "inline-grid";
+    document.querySelector(".grid-container3").style.display =  "none";
+    document.querySelector(".grid-container4").style.display =  "none";
 
     document.querySelector(".validationDefault01").val("")
     document.querySelector(".track-list").empty()
@@ -1234,9 +1234,9 @@ document.querySelector(".submit-button2, .searchButton").addEventListener("click
         searchAlbumCovers();
     }
 
-    document.querySelector(".validationDefault02").val("")
-    document.querySelector(".track-list").empty()
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".validationDefault02").val("");
+    document.querySelector(".track-list").empty();
+    document.querySelector(".grid-container4").style.display =  "none";
 
 
 })
@@ -1244,11 +1244,11 @@ document.querySelector(".submit-button3, .searchButton").addEventListener("click
     event.preventDefault();
     console.log("value:" + document.querySelector(".validationDefault03").val())
     submitCount++;
-    document.querySelector(".grid-container3").style("display", "none")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container3").style.display =  "none";
+    document.querySelector(".grid-container4").style.display =  "none";
 
     if (document.querySelector(".validationDefault03").val() !== "") {
-        document.querySelector(".grid-container2").style("display", "inline-grid")
+        document.querySelector(".grid-container2").style.display =  "inline-grid";
 
         searchSpotify();
         searchSpotifyName();
@@ -1267,11 +1267,11 @@ document.querySelector(".submit-button4, .searchButton").addEventListener("click
     event.preventDefault();
     console.log("value:" + document.querySelector(".validationDefault03").val())
     submitCount++;
-    document.querySelector(".grid-container3").style("display", "none")
-    document.querySelector(".grid-container4").style("display", "none")
+    document.querySelector(".grid-container3").style.display =  "none";
+    document.querySelector(".grid-container4").style.display =  "none";
 
     if (document.querySelector(".validationDefault04").val() !== "") {
-        document.querySelector(".grid-container2").style("display", "inline-grid")
+        document.querySelector(".grid-container2").style.display =  "inline-grid";
 
         searchSpotify();
         searchSpotifyName();
@@ -1305,7 +1305,7 @@ function myFunctiaddEventListener() {
 var vid = document.getElementById("preview-player");
 vid.ontimeupdate = function () {
     var percentage = (vid.currentTime / vid.duration) * 100;
-    document.querySelector("#custom-seekbar span").style("width", percentage + "%");
+    document.querySelector("#custom-seekbar span").style.width =  percentage + "%";
 };
 
 document.querySelector("#custom-seekbar").addEventListener("click", function (e) {
