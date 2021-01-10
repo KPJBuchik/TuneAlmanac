@@ -37,6 +37,7 @@ $(document).ready(function () {
     getUserProfile();
     getAlbumTracklist();
     getNewReleases()
+    getTop()
 });
 //get user image
 function getUserProfile() {
@@ -64,7 +65,6 @@ function getUserProfile() {
 
 // })
 
-$(document).ready(
 
     function getNewReleases() {
 
@@ -122,10 +122,9 @@ $(document).ready(
             }
         })
     }
-)
 
 
-$(document).ready(
+
 
     function getTop() {
 
@@ -214,7 +213,7 @@ $(document).ready(
             }
         })
     }
-)
+
 
 
 //ajax call to populate sidebar with playlists
@@ -996,7 +995,6 @@ function searchAlbumCovers(id) {
 
 
 
-$(document).ready(
     function getAlbumInfo() {
         document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick =  function () {
             var albumId = document.querySelector(this).setAttribute("value");
@@ -1046,7 +1044,7 @@ $(document).ready(
 
     }
 
-)
+
 //get artists related artists
 function searchRelatedArtists(id) {
 
