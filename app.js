@@ -693,7 +693,7 @@ function searchSpotify(id) {
 
 //initial function to retrieve artists name, artist picture and populates other search functions wit id callbacks
 function searchSpotifyName() {
-    var inputArtist = document.querySelector(".validationDefault01").val().trim() || document.querySelector(".validationDefault02").val().trim() || document.querySelector(".validationDefault03").val().trim() || document.querySelector(".by-artist-album").text() || document.querySelector(".playlist-artist").val();
+    var inputArtist = $(".validationDefault01").val().trim() || $(".validationDefault02").val().trim() || document.querySelector(".validationDefault03").val().trim() || $(".by-artist-album").text() || $(".playlist-artist").val();
 
 
     var queryUrl = "https://api.spotify.com/v1/search?q=" + inputArtist + "&type=artist&limit=1"
@@ -1214,8 +1214,8 @@ document.querySelector(".submit-button, .searchButton").onClick = function (even
     document.querySelector(".grid-container3").style.display = "none";
     document.querySelector(".grid-container4").style.display = "none";
 
-    document.querySelector(".validationDefault01").val("")
-    document.querySelector(".track-list").empty()
+    $(".validationDefault01").val("")
+    $(".track-list").empty()
 
 
 }
@@ -1278,7 +1278,7 @@ document.querySelector(".submit-button4, .searchButton").onClick = function (eve
 
 
 
-    document.querySelector(".validationDefault04").val("")
+    $(".validationDefault04").val("")
     $(".track-list").empty()
 
 }
