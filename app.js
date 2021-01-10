@@ -368,7 +368,7 @@ function getPlaylists() {
 
             } 
 
-            document.querySelector("ul:nth-child(15)").innerText = (response.items[14].name)
+            document.querySelector("ul:nth-child(15)").innerText = response.items[14].name
             document.querySelector("ul:nth-child(15)").setAttribute("value", response.items[14].id)
             document.querySelector("ul:nth-child(15)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[14].images[0].url)
@@ -911,7 +911,6 @@ function searchAlbumCovers(id) {
 }
 
 
-$(document).ready(
 
     function getAlbumTracklist() {
         document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").click(function () {
@@ -995,7 +994,7 @@ $(document).ready(
 
     }
 
-)
+
 
 $(document).ready(
     function getAlbumInfo() {
