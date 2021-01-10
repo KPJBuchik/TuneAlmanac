@@ -376,7 +376,7 @@ function getPlaylists() {
 
 
             } 
-            document.querySelector("ul:nth-child(16)").innerText = (response.items[15].name)
+            document.querySelector("ul:nth-child(16)").innerText = response.items[15].name
             document.querySelector("ul:nth-child(16)").setAttribute("value", response.items[15].id)
             document.querySelector("ul:nth-child(16)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[15].images[0].url)
