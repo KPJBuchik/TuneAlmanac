@@ -230,13 +230,13 @@ function getPlaylists() {
         success: function (response) {
             document.querySelector("ul").innerText = (response.items[0].name)
             document.querySelector("ul").setAttribute("value", response.items[0].id)
-            document.querySelector("ul").onClick = function () {
+            $("ul").on( function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[0].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            })
             document.querySelector("ul:nth-child(2)").innerText = (response.items[1].name)
             document.querySelector("ul:nth-child(2)").setAttribute("value", response.items[1].id)
             document.querySelector("ul:nth-child(2)").onClick = function () {
