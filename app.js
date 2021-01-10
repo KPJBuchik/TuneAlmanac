@@ -66,153 +66,153 @@ function getUserProfile() {
 // })
 
 
-    function getNewReleases() {
+function getNewReleases() {
 
-        var queryUrl = "https://api.spotify.com/v1/browse/new-releases"
-
-
-        $.ajax({
-            url: queryUrl,
-            type: "GET",
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
-            success: function (response) {
-
-                console.log(response)
-                // for (let i = 0; i < 6 + 1; i++) {
-
-                document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
-
-                document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
-
-                document.querySelector(".new-release-album-name1").innerHTML = (response.albums.items[0].name)
-                document.querySelector(".new-release-artist-name1").innerHTML = (response.albums.items[0].artists[0].name)
-
-                document.querySelector(".recent-album-cover2").setAttribute("src", response.albums.items[1].images[0].url)
-                document.querySelector(".recent-album-cover2").setAttribute("value", response.albums.items[1].id)
-
-                document.querySelector(".new-release-album-name2").innerHTML = (response.albums.items[1].name)
-                document.querySelector(".new-release-artist-name2").innerHTML = (response.albums.items[1].artists[0].name)
+    var queryUrl = "https://api.spotify.com/v1/browse/new-releases"
 
 
-                document.querySelector(".recent-album-cover3").setAttribute("src", response.albums.items[2].images[0].url)
-                document.querySelector(".recent-album-cover3").setAttribute("value", response.albums.items[2].id)
-                document.querySelector(".new-release-album-name3").innerHTML = (response.albums.items[2].name)
-                document.querySelector(".new-release-artist-name3").innerHTML = (response.albums.items[2].artists[0].name)
+    $.ajax({
+        url: queryUrl,
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
+
+            console.log(response)
+            // for (let i = 0; i < 6 + 1; i++) {
+
+            document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
+
+            document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
+
+            document.querySelector(".new-release-album-name1").innerHTML = (response.albums.items[0].name)
+            document.querySelector(".new-release-artist-name1").innerHTML = (response.albums.items[0].artists[0].name)
+
+            document.querySelector(".recent-album-cover2").setAttribute("src", response.albums.items[1].images[0].url)
+            document.querySelector(".recent-album-cover2").setAttribute("value", response.albums.items[1].id)
+
+            document.querySelector(".new-release-album-name2").innerHTML = (response.albums.items[1].name)
+            document.querySelector(".new-release-artist-name2").innerHTML = (response.albums.items[1].artists[0].name)
 
 
-                document.querySelector(".recent-album-cover4").setAttribute("src", response.albums.items[3].images[0].url)
-                document.querySelector(".recent-album-cover4").setAttribute("value", response.albums.items[3].id)
-                document.querySelector(".new-release-album-name4").innerHTML = (response.albums.items[3].name)
-                document.querySelector(".new-release-artist-name4").innerHTML = (response.albums.items[3].artists[0].name)
+            document.querySelector(".recent-album-cover3").setAttribute("src", response.albums.items[2].images[0].url)
+            document.querySelector(".recent-album-cover3").setAttribute("value", response.albums.items[2].id)
+            document.querySelector(".new-release-album-name3").innerHTML = (response.albums.items[2].name)
+            document.querySelector(".new-release-artist-name3").innerHTML = (response.albums.items[2].artists[0].name)
 
 
-                document.querySelector(".recent-album-cover5").setAttribute("src", response.albums.items[4].images[0].url)
-                document.querySelector(".recent-album-cover5").setAttribute("value", response.albums.items[4].id)
-                document.querySelector(".new-release-album-name5").innerHTML = (response.albums.items[4].name)
-                document.querySelector(".new-release-artist-name5").innerHTML = (response.albums.items[4].artists[0].name)
-
-                document.querySelector(".recent-album-cover6").setAttribute("src", response.albums.items[5].images[0].url)
-                document.querySelector(".recent-album-cover6").setAttribute("value", response.albums.items[5].id)
-                document.querySelector(".new-release-album-name6").innerHTML = (response.albums.items[5].name)
-                document.querySelector(".new-release-artist-name6").innerHTML = (response.albums.items[5].artists[0].name)
+            document.querySelector(".recent-album-cover4").setAttribute("src", response.albums.items[3].images[0].url)
+            document.querySelector(".recent-album-cover4").setAttribute("value", response.albums.items[3].id)
+            document.querySelector(".new-release-album-name4").innerHTML = (response.albums.items[3].name)
+            document.querySelector(".new-release-artist-name4").innerHTML = (response.albums.items[3].artists[0].name)
 
 
+            document.querySelector(".recent-album-cover5").setAttribute("src", response.albums.items[4].images[0].url)
+            document.querySelector(".recent-album-cover5").setAttribute("value", response.albums.items[4].id)
+            document.querySelector(".new-release-album-name5").innerHTML = (response.albums.items[4].name)
+            document.querySelector(".new-release-artist-name5").innerHTML = (response.albums.items[4].artists[0].name)
 
-
-            }
-        })
-    }
+            document.querySelector(".recent-album-cover6").setAttribute("src", response.albums.items[5].images[0].url)
+            document.querySelector(".recent-album-cover6").setAttribute("value", response.albums.items[5].id)
+            document.querySelector(".new-release-album-name6").innerHTML = (response.albums.items[5].name)
+            document.querySelector(".new-release-artist-name6").innerHTML = (response.albums.items[5].artists[0].name)
 
 
 
 
-    function getTop() {
-
-        var queryUrl = "https://api.spotify.com/v1/me/albums?limit=50&offset=5"
-
-
-        $.ajax({
-            url: queryUrl,
-            type: "GET",
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
-            success: function (response) {
-                console.log(response)
-
-                var check = Math.floor(Math.random() * 20)
-                var check2 = Math.floor(Math.random() * 20)
-                var check3 = Math.floor(Math.random() * 20)
-                var check4 = Math.floor(Math.random() * 20)
-                var check5 = Math.floor(Math.random() * 20)
-                var check6 = Math.floor(Math.random() * 20)
-                var check7 = Math.floor(Math.random() * 20)
-                var check8 = Math.floor(Math.random() * 20)
-                document.querySelector(".album-picks-for-you1").setAttribute("src", response.items[check].album.images[0].url)
-                document.querySelector(".album-picks-for-you1").setAttribute("value", response.items[check].album.id)
-                document.querySelector(".picks-album1").innerHTML = (response.items[check].album.name)
-                document.querySelector(".picks-artist1").innerHTML = (response.items[check].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you2").setAttribute("src", response.items[check2].album.images[0].url)
-                document.querySelector(".album-picks-for-you2").setAttribute("value", response.items[check2].album.id)
-                document.querySelector(".picks-album2").innerHTML = (response.items[check2].album.name)
-                document.querySelector(".picks-artist2").innerHTML = (response.items[check2].album.artists[0].name)
-
-
-                document.querySelector(".album-picks-for-you3").setAttribute("src", response.items[check3].album.images[0].url)
-                document.querySelector(".album-picks-for-you3").setAttribute("value", response.items[check3].album.id)
-                document.querySelector(".picks-album3").innerHTML = (response.items[check3].album.name)
-                document.querySelector(".picks-artist3").innerHTML = (response.items[check3].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you4").setAttribute("src", response.items[check4].album.images[0].url)
-                document.querySelector(".album-picks-for-you4").setAttribute("value", response.items[check4].album.id)
-                document.querySelector(".picks-album4").innerHTML = (response.items[check4].album.name)
-                document.querySelector(".picks-artist4").innerHTML = (response.items[check4].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you5").setAttribute("src", response.items[check5].album.images[0].url)
-                document.querySelector(".album-picks-for-you5").setAttribute("value", response.items[check5].album.id)
-                document.querySelector(".picks-album5").innerHTML = (response.items[check5].album.name)
-                document.querySelector(".picks-artist5").innerHTML = (response.items[check5].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you6").setAttribute("src", response.items[check6].album.images[0].url)
-                document.querySelector(".album-picks-for-you6").setAttribute("value", response.items[check6].album.id)
-                document.querySelector(".picks-album6").innerHTML = (response.items[check6].album.name)
-                document.querySelector(".picks-artist6").innerHTML = (response.items[check6].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you7").setAttribute("src", response.items[check7].album.images[0].url)
-                document.querySelector(".album-picks-for-you7").setAttribute("value", response.items[check7].album.id)
-                document.querySelector(".picks-album7").innerHTML = (response.items[check7].album.name)
-                document.querySelector(".picks-artist7").innerHTML = (response.items[check7].album.artists[0].name)
-
-                document.querySelector(".album-picks-for-you8").setAttribute("src", response.items[check8].album.images[0].url)
-                document.querySelector(".album-picks-for-you8").setAttribute("value", response.items[check8].album.id)
-                document.querySelector(".picks-album8").innerHTML = (response.items[check8].album.name)
-                document.querySelector(".picks-artist8").innerHTML = (response.items[check8].album.artists[0].name)
+        }
+    })
+}
 
 
 
 
-                document.querySelector(".on-this-day-cover1").setAttribute("src", response.items[20].album.images[0].url)
-                document.querySelector(".on-this-day-cover1").setAttribute("value", response.items[20].album.id)
-                document.querySelector(".on-this-day-album-name1").innerHTML = (response.items[20].album.name)
-                document.querySelector(".on-this-day-artist-name1").innerHTML = (response.items[20].album.artists[0].name)
+function getTop() {
+
+    var queryUrl = "https://api.spotify.com/v1/me/albums?limit=50&offset=5"
 
 
-                document.querySelector(".on-this-day-cover2").setAttribute("src", response.items[21].album.images[0].url)
-                document.querySelector(".on-this-day-cover2").setAttribute("value", response.items[21].album.id)
+    $.ajax({
+        url: queryUrl,
+        type: "GET",
+        beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+        success: function (response) {
+            console.log(response)
 
-                document.querySelector(".on-this-day-album-name2").innerHTML = (response.items[21].album.name)
-                document.querySelector(".on-this-day-artist-name2").innerHTML = (response.items[21].album.artists[0].name)
+            var check = Math.floor(Math.random() * 20)
+            var check2 = Math.floor(Math.random() * 20)
+            var check3 = Math.floor(Math.random() * 20)
+            var check4 = Math.floor(Math.random() * 20)
+            var check5 = Math.floor(Math.random() * 20)
+            var check6 = Math.floor(Math.random() * 20)
+            var check7 = Math.floor(Math.random() * 20)
+            var check8 = Math.floor(Math.random() * 20)
+            document.querySelector(".album-picks-for-you1").setAttribute("src", response.items[check].album.images[0].url)
+            document.querySelector(".album-picks-for-you1").setAttribute("value", response.items[check].album.id)
+            document.querySelector(".picks-album1").innerHTML = (response.items[check].album.name)
+            document.querySelector(".picks-artist1").innerHTML = (response.items[check].album.artists[0].name)
+
+            document.querySelector(".album-picks-for-you2").setAttribute("src", response.items[check2].album.images[0].url)
+            document.querySelector(".album-picks-for-you2").setAttribute("value", response.items[check2].album.id)
+            document.querySelector(".picks-album2").innerHTML = (response.items[check2].album.name)
+            document.querySelector(".picks-artist2").innerHTML = (response.items[check2].album.artists[0].name)
 
 
-                document.querySelector(".on-this-day-cover3").setAttribute("src", response.items[22].album.images[0].url)
-                document.querySelector(".on-this-day-cover3").setAttribute("value", response.items[22].album.id)
+            document.querySelector(".album-picks-for-you3").setAttribute("src", response.items[check3].album.images[0].url)
+            document.querySelector(".album-picks-for-you3").setAttribute("value", response.items[check3].album.id)
+            document.querySelector(".picks-album3").innerHTML = (response.items[check3].album.name)
+            document.querySelector(".picks-artist3").innerHTML = (response.items[check3].album.artists[0].name)
 
-                document.querySelector(".on-this-day-album-name3").innerHTML = (response.items[22].album.name)
-                document.querySelector(".on-this-day-artist-name3").innerHTML = (response.items[22].album.artists[0].name)
+            document.querySelector(".album-picks-for-you4").setAttribute("src", response.items[check4].album.images[0].url)
+            document.querySelector(".album-picks-for-you4").setAttribute("value", response.items[check4].album.id)
+            document.querySelector(".picks-album4").innerHTML = (response.items[check4].album.name)
+            document.querySelector(".picks-artist4").innerHTML = (response.items[check4].album.artists[0].name)
+
+            document.querySelector(".album-picks-for-you5").setAttribute("src", response.items[check5].album.images[0].url)
+            document.querySelector(".album-picks-for-you5").setAttribute("value", response.items[check5].album.id)
+            document.querySelector(".picks-album5").innerHTML = (response.items[check5].album.name)
+            document.querySelector(".picks-artist5").innerHTML = (response.items[check5].album.artists[0].name)
+
+            document.querySelector(".album-picks-for-you6").setAttribute("src", response.items[check6].album.images[0].url)
+            document.querySelector(".album-picks-for-you6").setAttribute("value", response.items[check6].album.id)
+            document.querySelector(".picks-album6").innerHTML = (response.items[check6].album.name)
+            document.querySelector(".picks-artist6").innerHTML = (response.items[check6].album.artists[0].name)
+
+            document.querySelector(".album-picks-for-you7").setAttribute("src", response.items[check7].album.images[0].url)
+            document.querySelector(".album-picks-for-you7").setAttribute("value", response.items[check7].album.id)
+            document.querySelector(".picks-album7").innerHTML = (response.items[check7].album.name)
+            document.querySelector(".picks-artist7").innerHTML = (response.items[check7].album.artists[0].name)
+
+            document.querySelector(".album-picks-for-you8").setAttribute("src", response.items[check8].album.images[0].url)
+            document.querySelector(".album-picks-for-you8").setAttribute("value", response.items[check8].album.id)
+            document.querySelector(".picks-album8").innerHTML = (response.items[check8].album.name)
+            document.querySelector(".picks-artist8").innerHTML = (response.items[check8].album.artists[0].name)
 
 
-            }
-        })
-    }
+
+
+            document.querySelector(".on-this-day-cover1").setAttribute("src", response.items[20].album.images[0].url)
+            document.querySelector(".on-this-day-cover1").setAttribute("value", response.items[20].album.id)
+            document.querySelector(".on-this-day-album-name1").innerHTML = (response.items[20].album.name)
+            document.querySelector(".on-this-day-artist-name1").innerHTML = (response.items[20].album.artists[0].name)
+
+
+            document.querySelector(".on-this-day-cover2").setAttribute("src", response.items[21].album.images[0].url)
+            document.querySelector(".on-this-day-cover2").setAttribute("value", response.items[21].album.id)
+
+            document.querySelector(".on-this-day-album-name2").innerHTML = (response.items[21].album.name)
+            document.querySelector(".on-this-day-artist-name2").innerHTML = (response.items[21].album.artists[0].name)
+
+
+            document.querySelector(".on-this-day-cover3").setAttribute("src", response.items[22].album.images[0].url)
+            document.querySelector(".on-this-day-cover3").setAttribute("value", response.items[22].album.id)
+
+            document.querySelector(".on-this-day-album-name3").innerHTML = (response.items[22].album.name)
+            document.querySelector(".on-this-day-artist-name3").innerHTML = (response.items[22].album.artists[0].name)
+
+
+        }
+    })
+}
 
 
 
@@ -230,13 +230,13 @@ function getPlaylists() {
         success: function (response) {
             document.querySelector("ul").innerText = (response.items[0].name)
             document.querySelector("ul").setAttribute("value", response.items[0].id)
-            $("ul").on( function () {
+            document.querySelector("ul").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[0].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            })
+            }
             document.querySelector("ul:nth-child(2)").innerText = (response.items[1].name)
             document.querySelector("ul:nth-child(2)").setAttribute("value", response.items[1].id)
             document.querySelector("ul:nth-child(2)").onClick = function () {
@@ -245,7 +245,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
 
             document.querySelector("ul:nth-child(3)").innerText = (response.items[2].name)
@@ -256,7 +256,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
             document.querySelector("ul:nth-child(4)").innerText = (response.items[3].name)
             document.querySelector("ul:nth-child(4)").setAttribute("value", response.items[3].id)
             document.querySelector("ul:nth-child(4)").onClick = function () {
@@ -265,7 +265,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(5)").innerText = (response.items[4].name)
             document.querySelector("ul:nth-child(5)").setAttribute("value", response.items[4].id)
@@ -275,27 +275,27 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(6)").innerText = (response.items[5].name)
             document.querySelector("ul:nth-child(6)").setAttribute("value", response.items[5].id)
-            document.querySelector("ul:nth-child(6)").onClick =  function () {
+            document.querySelector("ul:nth-child(6)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[5].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[5].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(7)").innerText = (response.items[6].name)
             document.querySelector("ul:nth-child(7)").setAttribute("value", response.items[6].id)
-            document.querySelector("ul:nth-child(7)").onClick =  function () {
+            document.querySelector("ul:nth-child(7)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[6].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[6].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(8)").innerText = (response.items[7].name)
             document.querySelector("ul:nth-child(8)").setAttribute("value", response.items[7].id)
@@ -305,17 +305,17 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(9)").innerText = (response.items[8].name)
             document.querySelector("ul:nth-child(9)").setAttribute("value", response.items[8].id)
-            document.querySelector("ul:nth-child(9)").onClick =  function () {
+            document.querySelector("ul:nth-child(9)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[8].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[8].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(10)").innerText = (response.items[9].name)
             document.querySelector("ul:nth-child(10)").setAttribute("value", response.items[9].id)
@@ -325,7 +325,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(11)").innerText = (response.items[10].name)
             document.querySelector("ul:nth-child(11)").setAttribute("value", response.items[10].id)
@@ -335,7 +335,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(12)").innerText = (response.items[11].name)
             document.querySelector("ul:nth-child(12)").setAttribute("value", response.items[11].id)
@@ -345,7 +345,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(13)").innerText = (response.items[12].name)
             document.querySelector("ul:nth-child(13)").setAttribute("value", response.items[12].id)
@@ -355,7 +355,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(14)").innerText = (response.items[13].name)
             document.querySelector("ul:nth-child(14)").setAttribute("value", response.items[13].id)
@@ -365,9 +365,9 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
-            document.querySelector("ul:nth-child(15)").innerText = response.items[14].name
+            document.querySelector("ul:nth-child(15)").innerText = (response.items[14].name)
             document.querySelector("ul:nth-child(15)").setAttribute("value", response.items[14].id)
             document.querySelector("ul:nth-child(15)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[14].images[0].url)
@@ -375,8 +375,8 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
-            document.querySelector("ul:nth-child(16)").innerText = response.items[15].name
+            }
+            document.querySelector("ul:nth-child(16)").innerText = (response.items[15].name)
             document.querySelector("ul:nth-child(16)").setAttribute("value", response.items[15].id)
             document.querySelector("ul:nth-child(16)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[15].images[0].url)
@@ -384,7 +384,7 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(17)").innerText = (response.items[16].name)
             document.querySelector("ul:nth-child(17)").setAttribute("value", response.items[16].id)
@@ -394,17 +394,17 @@ function getPlaylists() {
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(18)").innerText = (response.items[17].name)
             document.querySelector("ul:nth-child(18)").setAttribute("value", response.items[17].id)
-            document.querySelector("ul:nth-child(18)").onClick =  function () {
+            document.querySelector("ul:nth-child(18)").onClick = function () {
                 document.querySelector(".album-cover-page").setAttribute("src", response.items[17].images[0].url)
                 document.querySelector(".album-page-name").innerText = (response.items[17].name)
                 document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            } 
+            }
 
             document.querySelector("ul:nth-child(19)").innerText = (response.items[18].name)
             document.querySelector("ul:nth-child(19)").setAttribute("value", response.items[18].id)
@@ -473,8 +473,8 @@ function getPlaylistTracks() {
 
 
                     document.querySelector(".playlist-artist").onClick = function () {
-                        document.querySelector(".grid-container2").style.display =  "inline-grid";
-                        document.querySelector(".grid-container3").style.display =  "none"
+                        document.querySelector(".grid-container2").style.display = "inline-grid";
+                        document.querySelector(".grid-container3").style.display = "none";
                         $(".track-list").empty();
                         searchSpotifyNameClone(response.items[i].track.artists[0].id)
                         searchRelatedArtists(response.items[i].track.artists[0].id)
@@ -484,7 +484,7 @@ function getPlaylistTracks() {
 
 
 
-                    } 
+                    }
                     document.querySelector(".next-track-playlist").onClick = function () {
                         document.querySelector(".album-cover").setAttribute("src", response.items[i + 1].track.album.images[0].url)
 
@@ -495,7 +495,7 @@ function getPlaylistTracks() {
                         document.querySelector(".now-playing-artist").html(response.items[i++].track.artist.name) //this makes it work for 
 
 
-                    } 
+                    }
 
                     document.querySelector(".previous-track-playlist").onClick = function () {
 
@@ -507,7 +507,7 @@ function getPlaylistTracks() {
                         document.querySelector("#preview-player").setAttribute("src", response.items[i - 1].track.preview_url)
                         document.querySelector(".now-playing-artist").html(response.items[i++].track.artist.name) //this makes it work for 
 
-                    } 
+                    }
 
                 }
             }
@@ -523,12 +523,12 @@ document.querySelector(".genre-img").onClick = function (event) {
     event.preventDefault()
     document.querySelector(".album-page-title").innerText = ("Playlist")
 
-    document.querySelector(".grid-container3").style.display =  "inline-grid";
-    document.querySelector(".grid-container").style.display =  "hidden";
-    document.querySelector(".grid-container2").style.display =  "hidden";
+    document.querySelector(".grid-container3").style.display = "inline-grid";
+    document.querySelector(".grid-container").style.display = "hidden";
+    document.querySelector(".grid-container2").style.display = "hidden";
     getPlaylistTracks()
 
-} 
+}
 
 document.querySelector(".cowboy").onClick = function (event) {
     event.preventDefault()
@@ -536,8 +536,8 @@ document.querySelector(".cowboy").onClick = function (event) {
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/cowboy.svg")
-} 
-document.querySelector(".playground").onClick =  function (event) {
+}
+document.querySelector(".playground").onClick = function (event) {
     event.preventDefault()
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/playground.svg")
@@ -545,7 +545,7 @@ document.querySelector(".playground").onClick =  function (event) {
 
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 
 document.querySelector(".psychedelic").onClick = function (event) {
     event.preventDefault()
@@ -554,7 +554,7 @@ document.querySelector(".psychedelic").onClick = function (event) {
     document.querySelector(".album-cover-page").setAttribute("src", "assets/Joshua Tree.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 
 document.querySelector(".rocknroll").onClick = function (event) {
     event.preventDefault()
@@ -563,7 +563,7 @@ document.querySelector(".rocknroll").onClick = function (event) {
     document.querySelector(".album-cover-page").setAttribute("src", "assets/locked.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 
 document.querySelector(".metal").onClick = function (event) {
     event.preventDefault()
@@ -572,7 +572,7 @@ document.querySelector(".metal").onClick = function (event) {
     document.querySelector(".album-cover-page").setAttribute("src", "assets/pitchfork.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 document.querySelector(".shattuck").onClick = function (event) {
     event.preventDefault()
     document.querySelector(".album-page-name").innerText = ("Noise Rock")
@@ -580,15 +580,15 @@ document.querySelector(".shattuck").onClick = function (event) {
     document.querySelector(".album-cover-page").setAttribute("src", "assets/shattuck.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
-document.querySelector(".jazz").onClick =  function (event) {
+}
+document.querySelector(".jazz").onClick = function (event) {
     event.preventDefault()
     document.querySelector(".album-page-name").innerText = ("Jazz")
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/jazz.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 document.querySelector(".pancakes").onClick = function (event) {
     event.preventDefault()
     document.querySelector(".album-page-name").innerText = ("Morning")
@@ -596,7 +596,7 @@ document.querySelector(".pancakes").onClick = function (event) {
     document.querySelector(".album-cover-page").setAttribute("src", "assets/pancakes.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-} 
+}
 
 
 //get artists top tracks and album covers
@@ -638,7 +638,7 @@ function searchSpotify(id) {
                 document.querySelector(".now-playing-song").innerText = (response.tracks[0].name)
                 document.querySelector(".now-playing-artist").innerText = (response.tracks[0].artists[0].name)
                 document.querySelector(".album-cover").setAttribute("src", response.tracks[0].album.images[0].url)
-            } 
+            }
             document.querySelector(".popular-songs2").onClick = function (event) {
                 event.preventDefault();
                 document.querySelector("#preview-player").setAttribute("src", response.tracks[1].preview_url)
@@ -649,8 +649,8 @@ function searchSpotify(id) {
 
 
 
-            } 
-            document.querySelector(".popular-songs3").onClick =  function (event) {
+            }
+            document.querySelector(".popular-songs3").onClick = function (event) {
                 event.preventDefault();
                 document.querySelector("#preview-player").setAttribute("src", response.tracks[2].preview_url)
                 document.querySelector(".now-playing-song").innerText = (response.tracks[2].name)
@@ -659,8 +659,8 @@ function searchSpotify(id) {
                 document.querySelector(".album-cover").setAttribute("src", response.tracks[2].album.images[0].url)
 
 
-            } 
-            document.querySelector(".popular-songs4").onClick =  function (event) {
+            }
+            document.querySelector(".popular-songs4").onClick = function (event) {
                 event.preventDefault();
                 document.querySelector("#preview-player").setAttribute("src", response.tracks[3].preview_url)
                 document.querySelector(".now-playing-song").innerText = (response.tracks[3].name)
@@ -669,7 +669,7 @@ function searchSpotify(id) {
                 document.querySelector(".album-cover").setAttribute("src", response.tracks[3].album.images[0].url)
 
             }
-            document.querySelector(".popular-songs5").onClick =  function (event) {
+            document.querySelector(".popular-songs5").onClick = function (event) {
                 event.preventDefault();
                 document.querySelector("#preview-player").setAttribute("src", response.tracks[4].preview_url)
                 document.querySelector(".now-playing-song").innerText = (response.tracks[4].name)
@@ -677,7 +677,7 @@ function searchSpotify(id) {
                 document.querySelector(".now-playing-artist").innerText = (response.tracks[4].artists[0].name)
                 document.querySelector(".album-cover").setAttribute("src", response.tracks[4].album.images[0].url)
 
-            } 
+            }
 
 
 
@@ -702,7 +702,7 @@ function searchSpotifyName() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            document.querySelector(".header-image").style.backgroundImage =  "url(" + response.artists.items[0].images[0].url + ")"
+            document.querySelector(".header-image").style.backgroundImage = "url(" + response.artists.items[0].images[0].url + ")"
 
             var artistName = (response.artists.items[0].name)
             var artistArray = artistName.split("")
@@ -774,7 +774,7 @@ function searchSpotifyNameClone(id) {
                 document.querySelector(".band-header2").innerText = (artistSplit)
                 document.querySelector(".band-header2").style.transform = "scaleX(-1) rotate(180deg)";
                 document.querySelector(".band-header").style.fontSize = "5em";
-                document.querySelector(".band-header2").style.fontSize =  "5em";
+                document.querySelector(".band-header2").style.fontSize = "5em";
 
 
             }
@@ -782,8 +782,8 @@ function searchSpotifyNameClone(id) {
                 document.querySelector(".band-header").innerText = (artistSplit[0])
                 document.querySelector(".band-header2").innerText = (artistSplit[1])
                 document.querySelector(".band-header2").style.transform = "none";
-                document.querySelector(".band-header").style.fontSize= "5em";
-                document.querySelector(".band-header2").style.fontSize =  "5em";
+                document.querySelector(".band-header").style.fontSize = "5em";
+                document.querySelector(".band-header2").style.fontSize = "5em";
 
 
 
@@ -792,9 +792,9 @@ function searchSpotifyNameClone(id) {
             if (artistSplit.length === 3) {
                 document.querySelector(".band-header").innerText = (artistSplit[0]);
                 document.querySelector(".band-header2").innerText = (artistSplit[1] + " " + " " + artistSplit[2])
-                document.querySelector(".band-header2").style.transform= "none";
-                document.querySelector(".band-header").fontSize =  "5em";
-                document.querySelector(".band-header2").style.fontSize= "5em";
+                document.querySelector(".band-header2").style.transform = "none";
+                document.querySelector(".band-header").fontSize = "5em";
+                document.querySelector(".band-header2").style.fontSize = "5em";
 
 
             }
@@ -805,14 +805,14 @@ function searchSpotifyNameClone(id) {
             }
 
             if (artistArray.length > 10) {
-                document.querySelector(".band-header").style.fontSize= "4em";
-                document.querySelector(".band-header2").style.fontSize= "4em";
+                document.querySelector(".band-header").style.fontSize = "4em";
+                document.querySelector(".band-header2").style.fontSize = "4em";
 
             }
 
             if (artistArray.length > 12) {
-                document.querySelector(".band-header").style.fontSize =  "3em";
-                document.querySelector(".band-header2").style.fontSize =  "3em";
+                document.querySelector(".band-header").style.fontSize = "3em";
+                document.querySelector(".band-header2").style.fontSize = "3em";
 
             }
 
@@ -911,138 +911,138 @@ function searchAlbumCovers(id) {
 
 
 
-    function getAlbumTracklist() {
-        document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").click(function () {
+function getAlbumTracklist() {
+    document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").click(function () {
 
-            var albumId = document.querySelector(this).setAttribute("value");
-            var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
+        var albumId = document.querySelector(this).setAttribute("value");
+        var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
 
-            $.ajax({
-                url: queryUrl,
-                type: "GET",
-                beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
-                success: function (response) {
-                    console.log(response)
-                    for (let i = 0; i < response.items.length + 1; i++) {
+        $.ajax({
+            url: queryUrl,
+            type: "GET",
+            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            success: function (response) {
+                console.log(response)
+                for (let i = 0; i < response.items.length + 1; i++) {
 
-                        let tracklistDiv = document.querySelector("<div>")
-                        let results = response.items[i].name
+                    let tracklistDiv = document.querySelector("<div>")
+                    let results = response.items[i].name
 
-                        tracklistDisplay = document.querySelector("<p>").innerText = (results).addClass("track")
-                        let trackHr = document.querySelector("<hr>")
-                        let albumTrackDuration = response.items[i].duration_ms
-                        let newAlbumTrackTime = timeConversiaddEventListener(albumTrackDuration)
-                        let trackTime = document.querySelector("<p>").innerText = (newAlbumTrackTime).addClass("track-time")
-                        let trackNumber = (response.items[i].track_number)
-                        document.querySelector(".next-track").addClass("next-track-album")
-                        document.querySelector(".previous-track").addClass("previous-track-album")
+                    tracklistDisplay = document.querySelector("<p>").innerText = (results).addClass("track")
+                    let trackHr = document.querySelector("<hr>")
+                    let albumTrackDuration = response.items[i].duration_ms
+                    let newAlbumTrackTime = timeConversiaddEventListener(albumTrackDuration)
+                    let trackTime = document.querySelector("<p>").innerText = (newAlbumTrackTime).addClass("track-time")
+                    let trackNumber = (response.items[i].track_number)
+                    document.querySelector(".next-track").addClass("next-track-album")
+                    document.querySelector(".previous-track").addClass("previous-track-album")
 
-                        tracklistDiv.html(tracklistDisplay)
+                    tracklistDiv.html(tracklistDisplay)
 
-                        document.querySelector(".track-list").append(tracklistDiv)
-                        document.querySelector(".track-list").append(trackHr)
-                        document.querySelector(tracklistDiv).append(trackTime)
-                        document.querySelector(tracklistDiv).prepend(trackNumber + " " + " " + " " + " ").addClass("track-number")
-
-
-                        document.querySelector(".track").onClick = function () {
-                            document.querySelector("#preview-player").setAttribute("src", response.items[i].preview_url)
-                            document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
-
-                            document.querySelector(".now-playing-song").html(response.items[i].name)
-
-                            document.querySelector(".now-playing-artist").html(response.items[i].artists[0].name)
-
-                            document.querySelector(".now-playing-artist").html(response.items[i].track.artists[0].name)//wtf 
+                    document.querySelector(".track-list").append(tracklistDiv)
+                    document.querySelector(".track-list").append(trackHr)
+                    document.querySelector(tracklistDiv).append(trackTime)
+                    document.querySelector(tracklistDiv).prepend(trackNumber + " " + " " + " " + " ").addClass("track-number")
 
 
-                        } 
+                    document.querySelector(".track").onClick = function () {
+                        document.querySelector("#preview-player").setAttribute("src", response.items[i].preview_url)
+                        document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
 
+                        document.querySelector(".now-playing-song").html(response.items[i].name)
 
-                        document.querySelector(".next-track-album").onClick = function () {
-                            document.querySelector("#preview-player").setAttribute("src", response.items[i + 1].preview_url)
+                        document.querySelector(".now-playing-artist").html(response.items[i].artists[0].name)
 
-                            document.querySelector(".now-playing-song").html(response.items[i + 1].name)
-
-                            document.querySelector(".now-playing-artist").html(response.items[i + 1].artists[0].name)
-                            document.querySelector(".now-playing-artist").html(response.items[i++].track.artists[0].name)//wtf 
-
-                            console.log("working")
-
-                        } 
-                        document.querySelector(".previous-track").onClick =  function () {
-                            document.querySelector("#preview-player").setAttribute("src", response.items[i - 1].preview_url)
-
-                            document.querySelector(".now-playing-song").html(response.items[i - 1].name)
-
-                            document.querySelector(".now-playing-artist").html(response.items[i - 1].artists[0].name)
-                            document.querySelector(".now-playing-artist").html(response.items[i++].track.artists[0].name)//wtf 
-
-                            console.log("working")
-
-                        } 
-
+                        document.querySelector(".now-playing-artist").html(response.items[i].track.artists[0].name)//wtf 
 
 
                     }
 
+
+                    document.querySelector(".next-track-album").onClick = function () {
+                        document.querySelector("#preview-player").setAttribute("src", response.items[i + 1].preview_url)
+
+                        document.querySelector(".now-playing-song").html(response.items[i + 1].name)
+
+                        document.querySelector(".now-playing-artist").html(response.items[i + 1].artists[0].name)
+                        document.querySelector(".now-playing-artist").html(response.items[i++].track.artists[0].name)//wtf 
+
+                        console.log("working")
+
+                    }
+                    document.querySelector(".previous-track").onClick = function () {
+                        document.querySelector("#preview-player").setAttribute("src", response.items[i - 1].preview_url)
+
+                        document.querySelector(".now-playing-song").html(response.items[i - 1].name)
+
+                        document.querySelector(".now-playing-artist").html(response.items[i - 1].artists[0].name)
+                        document.querySelector(".now-playing-artist").html(response.items[i++].track.artists[0].name)//wtf 
+
+                        console.log("working")
+
+                    }
+
+
+
                 }
-            })
+
+            }
         })
+    })
 
 
+}
+
+
+
+function getAlbumInfo() {
+    document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick = function () {
+        var albumId = document.querySelector(this).setAttribute("value");
+        var queryUrl = "https://api.spotify.com/v1/albums/" + albumId
+
+        $.ajax({
+            url: queryUrl,
+            type: "GET",
+            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            success: function (response) {
+                console.log(response)
+
+                document.querySelector(".track-list").onClick(function (event) {
+                    event.preventDefault();
+                    console.log("plesework")
+                    document.querySelector(".album-cover").setAttribute("src", response.images[0].url)
+
+
+                })
+                let releaseDate = (response.release_date);
+                let releaseYear = releaseDate.split("-");
+                document.querySelector(".album-page-title").innerText = ("Album")
+                document.querySelector(".album-cover-page").setAttribute("src", response.images[0].url)
+                document.querySelector(".album-page-name").innerText = (response.name)
+                document.querySelector(".by-artist-album").innerText = (response.artists[0].name)
+                document.querySelector(".release-date").innerText = (releaseYear[0] + "-" + response.total_tracks + " Tracks")
+                document.querySelector(".label").html(response.label)
+
+                document.querySelector(".by-artist-album").onClick(function (event) {
+                    event.preventDefault();
+                    let backToArtist = document.querySelector(".by-artist-album").innerText()
+                    searchSpotifyNameClone(response.artists[0].id)
+                    searchRelatedArtists(response.artists[0].id)
+                    searchSpotify(response.artists[0].id);
+                    searchAlbumCovers(response.artists[0].id);
+
+                    document.querySelector(".grid-container2").style.display = "inline-grid";
+                    document.querySelector(".grid-container3").style.display = "none";
+                    document.querySelector(".track-list").empty()
+
+                })
+
+            }
+        })
     }
 
 
-
-    function getAlbumInfo() {
-        document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick =  function () {
-            var albumId = document.querySelector(this).setAttribute("value");
-            var queryUrl = "https://api.spotify.com/v1/albums/" + albumId
-
-            $.ajax({
-                url: queryUrl,
-                type: "GET",
-                beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
-                success: function (response) {
-                    console.log(response)
-
-                    document.querySelector(".track-list").onClick( function (event) {
-                        event.preventDefault();
-                        console.log("plesework")
-                        document.querySelector(".album-cover").setAttribute("src", response.images[0].url)
-
-
-                    })
-                    let releaseDate = (response.release_date);
-                    let releaseYear = releaseDate.split("-");
-                    document.querySelector(".album-page-title").innerText = ("Album")
-                    document.querySelector(".album-cover-page").setAttribute("src", response.images[0].url)
-                    document.querySelector(".album-page-name").innerText = (response.name)
-                    document.querySelector(".by-artist-album").innerText = (response.artists[0].name)
-                    document.querySelector(".release-date").innerText = (releaseYear[0] + "-" + response.total_tracks + " Tracks")
-                    document.querySelector(".label").html(response.label)
-
-                    document.querySelector(".by-artist-album").onClick( function (event) {
-                        event.preventDefault();
-                        let backToArtist = document.querySelector(".by-artist-album").innerText()
-                        searchSpotifyNameClone(response.artists[0].id)
-                        searchRelatedArtists(response.artists[0].id)
-                        searchSpotify(response.artists[0].id);
-                        searchAlbumCovers(response.artists[0].id);
-
-                        document.querySelector(".grid-container2").style.display =  "inline-grid";
-                        document.querySelector(".grid-container3").style.display =  "none";
-                        document.querySelector(".track-list").empty()
-
-                    })
-
-                }
-            })
-        }
-
-
-    }
+}
 
 
 //get artists related artists
@@ -1080,21 +1080,21 @@ function searchRelatedArtists(id) {
                 searchSpotify(response.artists[0].id);
                 searchAlbumCovers(response.artists[0].id);
                 searchSpotifyNameClone(response.artists[0].id); //this one doesn't work
-            } 
-            document.querySelector(".circle2").onClick =  function (event) {
+            }
+            document.querySelector(".circle2").onClick = function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[1].id)
                 searchSpotify(response.artists[1].id);
                 searchAlbumCovers(response.artists[1].id);
                 searchSpotifyNameClone(response.artists[1].id); //this one doesn't work
-            } 
+            }
             document.querySelector(".circle3").onClick = function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[2].id)
                 searchSpotify(response.artists[2].id);
                 searchAlbumCovers(response.artists[2].id);
                 searchSpotifyNameClone(response.artists[2].id); //this one doesn't work
-            } 
+            }
             document.querySelector(".circle4").onClick = function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[3].id)
@@ -1115,11 +1115,11 @@ function timeConversiaddEventListener(ms) {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 }
 
-document.querySelector(".home").onClick= function (event) {
+document.querySelector(".home").onClick = function (event) {
     event.preventDefault();
-    document.querySelector(".grid-container4").style.display =  "inline-grid";
-    document.querySelector(".grid-container").style.display =  "hidden";
-    document.querySelector(".grid-container2").style.display =  "hidden";
+    document.querySelector(".grid-container4").style.display = "inline-grid";
+    document.querySelector(".grid-container").style.display = "hidden";
+    document.querySelector(".grid-container2").style.display = "hidden";
 
 
 }
@@ -1128,10 +1128,10 @@ document.querySelector("ul").onClick = function (event) {
     event.preventDefault();
     console.log("JESUS")
 
-    document.querySelector(".grid-container3").style.display =  "inline-grid"
-    document.querySelector(".grid-container").style.display =  "hidden"
-    document.querySelector(".grid-container2").style.display =  "hidden"
-    document.querySelector(".grid-container4").style.display =  "none"
+    document.querySelector(".grid-container3").style.display = "inline-grid"
+    document.querySelector(".grid-container").style.display = "hidden"
+    document.querySelector(".grid-container2").style.display = "hidden"
+    document.querySelector(".grid-container4").style.display = "none"
 
     $(".track-list").empty()
     getPlaylistTracks();
@@ -1140,9 +1140,9 @@ document.querySelector("ul").onClick = function (event) {
 
 }
 
-document.querySelector(".top-albums").onClick= function () {
+document.querySelector(".top-albums").onClick = function () {
 
-    document.querySelector(".grid-container3").style.display =  "inline-grid"
+    document.querySelector(".grid-container3").style.display = "inline-grid"
     getAlbumInfo()
     getAlbumTracklist();
     searchAlbumCovers();
@@ -1151,8 +1151,8 @@ document.querySelector(".top-albums").onClick= function () {
 
 }
 document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick = function () {
-    document.querySelector(".grid-container3").style.display =  "inline-grid"
-    document.querySelector(".grid-container4").style.display =  "none"
+    document.querySelector(".grid-container3").style.display = "inline-grid"
+    document.querySelector(".grid-container4").style.display = "none"
     document.querySelector(".track-list").empty()
 
 }
@@ -1161,10 +1161,10 @@ document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you
 
 document.querySelector(".browse").onClick = function (event) {
     event.preventDefault();
-    document.querySelector(".grid-container").style.display =  "inline-grid"
-    document.querySelector(".grid-container3").style.display =  "none"
-    document.querySelector(".grid-container2").style.display =  "none"
-    document.querySelector(".grid-container4").style.display =  "none"
+    document.querySelector(".grid-container").style.display = "inline-grid"
+    document.querySelector(".grid-container3").style.display = "none"
+    document.querySelector(".grid-container2").style.display = "none"
+    document.querySelector(".grid-container4").style.display = "none"
 
     $(".track-list").empty()
 
@@ -1194,58 +1194,57 @@ document.querySelector(".play-button").onClick = function (event) {
 
 document.querySelector(".popular-songs").onClick = function (event) {
     event.preventDefault();
-    console.log("bitch")
     document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
 
 
-} 
+}
 var submitCount = 0
 document.querySelector(".submit-button, .searchButton").onClick = function (event) {
     event.preventDefault();
     console.log("value: " + document.querySelector(".validationDefault01").val())
     submitCount++;
 
-    if (document.querySelector(".validationDefault01").val() !== "") {
+    if ($(".validationDefault01").val() !== "") {
         searchSpotify();
         searchSpotifyName();
         searchAlbumCovers();
 
     }
-    document.querySelector(".grid-container2").style.display =  "inline-grid";
-    document.querySelector(".grid-container3").style.display =  "none";
-    document.querySelector(".grid-container4").style.display =  "none";
+    document.querySelector(".grid-container2").style.display = "inline-grid";
+    document.querySelector(".grid-container3").style.display = "none";
+    document.querySelector(".grid-container4").style.display = "none";
 
     document.querySelector(".validationDefault01").val("")
     document.querySelector(".track-list").empty()
 
 
-} 
+}
 
-document.querySelector(".submit-button2, .searchButton").onClick =  function (event) {
+document.querySelector(".submit-button2, .searchButton").onClick = function (event) {
     event.preventDefault();
     console.log("value:" + document.querySelector(".validationDefault02").val())
     submitCount++;
-    if (document.querySelector(".validationDefault02").val() !== "") {
+    if ($(".validationDefault02").val() !== "") {
         searchSpotify();
         searchSpotifyName();
         searchAlbumCovers();
     }
 
-    document.querySelector(".validationDefault02").val("");
+    $(".validationDefault02").val("");
     $(".track-list").empty();
-    document.querySelector(".grid-container4").style.display =  "none";
+    document.querySelector(".grid-container4").style.display = "none";
 
 
-} 
+}
 document.querySelector(".submit-button3, .searchButton").onClick = function (event) {
     event.preventDefault();
     console.log("value:" + document.querySelector(".validationDefault03").val())
     submitCount++;
-    document.querySelector(".grid-container3").style.display =  "none";
-    document.querySelector(".grid-container4").style.display =  "none";
+    document.querySelector(".grid-container3").style.display = "none";
+    document.querySelector(".grid-container4").style.display = "none";
 
-    if (document.querySelector(".validationDefault03").val() !== "") {
-        document.querySelector(".grid-container2").style.display =  "inline-grid";
+    if ($(".validationDefault03").val() !== "") {
+        document.querySelector(".grid-container2").style.display = "inline-grid";
 
         searchSpotify();
         searchSpotifyName();
@@ -1259,16 +1258,16 @@ document.querySelector(".submit-button3, .searchButton").onClick = function (eve
     document.querySelector(".validationDefault03").val("")
     document.querySelector(".track-list").empty()
 
-} 
+}
 document.querySelector(".submit-button4, .searchButton").onClick = function (event) {
     event.preventDefault();
     console.log("value:" + document.querySelector(".validationDefault03").val())
     submitCount++;
-    document.querySelector(".grid-container3").style.display =  "none";
-    document.querySelector(".grid-container4").style.display =  "none";
+    document.querySelector(".grid-container3").style.display = "none";
+    document.querySelector(".grid-container4").style.display = "none";
 
-    if (document.querySelector(".validationDefault04").val() !== "") {
-        document.querySelector(".grid-container2").style.display =  "inline-grid";
+    if ($(".validationDefault04").val() !== "") {
+        document.querySelector(".grid-container2").style.display = "inline-grid";
 
         searchSpotify();
         searchSpotifyName();
@@ -1282,7 +1281,7 @@ document.querySelector(".submit-button4, .searchButton").onClick = function (eve
     document.querySelector(".validationDefault04").val("")
     $(".track-list").empty()
 
-} 
+}
 
 document.querySelector('.volume').addEventListener('change', function () {
     $('#preview-player').prop("volume", this.value);
@@ -1302,17 +1301,17 @@ function myFunctiaddEventListener() {
 var vid = document.getElementById("preview-player");
 vid.ontimeupdate = function () {
     var percentage = (vid.currentTime / vid.duration) * 100;
-    document.querySelector("#custom-seekbar span").style.width =  percentage + "%";
+    document.querySelector("#custom-seekbar span").style.width = percentage + "%";
 };
 
-document.querySelector("#custom-seekbar").onClick =  function (e) {
+document.querySelector("#custom-seekbar").onClick = function (e) {
     var offset = document.querySelector(this).offset();
     var left = (e.pageX - offset.left);
     var totalWidth = document.querySelector("#custom-seekbar").width();
     var percentage = (left / totalWidth);
     var vidTime = vid.duration * percentage;
     vid.currentTime = vidTime;
-} ;//click()
+};//click()
 
 
 
