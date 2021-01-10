@@ -1287,7 +1287,7 @@ document.querySelector(".submit-button4, .searchButton").onClick = function (eve
 } 
 
 document.querySelector('.volume').addEventListener('change', function () {
-    document.querySelector('#preview-player').prop("volume", this.value);
+    $('#preview-player').prop("volume", this.value);
 });
 
 
