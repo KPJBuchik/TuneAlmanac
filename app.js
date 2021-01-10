@@ -1078,33 +1078,33 @@ function searchRelatedArtists(id) {
             console.log(response)
             //when related artists are clicked 
 
-            document.querySelector(".circle1").onClick( function () {
+            document.querySelector(".circle1").onClick = function () {
                 searchRelatedArtists(response.artists[0].id)
                 searchSpotify(response.artists[0].id);
                 searchAlbumCovers(response.artists[0].id);
                 searchSpotifyNameClone(response.artists[0].id); //this one doesn't work
-            })
-            document.querySelector(".circle2").onClick( function (event) {
+            } 
+            document.querySelector(".circle2").onClick =  function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[1].id)
                 searchSpotify(response.artists[1].id);
                 searchAlbumCovers(response.artists[1].id);
                 searchSpotifyNameClone(response.artists[1].id); //this one doesn't work
-            })
-            document.querySelector(".circle3").onClick( function (event) {
+            } 
+            document.querySelector(".circle3").onClick = function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[2].id)
                 searchSpotify(response.artists[2].id);
                 searchAlbumCovers(response.artists[2].id);
                 searchSpotifyNameClone(response.artists[2].id); //this one doesn't work
-            })
-            document.querySelector(".circle4").onClick( function (event) {
+            } 
+            document.querySelector(".circle4").onClick = function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[3].id)
                 searchSpotify(response.artists[3].id);
                 searchAlbumCovers(response.artists[3].id);
                 searchSpotifyNameClone(response.artists[3].id); //this one doesn't work
-            })
+            }
 
         }
     });
@@ -1333,10 +1333,10 @@ var dataArray, bufferLength;
 var masterGain, stereoPanner;
 var eqSwitch = 0
 
-document.querySelector("#stop-eq").onClick = function () {
+// document.querySelector("#stop-eq").onClick = function () {
 
 
-} 
+// } 
 
 
 document.querySelector(".slider").onClick = function () {
