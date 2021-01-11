@@ -1,32 +1,32 @@
-const hash = window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce(function (initial, item) {
-        if (item) {
-            var parts = item.split('=');
-            initial[parts[0]] = decodeURIComponent(parts[1]);
-        }
-        return initial;
-    }, {});
-window.location.hash = '';
+// const hash = window.location.hash
+//     .substring(1)
+//     .split('&')
+//     .reduce(function (initial, item) {
+//         if (item) {
+//             var parts = item.split('=');
+//             initial[parts[0]] = decodeURIComponent(parts[1]);
+//         }
+//         return initial;
+//     }, {});
+// window.location.hash = '';
 
-// Set token
-let _token = hash.access_token;
+// // Set token
+// let _token = hash.access_token;
 
-const authEndpoint = 'https://accounts.spotify.com/authorize';
+// const authEndpoint = 'https://accounts.spotify.com/authorize';
 
-// Replace with your app's client ID, redirect URI and desired scopes
-const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
-const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
-const scopes = [
-    'user-read-email', 'user-library-read'
+// // Replace with your app's client ID, redirect URI and desired scopes
+// const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
+// const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
+// const scopes = [
+//     'user-read-email', 'user-library-read'
 
-];
+// ];
 
-// If there is no token, redirect to Spotify authorization
-if (!_token) {
-    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-}
+// // If there is no token, redirect to Spotify authorization
+// if (!_token) {
+//     window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+// }
 
 var count = 0
 
@@ -456,8 +456,8 @@ function getPlaylistTracks() {
 
 
                     document.querySelector(".playlist-track").addEventListener("click", function (event) {
-                        document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
                         event.preventDefault();
+                        document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
                         console.log(response)
                         document.querySelector(".album-cover").setAttribute("src", response.items[i].track.album.images[0].url)
 
@@ -480,7 +480,7 @@ function getPlaylistTracks() {
                         searchRelatedArtists(response.items[i].track.artists[0].id)
                         searchSpotify(response.items[i].track.artists[0].id);
                         searchAlbumCovers(response.items[i].track.artists[0].id);
-                        document.querySelector(".now-playing-artist").html(response.items[i].track.artist.name) //this makes it work for some reasons
+                        document.querySelector(".now-playing-artist").innerHTML(response.items[i].track.artist.name) //this makes it work for some reasons
 
 
 
@@ -492,7 +492,7 @@ function getPlaylistTracks() {
                         document.querySelector(".now-playing-song").innerText = (response.items[i + 1].track.name)
 
                         document.querySelector("#preview-player").setAttribute("src", response.items[i + 1].track.preview_url)
-                        document.querySelector(".now-playing-artist").html(response.items[i++].track.artist.name) //this makes it work for 
+                        document.querySelector(".now-playing-artist").innerHTML(response.items[i++].track.artist.name) //this makes it work for 
 
 
                     })
