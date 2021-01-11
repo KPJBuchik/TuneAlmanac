@@ -38,6 +38,8 @@ $(document).ready(function () {
     getAlbumTracklist();
     getNewReleases()
     getTop()
+    document.querySelector(".grid-container3").style.display = "none"
+
 });
 //get user image
 function getUserProfile() {
