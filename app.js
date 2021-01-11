@@ -1,32 +1,32 @@
-// const hash = window.location.hash
-//     .substring(1)
-//     .split('&')
-//     .reduce(function (initial, item) {
-//         if (item) {
-//             var parts = item.split('=');
-//             initial[parts[0]] = decodeURIComponent(parts[1]);
-//         }
-//         return initial;
-//     }, {});
-// window.location.hash = '';
+const hash = window.location.hash
+    .substring(1)
+    .split('&')
+    .reduce(function (initial, item) {
+        if (item) {
+            var parts = item.split('=');
+            initial[parts[0]] = decodeURIComponent(parts[1]);
+        }
+        return initial;
+    }, {});
+window.location.hash = '';
 
-// // Set token
-// let _token = hash.access_token;
+// Set token
+let _token = hash.access_token;
 
-// const authEndpoint = 'https://accounts.spotify.com/authorize';
+const authEndpoint = 'https://accounts.spotify.com/authorize';
 
-// // Replace with your app's client ID, redirect URI and desired scopes
-// const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
-// const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
-// const scopes = [
-//     'user-read-email', 'user-library-read'
+// Replace with your app's client ID, redirect URI and desired scopes
+const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
+const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
+const scopes = [
+    'user-read-email', 'user-library-read'
 
-// ];
+];
 
-// // If there is no token, redirect to Spotify authorization
-// if (!_token) {
-//     window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-// }
+// If there is no token, redirect to Spotify authorization
+if (!_token) {
+    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+}
 
 var count = 0
 
@@ -535,9 +535,6 @@ document.querySelector(".cowboy").addEventListener("click", function (event) {
     document.querySelector(".album-page-name").innerText = ("Country")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
     document.querySelector(".album-cover-page").setAttribute("src", "assets/cowboy.svg")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
     getPlaylistTracks()
 
 })
@@ -549,9 +546,7 @@ document.querySelector(".playground").addEventListener("click", function (event)
     document.querySelector(".album-page-name").innerText = ("Pop Punk")
 
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+  
     getPlaylistTracks()
 
 
@@ -563,9 +558,6 @@ document.querySelector(".psychedelic").addEventListener("click", function (event
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/Joshua Tree.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
     getPlaylistTracks()
 
 
@@ -577,9 +569,7 @@ document.querySelector(".rocknroll").addEventListener("click", function (event) 
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/locked.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+ 
     getPlaylistTracks()
 
 
@@ -591,9 +581,7 @@ document.querySelector(".metal").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/pitchfork.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+
     getPlaylistTracks()
 
 
@@ -604,9 +592,7 @@ document.querySelector(".shattuck").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/shattuck.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+  
     getPlaylistTracks()
 
 
@@ -617,9 +603,7 @@ document.querySelector(".jazz").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/jazz.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+
     getPlaylistTracks()
 
 
@@ -630,9 +614,7 @@ document.querySelector(".pancakes").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/pancakes.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-    document.querySelector(".album-page-title").innerText = "Playlist"
-    document.querySelector(".grid-container").style.display = "hidden";
-    document.querySelector(".grid-container2").style.display = "hidden";
+ 
     getPlaylistTracks()
 
 
