@@ -1,32 +1,32 @@
-const hash = window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce(function (initial, item) {
-        if (item) {
-            var parts = item.split('=');
-            initial[parts[0]] = decodeURIComponent(parts[1]);
-        }
-        return initial;
-    }, {});
-window.location.hash = '';
+// const hash = window.location.hash
+//     .substring(1)
+//     .split('&')
+//     .reduce(function (initial, item) {
+//         if (item) {
+//             var parts = item.split('=');
+//             initial[parts[0]] = decodeURIComponent(parts[1]);
+//         }
+//         return initial;
+//     }, {});
+// window.location.hash = '';
 
-// Set token
-let _token = hash.access_token;
+// // Set token
+// let _token = hash.access_token;
 
-const authEndpoint = 'https://accounts.spotify.com/authorize';
+// const authEndpoint = 'https://accounts.spotify.com/authorize';
 
-// Replace with your app's client ID, redirect URI and desired scopes
-const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
-const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
-const scopes = [
-    'user-read-email', 'user-library-read'
+// // Replace with your app's client ID, redirect URI and desired scopes
+// const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
+// const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
+// const scopes = [
+//     'user-read-email', 'user-library-read'
 
-];
+// ];
 
-// If there is no token, redirect to Spotify authorization
-if (!_token) {
-    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-}
+// // If there is no token, redirect to Spotify authorization
+// if (!_token) {
+//     window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+// }
 
 var count = 0
 
@@ -55,10 +55,10 @@ function getUserProfile() {
             console.log("1" + response)
             var allUserName = document.getElementsByClassName(".user-name")
             var allUserImage = document.getElementsByClassName(".user-image2")
-            for (i = 0; index < allUserName.length; i++) {
+            for (i = 0; i < allUserName.length; i++) {
                 allUserName[i].innerText = response.display_name;
             }
-            for (i = 0; index < allUserImage.length; i++) {
+            for (i = 0; i < allUserImage.length; i++) {
                 allUserName[i].setAttribute("src", response.images[0].url)
             }
             
@@ -1067,7 +1067,7 @@ function getAlbumInfo() {
 
                     document.querySelector(".grid-container2").style.display = "inline-grid";
                     document.querySelector(".grid-container3").style.display = "none";
-                    document.querySelector(".track-list").empty()
+                    $(".track-list").empty()
 
                 })
 
@@ -1194,7 +1194,7 @@ for (var i = 0; i < allTopAlbums.length; i++) {
 document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick = function () {
     document.querySelector(".grid-container3").style.display = "inline-grid"
     document.querySelector(".grid-container4").style.display = "none"
-    document.querySelector(".track-list").empty()
+    $(".track-list").empty()
 
 }
 
@@ -1300,7 +1300,7 @@ document.querySelector(".submit-button3, .searchButton").onClick = function (eve
 
 
     document.querySelector(".validationDefault03").val("")
-    document.querySelector(".track-list").empty()
+    $(".track-list").empty()
 
 }
 document.querySelector(".submit-button4, .searchButton").onClick = function (event) {
