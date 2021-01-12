@@ -1170,17 +1170,17 @@ for (var i = 0; i < allPlaylists.length; i++) {
     allPlaylists[i].addEventListener('click', playlistClick, false);
 }
 
-
-document.querySelector(".top-albums").onClick = function () {
-
-    document.querySelector(".grid-container3").style.display = "inline-grid"
+var allTopAlbums = document.getElementsByClassName("top-albums")
+function topAlbumsClick (){
     getAlbumInfo()
     getAlbumTracklist();
     searchAlbumCovers();
     $(".track-list").empty()
-
-
 }
+for (var i = 0; i < allTopAlbums.length; i++) {
+    allTopAlbums[i].addEventListener('click', topAlbumsClick, false);
+}
+
 document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick = function () {
     document.querySelector(".grid-container3").style.display = "inline-grid"
     document.querySelector(".grid-container4").style.display = "none"
