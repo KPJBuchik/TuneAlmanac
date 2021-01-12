@@ -95,7 +95,7 @@ function getNewReleases() {
 
             var allRecentCovers = document.getElementsByClassName("recent-album-cover")
             for (i = 1; i < allRecentCovers.length; i++) {
-                allRecentCovers[i].setAttribute("src", response.albums.items[i].images[i].url)
+                allRecentCovers[i].setAttribute("src", response.albums.items[i].images[0].url)
             }
             var allRecentCovers = document.getElementsByClassName("recent-album-cover")
             for (i = 0; i < allRecentCovers.length; i++) {
@@ -103,7 +103,7 @@ function getNewReleases() {
             }
             var allRecentArtistNames = document.getElementsByClassName("new-release-artist-name")
             for (i = 1; i < allRecentArtistNames.length; i++) {
-                allRecentArtistNames[i].innerHTML = (response.albums.items[i].artists[i].name)
+                allRecentArtistNames[i].innerHTML = (response.albums.items[i].artists[0].name)
             }
             var allRecentAlbumNames = document.getElementsByClassName("new-release-album-name")
             for (i = 1; i < allRecentAlbumNames.length; i++) {
@@ -170,76 +170,109 @@ function getTop() {
         success: function (response) {
             console.log(response)
 
-            var check = Math.floor(Math.random() * 20)
-            var check2 = Math.floor(Math.random() * 20)
-            var check3 = Math.floor(Math.random() * 20)
-            var check4 = Math.floor(Math.random() * 20)
-            var check5 = Math.floor(Math.random() * 20)
-            var check6 = Math.floor(Math.random() * 20)
-            var check7 = Math.floor(Math.random() * 20)
-            var check8 = Math.floor(Math.random() * 20)
-            document.querySelector(".album-picks-for-you1").setAttribute("src", response.items[check].album.images[0].url)
-            document.querySelector(".album-picks-for-you1").setAttribute("value", response.items[check].album.id)
-            document.querySelector(".picks-album1").innerHTML = (response.items[check].album.name)
-            document.querySelector(".picks-artist1").innerHTML = (response.items[check].album.artists[0].name)
-
-            document.querySelector(".album-picks-for-you2").setAttribute("src", response.items[check2].album.images[0].url)
-            document.querySelector(".album-picks-for-you2").setAttribute("value", response.items[check2].album.id)
-            document.querySelector(".picks-album2").innerHTML = (response.items[check2].album.name)
-            document.querySelector(".picks-artist2").innerHTML = (response.items[check2].album.artists[0].name)
+            // var check = Math.floor(Math.random() * 20)
+            // var check2 = Math.floor(Math.random() * 20)
+            // var check3 = Math.floor(Math.random() * 20)
+            // var check4 = Math.floor(Math.random() * 20)
+            // var check5 = Math.floor(Math.random() * 20)
+            // var check6 = Math.floor(Math.random() * 20)
+            // var check7 = Math.floor(Math.random() * 20)
+            // var check8 = Math.floor(Math.random() * 20)
 
 
-            document.querySelector(".album-picks-for-you3").setAttribute("src", response.items[check3].album.images[0].url)
-            document.querySelector(".album-picks-for-you3").setAttribute("value", response.items[check3].album.id)
-            document.querySelector(".picks-album3").innerHTML = (response.items[check3].album.name)
-            document.querySelector(".picks-artist3").innerHTML = (response.items[check3].album.artists[0].name)
+            var allSavedAlbums = document.getElementsByClassName("album-picks-for-you")
+            for (i = 1; i < allSavedAlbums.length; i++) {
+                allSavedAlbums[i].setAttribute("src", response.items[i].album.images[0].url)
+            }
 
-            document.querySelector(".album-picks-for-you4").setAttribute("src", response.items[check4].album.images[0].url)
-            document.querySelector(".album-picks-for-you4").setAttribute("value", response.items[check4].album.id)
-            document.querySelector(".picks-album4").innerHTML = (response.items[check4].album.name)
-            document.querySelector(".picks-artist4").innerHTML = (response.items[check4].album.artists[0].name)
+            var allSavedArtists = document.getElementsByClassName("picks-artist")
+            for (i = 1; i < allSavedArtists.length; i++) {
+                allSavedArtists[i].innerHTML = (response.items[i].album.artists[0].name)
+            }
 
-            document.querySelector(".album-picks-for-you5").setAttribute("src", response.items[check5].album.images[0].url)
-            document.querySelector(".album-picks-for-you5").setAttribute("value", response.items[check5].album.id)
-            document.querySelector(".picks-album5").innerHTML = (response.items[check5].album.name)
-            document.querySelector(".picks-artist5").innerHTML = (response.items[check5].album.artists[0].name)
-
-            document.querySelector(".album-picks-for-you6").setAttribute("src", response.items[check6].album.images[0].url)
-            document.querySelector(".album-picks-for-you6").setAttribute("value", response.items[check6].album.id)
-            document.querySelector(".picks-album6").innerHTML = (response.items[check6].album.name)
-            document.querySelector(".picks-artist6").innerHTML = (response.items[check6].album.artists[0].name)
-
-            document.querySelector(".album-picks-for-you7").setAttribute("src", response.items[check7].album.images[0].url)
-            document.querySelector(".album-picks-for-you7").setAttribute("value", response.items[check7].album.id)
-            document.querySelector(".picks-album7").innerHTML = (response.items[check7].album.name)
-            document.querySelector(".picks-artist7").innerHTML = (response.items[check7].album.artists[0].name)
-
-            document.querySelector(".album-picks-for-you8").setAttribute("src", response.items[check8].album.images[0].url)
-            document.querySelector(".album-picks-for-you8").setAttribute("value", response.items[check8].album.id)
-            document.querySelector(".picks-album8").innerHTML = (response.items[check8].album.name)
-            document.querySelector(".picks-artist8").innerHTML = (response.items[check8].album.artists[0].name)
+            var allSavedAlbumTitle = document.getElementsByClassName("picks-album")
+            for (i = 1; i < allSavedAlbumTitle.length; i++) {
+                allSavedAlbumTitle[i].innerHTML = (response.items[i].album.name)
+            }
 
 
+            // document.querySelector(".album-picks-for-you1").setAttribute("src", response.items[check].album.images[0].url)
+            // document.querySelector(".album-picks-for-you1").setAttribute("value", response.items[check].album.id)
+            // document.querySelector(".picks-album1").innerHTML = (response.items[check].album.name)
+            // document.querySelector(".picks-artist1").innerHTML = (response.items[check].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you2").setAttribute("src", response.items[check2].album.images[0].url)
+            // document.querySelector(".album-picks-for-you2").setAttribute("value", response.items[check2].album.id)
+            // document.querySelector(".picks-album2").innerHTML = (response.items[check2].album.name)
+            // document.querySelector(".picks-artist2").innerHTML = (response.items[check2].album.artists[0].name)
 
 
-            document.querySelector(".on-this-day-cover1").setAttribute("src", response.items[20].album.images[0].url)
-            document.querySelector(".on-this-day-cover1").setAttribute("value", response.items[20].album.id)
-            document.querySelector(".on-this-day-album-name1").innerHTML = (response.items[20].album.name)
-            document.querySelector(".on-this-day-artist-name1").innerHTML = (response.items[20].album.artists[0].name)
+            // document.querySelector(".album-picks-for-you3").setAttribute("src", response.items[check3].album.images[0].url)
+            // document.querySelector(".album-picks-for-you3").setAttribute("value", response.items[check3].album.id)
+            // document.querySelector(".picks-album3").innerHTML = (response.items[check3].album.name)
+            // document.querySelector(".picks-artist3").innerHTML = (response.items[check3].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you4").setAttribute("src", response.items[check4].album.images[0].url)
+            // document.querySelector(".album-picks-for-you4").setAttribute("value", response.items[check4].album.id)
+            // document.querySelector(".picks-album4").innerHTML = (response.items[check4].album.name)
+            // document.querySelector(".picks-artist4").innerHTML = (response.items[check4].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you5").setAttribute("src", response.items[check5].album.images[0].url)
+            // document.querySelector(".album-picks-for-you5").setAttribute("value", response.items[check5].album.id)
+            // document.querySelector(".picks-album5").innerHTML = (response.items[check5].album.name)
+            // document.querySelector(".picks-artist5").innerHTML = (response.items[check5].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you6").setAttribute("src", response.items[check6].album.images[0].url)
+            // document.querySelector(".album-picks-for-you6").setAttribute("value", response.items[check6].album.id)
+            // document.querySelector(".picks-album6").innerHTML = (response.items[check6].album.name)
+            // document.querySelector(".picks-artist6").innerHTML = (response.items[check6].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you7").setAttribute("src", response.items[check7].album.images[0].url)
+            // document.querySelector(".album-picks-for-you7").setAttribute("value", response.items[check7].album.id)
+            // document.querySelector(".picks-album7").innerHTML = (response.items[check7].album.name)
+            // document.querySelector(".picks-artist7").innerHTML = (response.items[check7].album.artists[0].name)
+
+            // document.querySelector(".album-picks-for-you8").setAttribute("src", response.items[check8].album.images[0].url)
+            // document.querySelector(".album-picks-for-you8").setAttribute("value", response.items[check8].album.id)
+            // document.querySelector(".picks-album8").innerHTML = (response.items[check8].album.name)
+            // document.querySelector(".picks-artist8").innerHTML = (response.items[check8].album.artists[0].name)
+
+            var allOnDayCover = document.getElementsByClassName("on-this-day-cover")
+            for (i = 1; i < allOnDayCover.length; i++) {
+                allOnDayCover[i].setAttribute("src", response.items[i].album.images[0].url)
+            }
+
+            var allOnDayAlbum = document.getElementsByClassName("on-this-day-album-name1")
+            for (i = 1; i < allOnDayAlbum.length; i++) {
+                allOnDayAlbum[i].innerHTML = (response.items[i].album.name)
+            }
+            var allOnDayArtist = document.getElementsByClassName("on-this-day-artist-name")
+            for (i = 1; i < allOnDayArtist.length; i++) {
+                allOnDayArtist[i].innerHTML = (response.items[i].album.artists[0].name)
+            }
 
 
-            document.querySelector(".on-this-day-cover2").setAttribute("src", response.items[21].album.images[0].url)
-            document.querySelector(".on-this-day-cover2").setAttribute("value", response.items[21].album.id)
-
-            document.querySelector(".on-this-day-album-name2").innerHTML = (response.items[21].album.name)
-            document.querySelector(".on-this-day-artist-name2").innerHTML = (response.items[21].album.artists[0].name)
+    
 
 
-            document.querySelector(".on-this-day-cover3").setAttribute("src", response.items[22].album.images[0].url)
-            document.querySelector(".on-this-day-cover3").setAttribute("value", response.items[22].album.id)
+            // document.querySelector(".on-this-day-cover1").setAttribute("src", response.items[20].album.images[0].url)
+            // document.querySelector(".on-this-day-cover1").setAttribute("value", response.items[20].album.id)
+            // document.querySelector(".on-this-day-album-name1").innerHTML = (response.items[20].album.name)
+            // document.querySelector(".on-this-day-artist-name1").innerHTML = (response.items[20].album.artists[0].name)
 
-            document.querySelector(".on-this-day-album-name3").innerHTML = (response.items[22].album.name)
-            document.querySelector(".on-this-day-artist-name3").innerHTML = (response.items[22].album.artists[0].name)
+
+            // document.querySelector(".on-this-day-cover2").setAttribute("src", response.items[21].album.images[0].url)
+            // document.querySelector(".on-this-day-cover2").setAttribute("value", response.items[21].album.id)
+
+            // document.querySelector(".on-this-day-album-name2").innerHTML = (response.items[21].album.name)
+            // document.querySelector(".on-this-day-artist-name2").innerHTML = (response.items[21].album.artists[0].name)
+
+
+            // document.querySelector(".on-this-day-cover3").setAttribute("src", response.items[22].album.images[0].url)
+            // document.querySelector(".on-this-day-cover3").setAttribute("value", response.items[22].album.id)
+
+            // document.querySelector(".on-this-day-album-name3").innerHTML = (response.items[22].album.name)
+            // document.querySelector(".on-this-day-artist-name3").innerHTML = (response.items[22].album.artists[0].name)
 
 
         }
