@@ -1077,22 +1077,22 @@ function getAlbumTracklist() {
                 console.log(response)
                 for (let i = 0; i < response.items.length + 1; i++) {
 
-                    let tracklistDiv = document.querySelector("<div>")
+                    let tracklistDiv = document.createElement("div")
                     let results = response.items[i].name
 
-                    tracklistDisplay = document.querySelector("<p>").innerText = (results).addClass("track")
-                    let trackHr = document.querySelector("<hr>")
+                    tracklistDisplay = document.createElement("p").innerText = (results).ClassList.add("track")
+                    let trackHr = document.createElement("hr")
                     let albumTrackDuration = response.items[i].duration_ms
                     let newAlbumTrackTime = timeConversiaddEventListener(albumTrackDuration)
-                    let trackTime = document.querySelector("<p>").innerText = (newAlbumTrackTime).addClass("track-time")
+                    let trackTime = document.createElement("p").innerText = (newAlbumTrackTime).classList.add("track-time")
                     let trackNumber = (response.items[i].track_number)
-                    document.querySelector(".next-track").addClass("next-track-album")
-                    document.querySelector(".previous-track").addClass("previous-track-album")
+                    document.getElementsByClassName("next-track").classList.add("next-track-album")
+                    document.getElementsByClassName("previous-track").classList.add("previous-track-album")
 
-                    tracklistDiv.html(tracklistDisplay)
+                    tracklistDiv.innerHTML=(tracklistDisplay)
 
-                    document.querySelector(".track-list").appendChild(tracklistDiv)
-                    document.querySelector(".track-list").appendChild(trackHr)
+                    document.getElementsByClassName("track-list").appendChild(tracklistDiv)
+                    document.getElementsByClassName("track-list").appendChild(trackHr)
                     document.querySelector(tracklistDiv).appendChild(trackTime)
                     document.querySelector(tracklistDiv).prepend(trackNumber + " " + " " + " " + " ").addClass("track-number")
 
