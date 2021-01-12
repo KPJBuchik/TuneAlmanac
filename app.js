@@ -97,6 +97,10 @@ function getNewReleases() {
             for (i = 0; i < allRecentCovers.length; i++) {
                 allRecentCovers[i].setAttribute("src", response.albums.items[i].images[i].url)
             }
+            var allRecentCovers = document.getElementsByClassName("recent-album-cover")
+            for (i = 0; i < allRecentCovers.length; i++) {
+                allRecentCovers[i].setAttribute("value", response.albums.items[i].id)
+            }
             var allRecentArtistNames = document.getElementsByClassName("new-release-artist-name")
             for (i = 0; i < allRecentArtistNames.length; i++) {
                 allRecentArtistNames[i].innerHTML = (response.albums.items[i].artists[i].name)
