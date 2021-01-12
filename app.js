@@ -1064,7 +1064,7 @@ function searchAlbumCovers(id) {
 
 
 function getAlbumTracklist() {
-    document.getElementsByClassName("image-results, on-this-day-cover, album-picks-for-you, recent-album-cover").onClick(function () {
+    document.querySelector("image-results, on-this-day-cover, album-picks-for-you, recent-album-cover").onClick(function () {
 
         var albumId = document.querySelector(this).setAttribute("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
