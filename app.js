@@ -242,7 +242,7 @@ function getTop() {
                 allOnDayCover[i].setAttribute("src", response.items[i].album.images[0].url)
             }
 
-            var allOnDayAlbum = document.getElementsByClassName("on-this-day-album-name1")
+            var allOnDayAlbum = document.getElementsByClassName("on-this-day-album-name")
             for (i = 1; i < allOnDayAlbum.length; i++) {
                 allOnDayAlbum[i].innerHTML = (response.items[i].album.name)
             }
@@ -303,30 +303,30 @@ function getPlaylists() {
                 allPlaylistList[i].setAttribute("value", response.items[i].id);
             }
 
-            var allPlaylistList2 = document.getElementsByClassName("playlist2")
-            for (i = 0; i < allPlaylistList2.length; i++) {
-                allPlaylistList2[i].innerText = (response.items[i].name)
-            }
+            // var allPlaylistList2 = document.getElementsByClassName("playlist2")
+            // for (i = 0; i < allPlaylistList2.length; i++) {
+            //     allPlaylistList2[i].innerText = (response.items[i].name)
+            // }
 
-            for (i = 0; i < allPlaylistList2.length; i++) {
-                allPlaylistList2[i].setAttribute("value", response.items[i].id);
-            }
-            var allPlaylistList3 = document.getElementsByClassName("playlist3")
-            for (i = 0; i < allPlaylistList3.length; i++) {
-                allPlaylistList3[i].innerText = (response.items[i].name)
-            }
+            // for (i = 0; i < allPlaylistList2.length; i++) {
+            //     allPlaylistList2[i].setAttribute("value", response.items[i].id);
+            // }
+            // var allPlaylistList3 = document.getElementsByClassName("playlist3")
+            // for (i = 0; i < allPlaylistList3.length; i++) {
+            //     allPlaylistList3[i].innerText = (response.items[i].name)
+            // }
 
-            for (i = 0; i < allPlaylistList3.length; i++) {
-                allPlaylistList3[i].setAttribute("value", response.items[i].id);
-            }
-            var allPlaylistList4 = document.getElementsByClassName("playlist4")
-            for (i = 0; i < allPlaylistList4.length; i++) {
-                allPlaylistList4[i].innerText = (response.items[i].name)
-            }
+            // for (i = 0; i < allPlaylistList3.length; i++) {
+            //     allPlaylistList3[i].setAttribute("value", response.items[i].id);
+            // }
+            // var allPlaylistList4 = document.getElementsByClassName("playlist4")
+            // for (i = 0; i < allPlaylistList4.length; i++) {
+            //     allPlaylistList4[i].innerText = (response.items[i].name)
+            // }
 
-            for (i = 0; i < allPlaylistList4.length; i++) {
-                allPlaylistList4[i].setAttribute("value", response.items[i].id);
-            }
+            // for (i = 0; i < allPlaylistList4.length; i++) {
+            //     allPlaylistList4[i].setAttribute("value", response.items[i].id);
+            // }
             // document.querySelector
 
           
