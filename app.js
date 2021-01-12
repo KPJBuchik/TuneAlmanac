@@ -303,36 +303,54 @@ function getPlaylists() {
                 allPlaylistList[i].setAttribute("value", response.items[i].id);
             }
 
-            // var allPlaylistList2 = document.getElementsByClassName("playlist2")
-            // for (i = 0; i < allPlaylistList2.length; i++) {
-            //     allPlaylistList2[i].innerText = (response.items[i].name)
-            // }
+            var allPlaylistList2 = document.getElementsByClassName("playlist2")
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList2[i].innerText = (response.items[i].name)
+            }
 
-            // for (i = 0; i < allPlaylistList2.length; i++) {
-            //     allPlaylistList2[i].setAttribute("value", response.items[i].id);
-            // }
-            // var allPlaylistList3 = document.getElementsByClassName("playlist3")
-            // for (i = 0; i < allPlaylistList3.length; i++) {
-            //     allPlaylistList3[i].innerText = (response.items[i].name)
-            // }
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList2[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList3 = document.getElementsByClassName("playlist3")
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList3[i].innerText = (response.items[i].name)
+            }
 
-            // for (i = 0; i < allPlaylistList3.length; i++) {
-            //     allPlaylistList3[i].setAttribute("value", response.items[i].id);
-            // }
-            // var allPlaylistList4 = document.getElementsByClassName("playlist4")
-            // for (i = 0; i < allPlaylistList4.length; i++) {
-            //     allPlaylistList4[i].innerText = (response.items[i].name)
-            // }
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList3[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList4 = document.getElementsByClassName("playlist4")
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList4[i].innerText = (response.items[i].name)
+            }
 
-            // for (i = 0; i < allPlaylistList4.length; i++) {
-            //     allPlaylistList4[i].setAttribute("value", response.items[i].id);
-            // }
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList4[i].setAttribute("value", response.items[i].id);
+            }
             // document.querySelector
 
+            function playlistClick (){
+                document.getElementsByClassName("album-cover-page").setAttribute("src", response.items[i].images[0].url)
+                document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
+                document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
+            }
+
+            var allPlaylistLinks = document.getElementsByTagName("ul")
+            for (var i = 0; i < allPlaylistLinks.length; i++) {
+                allPlaylistLinks[i].addEventListener('click', playlistClick, false);
+            }
+
+
           
-            // document.querySelector("ul").innerText = (response.items[0].name)
-            // document.querySelector("ul").setAttribute("value", response.items[0].id)
             // document.querySelector("ul").onClick = function () {
+
+            //     for (i = 0; i < allPlaylistList4.length; i++) {
+            //         allPlaylistList4[i].setAttribute("value", response.items[i].id);
+            //     }
+    
+
+
+
             //     document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
             //     document.querySelector(".album-page-name").innerText = (response.items[0].name)
             //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
