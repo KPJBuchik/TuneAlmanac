@@ -242,193 +242,200 @@ function getPlaylists() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            document.querySelector("ul").innerText = (response.items[0].name)
-            document.querySelector("ul").setAttribute("value", response.items[0].id)
-            document.querySelector("ul").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[0].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
-
-            }
-            document.querySelector("ul:nth-child(2)").innerText = (response.items[1].name)
-            document.querySelector("ul:nth-child(2)").setAttribute("value", response.items[1].id)
-            document.querySelector("ul:nth-child(2)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[1].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[1].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
+            var allPlaylistList = document.getElementsByTagName("ul")
+            for (i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].innerText = (response.items[i].name)
             }
 
 
-            document.querySelector("ul:nth-child(3)").innerText = (response.items[2].name)
-            document.querySelector("ul:nth-child(3)").setAttribute("value", response.items[2].id)
-            document.querySelector("ul:nth-child(3)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[2].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[2].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul").innerText = (response.items[0].name)
+            // document.querySelector("ul").setAttribute("value", response.items[0].id)
+            // document.querySelector("ul").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[0].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[0].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
-            document.querySelector("ul:nth-child(4)").innerText = (response.items[3].name)
-            document.querySelector("ul:nth-child(4)").setAttribute("value", response.items[3].id)
-            document.querySelector("ul:nth-child(4)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[3].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[3].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // }
+            // document.querySelector("ul:nth-child(2)").innerText = (response.items[1].name)
+            // document.querySelector("ul:nth-child(2)").setAttribute("value", response.items[1].id)
+            // document.querySelector("ul:nth-child(2)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[1].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[1].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
-
-            document.querySelector("ul:nth-child(5)").innerText = (response.items[4].name)
-            document.querySelector("ul:nth-child(5)").setAttribute("value", response.items[4].id)
-            document.querySelector("ul:nth-child(5)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[4].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[4].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // }
 
 
-            }
-
-            document.querySelector("ul:nth-child(6)").innerText = (response.items[5].name)
-            document.querySelector("ul:nth-child(6)").setAttribute("value", response.items[5].id)
-            document.querySelector("ul:nth-child(6)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[5].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[5].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(3)").innerText = (response.items[2].name)
+            // document.querySelector("ul:nth-child(3)").setAttribute("value", response.items[2].id)
+            // document.querySelector("ul:nth-child(3)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[2].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[2].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
-
-            document.querySelector("ul:nth-child(7)").innerText = (response.items[6].name)
-            document.querySelector("ul:nth-child(7)").setAttribute("value", response.items[6].id)
-            document.querySelector("ul:nth-child(7)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[6].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[6].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-
-            document.querySelector("ul:nth-child(8)").innerText = (response.items[7].name)
-            document.querySelector("ul:nth-child(8)").setAttribute("value", response.items[7].id)
-            document.querySelector("ul:nth-child(8)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[7].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[7].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // }
+            // document.querySelector("ul:nth-child(4)").innerText = (response.items[3].name)
+            // document.querySelector("ul:nth-child(4)").setAttribute("value", response.items[3].id)
+            // document.querySelector("ul:nth-child(4)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[3].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[3].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(9)").innerText = (response.items[8].name)
-            document.querySelector("ul:nth-child(9)").setAttribute("value", response.items[8].id)
-            document.querySelector("ul:nth-child(9)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[8].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[8].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-
-            document.querySelector("ul:nth-child(10)").innerText = (response.items[9].name)
-            document.querySelector("ul:nth-child(10)").setAttribute("value", response.items[9].id)
-            document.querySelector("ul:nth-child(10)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[9].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[9].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(5)").innerText = (response.items[4].name)
+            // document.querySelector("ul:nth-child(5)").setAttribute("value", response.items[4].id)
+            // document.querySelector("ul:nth-child(5)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[4].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[4].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(11)").innerText = (response.items[10].name)
-            document.querySelector("ul:nth-child(11)").setAttribute("value", response.items[10].id)
-            document.querySelector("ul:nth-child(11)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[10].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[10].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-
-            document.querySelector("ul:nth-child(12)").innerText = (response.items[11].name)
-            document.querySelector("ul:nth-child(12)").setAttribute("value", response.items[11].id)
-            document.querySelector("ul:nth-child(12)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[11].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[11].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(6)").innerText = (response.items[5].name)
+            // document.querySelector("ul:nth-child(6)").setAttribute("value", response.items[5].id)
+            // document.querySelector("ul:nth-child(6)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[5].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[5].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(13)").innerText = (response.items[12].name)
-            document.querySelector("ul:nth-child(13)").setAttribute("value", response.items[12].id)
-            document.querySelector("ul:nth-child(13)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[12].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[12].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-
-            document.querySelector("ul:nth-child(14)").innerText = (response.items[13].name)
-            document.querySelector("ul:nth-child(14)").setAttribute("value", response.items[13].id)
-            document.querySelector("ul:nth-child(14)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[13].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[13].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(7)").innerText = (response.items[6].name)
+            // document.querySelector("ul:nth-child(7)").setAttribute("value", response.items[6].id)
+            // document.querySelector("ul:nth-child(7)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[6].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[6].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(15)").innerText = (response.items[14].name)
-            document.querySelector("ul:nth-child(15)").setAttribute("value", response.items[14].id)
-            document.querySelector("ul:nth-child(15)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[14].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[14].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-            document.querySelector("ul:nth-child(16)").innerText = (response.items[15].name)
-            document.querySelector("ul:nth-child(16)").setAttribute("value", response.items[15].id)
-            document.querySelector("ul:nth-child(16)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[15].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[15].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(8)").innerText = (response.items[7].name)
+            // document.querySelector("ul:nth-child(8)").setAttribute("value", response.items[7].id)
+            // document.querySelector("ul:nth-child(8)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[7].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[7].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(17)").innerText = (response.items[16].name)
-            document.querySelector("ul:nth-child(17)").setAttribute("value", response.items[16].id)
-            document.querySelector("ul:nth-child(17)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[16].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[16].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-
-
-            }
-
-            document.querySelector("ul:nth-child(18)").innerText = (response.items[17].name)
-            document.querySelector("ul:nth-child(18)").setAttribute("value", response.items[17].id)
-            document.querySelector("ul:nth-child(18)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[17].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[17].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(9)").innerText = (response.items[8].name)
+            // document.querySelector("ul:nth-child(9)").setAttribute("value", response.items[8].id)
+            // document.querySelector("ul:nth-child(9)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[8].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[8].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
 
-            document.querySelector("ul:nth-child(19)").innerText = (response.items[18].name)
-            document.querySelector("ul:nth-child(19)").setAttribute("value", response.items[18].id)
-            document.querySelector("ul:nth-child(19)").onClick = function () {
-                document.querySelector(".album-cover-page").setAttribute("src", response.items[18].images[0].url)
-                document.querySelector(".album-page-name").innerText = (response.items[18].name)
-                document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            // document.querySelector("ul:nth-child(10)").innerText = (response.items[9].name)
+            // document.querySelector("ul:nth-child(10)").setAttribute("value", response.items[9].id)
+            // document.querySelector("ul:nth-child(10)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[9].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[9].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
 
 
-            }
+            // }
+
+            // document.querySelector("ul:nth-child(11)").innerText = (response.items[10].name)
+            // document.querySelector("ul:nth-child(11)").setAttribute("value", response.items[10].id)
+            // document.querySelector("ul:nth-child(11)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[10].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[10].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(12)").innerText = (response.items[11].name)
+            // document.querySelector("ul:nth-child(12)").setAttribute("value", response.items[11].id)
+            // document.querySelector("ul:nth-child(12)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[11].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[11].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(13)").innerText = (response.items[12].name)
+            // document.querySelector("ul:nth-child(13)").setAttribute("value", response.items[12].id)
+            // document.querySelector("ul:nth-child(13)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[12].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[12].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(14)").innerText = (response.items[13].name)
+            // document.querySelector("ul:nth-child(14)").setAttribute("value", response.items[13].id)
+            // document.querySelector("ul:nth-child(14)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[13].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[13].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(15)").innerText = (response.items[14].name)
+            // document.querySelector("ul:nth-child(15)").setAttribute("value", response.items[14].id)
+            // document.querySelector("ul:nth-child(15)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[14].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[14].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+            // document.querySelector("ul:nth-child(16)").innerText = (response.items[15].name)
+            // document.querySelector("ul:nth-child(16)").setAttribute("value", response.items[15].id)
+            // document.querySelector("ul:nth-child(16)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[15].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[15].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(17)").innerText = (response.items[16].name)
+            // document.querySelector("ul:nth-child(17)").setAttribute("value", response.items[16].id)
+            // document.querySelector("ul:nth-child(17)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[16].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[16].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(18)").innerText = (response.items[17].name)
+            // document.querySelector("ul:nth-child(18)").setAttribute("value", response.items[17].id)
+            // document.querySelector("ul:nth-child(18)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[17].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[17].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
+
+            // document.querySelector("ul:nth-child(19)").innerText = (response.items[18].name)
+            // document.querySelector("ul:nth-child(19)").setAttribute("value", response.items[18].id)
+            // document.querySelector("ul:nth-child(19)").onClick = function () {
+            //     document.querySelector(".album-cover-page").setAttribute("src", response.items[18].images[0].url)
+            //     document.querySelector(".album-page-name").innerText = (response.items[18].name)
+            //     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+
+
+            // }
 
 
         }
