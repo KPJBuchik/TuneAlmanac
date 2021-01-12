@@ -244,10 +244,10 @@ function getPlaylists() {
         success: function (response) {
 
             var allPlaylistList = document.getElementsByClassName("playlist")
-            for (i = 0; i < allPlaylistList.length; i++) {
+            for (i = 0; i < 16; i++) {
                 allPlaylistList[i].innerText = (response.items[i].name)
             }
-            for (i = 0; i < allPlaylistList.length; i++) {
+            for (i = 0; i < 16; i++) {
                 allPlaylistList[i].setAttribute("value", response.items[0].id);
             }
 
