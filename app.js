@@ -345,7 +345,7 @@ function getPlaylists() {
                 }
             }
 
-            var allPlaylistLinks = document.getElementsByTagName("ul")
+            var allPlaylistLinks = document.getElementsByClassName("playlist")
             for (var i = 0; i < allPlaylistLinks.length; i++) {
                 allPlaylistLinks[i].addEventListener('click', playlistClick, false);
             }
