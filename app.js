@@ -92,43 +92,57 @@ function getNewReleases() {
         success: function (response) {
 
             console.log(response)
-            // for (let i = 0; i < 6 + 1; i++) {
 
-            document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
-
-            document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
-
-            document.querySelector(".new-release-album-name1").innerHTML = (response.albums.items[0].name)
-            document.querySelector(".new-release-artist-name1").innerHTML = (response.albums.items[0].artists[0].name)
-
-            document.querySelector(".recent-album-cover2").setAttribute("src", response.albums.items[1].images[0].url)
-            document.querySelector(".recent-album-cover2").setAttribute("value", response.albums.items[1].id)
-
-            document.querySelector(".new-release-album-name2").innerHTML = (response.albums.items[1].name)
-            document.querySelector(".new-release-artist-name2").innerHTML = (response.albums.items[1].artists[0].name)
-
-
-            document.querySelector(".recent-album-cover3").setAttribute("src", response.albums.items[2].images[0].url)
-            document.querySelector(".recent-album-cover3").setAttribute("value", response.albums.items[2].id)
-            document.querySelector(".new-release-album-name3").innerHTML = (response.albums.items[2].name)
-            document.querySelector(".new-release-artist-name3").innerHTML = (response.albums.items[2].artists[0].name)
+            var allRecentCovers = document.getElementsByClassName("recent-album-cover")
+            for (i = 0; i < allRecentCovers.length; i++) {
+                allRecentCovers[i].setAttribute("src", response.albums.items[i].images[i].url)
+            }
+            var allRecentArtistNames = document.getElementsByClassName("new-release-artist-name")
+            for (i = 0; i < allRecentArtistNames.length; i++) {
+                allRecentArtistNames[i].innerHTML = (response.albums.items[0].artists[0].name)
+            }
+            var allRecentAlbumNames = document.getElementsByClassName("new-release-album-name")
+            for (i = 0; i < allRecentAlbumNames.length; i++) {
+                allRecentAlbumNames[i].innerHTML = (response.albums.items[0].artists[0].name)
+            }
 
 
-            document.querySelector(".recent-album-cover4").setAttribute("src", response.albums.items[3].images[0].url)
-            document.querySelector(".recent-album-cover4").setAttribute("value", response.albums.items[3].id)
-            document.querySelector(".new-release-album-name4").innerHTML = (response.albums.items[3].name)
-            document.querySelector(".new-release-artist-name4").innerHTML = (response.albums.items[3].artists[0].name)
+
+            // document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
+
+            // document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
+
+            // document.querySelector(".new-release-album-name1").innerHTML = (response.albums.items[0].name)
+            // document.querySelector(".new-release-artist-name1").innerHTML = (response.albums.items[0].artists[0].name)
+
+            // document.querySelector(".recent-album-cover2").setAttribute("src", response.albums.items[1].images[0].url)
+            // document.querySelector(".recent-album-cover2").setAttribute("value", response.albums.items[1].id)
+
+            // document.querySelector(".new-release-album-name2").innerHTML = (response.albums.items[1].name)
+            // document.querySelector(".new-release-artist-name2").innerHTML = (response.albums.items[1].artists[0].name)
 
 
-            document.querySelector(".recent-album-cover5").setAttribute("src", response.albums.items[4].images[0].url)
-            document.querySelector(".recent-album-cover5").setAttribute("value", response.albums.items[4].id)
-            document.querySelector(".new-release-album-name5").innerHTML = (response.albums.items[4].name)
-            document.querySelector(".new-release-artist-name5").innerHTML = (response.albums.items[4].artists[0].name)
+            // document.querySelector(".recent-album-cover3").setAttribute("src", response.albums.items[2].images[0].url)
+            // document.querySelector(".recent-album-cover3").setAttribute("value", response.albums.items[2].id)
+            // document.querySelector(".new-release-album-name3").innerHTML = (response.albums.items[2].name)
+            // document.querySelector(".new-release-artist-name3").innerHTML = (response.albums.items[2].artists[0].name)
 
-            document.querySelector(".recent-album-cover6").setAttribute("src", response.albums.items[5].images[0].url)
-            document.querySelector(".recent-album-cover6").setAttribute("value", response.albums.items[5].id)
-            document.querySelector(".new-release-album-name6").innerHTML = (response.albums.items[5].name)
-            document.querySelector(".new-release-artist-name6").innerHTML = (response.albums.items[5].artists[0].name)
+
+            // document.querySelector(".recent-album-cover4").setAttribute("src", response.albums.items[3].images[0].url)
+            // document.querySelector(".recent-album-cover4").setAttribute("value", response.albums.items[3].id)
+            // document.querySelector(".new-release-album-name4").innerHTML = (response.albums.items[3].name)
+            // document.querySelector(".new-release-artist-name4").innerHTML = (response.albums.items[3].artists[0].name)
+
+
+            // document.querySelector(".recent-album-cover5").setAttribute("src", response.albums.items[4].images[0].url)
+            // document.querySelector(".recent-album-cover5").setAttribute("value", response.albums.items[4].id)
+            // document.querySelector(".new-release-album-name5").innerHTML = (response.albums.items[4].name)
+            // document.querySelector(".new-release-artist-name5").innerHTML = (response.albums.items[4].artists[0].name)
+
+            // document.querySelector(".recent-album-cover6").setAttribute("src", response.albums.items[5].images[0].url)
+            // document.querySelector(".recent-album-cover6").setAttribute("value", response.albums.items[5].id)
+            // document.querySelector(".new-release-album-name6").innerHTML = (response.albums.items[5].name)
+            // document.querySelector(".new-release-artist-name6").innerHTML = (response.albums.items[5].artists[0].name)
 
 
 
@@ -276,7 +290,7 @@ function getPlaylists() {
             for (i = 0; i < allPlaylistList4.length; i++) {
                 allPlaylistList4[i].setAttribute("value", response.items[i].id);
             }
-
+            document.querySelector
 
           
             // document.querySelector("ul").innerText = (response.items[0].name)
