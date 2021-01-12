@@ -247,6 +247,9 @@ function getPlaylists() {
             for (i = 0; i < allPlaylistList.length; i++) {
                 allPlaylistList[i].innerText = (response.items[i].name)
             }
+            for (i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[0].id);
+            }
 
 
             // document.querySelector("ul").innerText = (response.items[0].name)
