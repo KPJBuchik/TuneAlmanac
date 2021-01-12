@@ -99,11 +99,11 @@ function getNewReleases() {
             }
             var allRecentArtistNames = document.getElementsByClassName("new-release-artist-name")
             for (i = 0; i < allRecentArtistNames.length; i++) {
-                allRecentArtistNames[i].innerHTML = (response.albums.items[0].artists[0].name)
+                allRecentArtistNames[i].innerHTML = (response.albums.items[i].artists[i].name)
             }
             var allRecentAlbumNames = document.getElementsByClassName("new-release-album-name")
             for (i = 0; i < allRecentAlbumNames.length; i++) {
-                allRecentAlbumNames[i].innerHTML = (response.albums.items[0].artists[0].name)
+                allRecentAlbumNames[i].innerHTML = (response.albums.items[i].artists[i].name)
             }
 
 
