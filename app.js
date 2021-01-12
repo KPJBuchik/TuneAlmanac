@@ -339,9 +339,9 @@ function getPlaylists() {
                 for (i = 0; i < allAlbumPageName.length; i++) {
                     allAlbumPageName[i].innerText = (response.items[i].name)
                 }
-                var allByAristAlbum = document.getElementsByClassName("by-artist-album")
-                for (i = 0; i < allByAristAlbum.length; i++) {
-                    allByAristAlbum[i].innerText = ("Created by" + " " + response.items[i].owner.display_name)
+                var allByArtistAlbum = document.getElementsByClassName("by-artist-album")
+                for (i = 0; i < allByArtistAlbum.length; i++) {
+                    allByArtistAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
                 }
             }
 
@@ -1064,7 +1064,7 @@ function searchAlbumCovers(id) {
 
 
 function getAlbumTracklist() {
-    document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick(function () {
+    document.getElementsByClassName("image-results, on-this-day-cover, album-picks-for-you, recent-album-cover").onClick(function () {
 
         var albumId = document.querySelector(this).setAttribute("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
