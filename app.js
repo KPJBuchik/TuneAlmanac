@@ -54,7 +54,7 @@ function getUserProfile() {
         success: function (response) {
             console.log("1" + response)
             var allUserName = document.getElementsByClassName("user-name")
-            
+
             for (i = 0; i < allUserName.length; i++) {
                 allUserName[i].innerText = response.display_name;
             }
@@ -63,12 +63,12 @@ function getUserProfile() {
             for (i = 0; i < allUserImage.length; i++) {
                 allUserImage[i].setAttribute("src", response.images[0].url)
             }
-            
+
             //document.querySelector(".user-name").innerText(response.display_name)
             // allUserName.innerText = (response.display_name)
             // allUserImage.setAttribute("src", response.images[0].url)
         }
-        
+
     });
 
 
@@ -243,7 +243,7 @@ function getPlaylists() {
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
 
-            var allPlaylistList = document.getElementsByTagName("ul")
+            var allPlaylistList = document.getElementsByClassName("playlist")
             for (i = 0; i < allPlaylistList.length; i++) {
                 allPlaylistList[i].innerText = (response.items[i].name)
             }
@@ -251,7 +251,8 @@ function getPlaylists() {
                 allPlaylistList[i].setAttribute("value", response.items[0].id);
             }
 
-
+           
+          
             // document.querySelector("ul").innerText = (response.items[0].name)
             // document.querySelector("ul").setAttribute("value", response.items[0].id)
             // document.querySelector("ul").onClick = function () {
@@ -529,7 +530,7 @@ function getPlaylistTracks() {
                         document.querySelector(".now-playing-song").innerText = (response.items[i - 1].track.name)
 
                         document.querySelector("#preview-player").setAttribute("src", response.items[i - 1].track.preview_url)
-                        document.querySelector(".now-playing-artist").innerHTML=(response.items[i++].track.artist.name) //this makes it work for 
+                        document.querySelector(".now-playing-artist").innerHTML = (response.items[i++].track.artist.name) //this makes it work for 
 
                     })
 
@@ -570,7 +571,7 @@ document.querySelector(".playground").addEventListener("click", function (event)
     document.querySelector(".album-page-name").innerText = ("Pop Punk")
 
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-  
+
     getPlaylistTracks()
 
 
@@ -593,7 +594,7 @@ document.querySelector(".rocknroll").addEventListener("click", function (event) 
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/locked.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
- 
+
     getPlaylistTracks()
 
 
@@ -616,7 +617,7 @@ document.querySelector(".shattuck").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/shattuck.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
-  
+
     getPlaylistTracks()
 
 
@@ -638,7 +639,7 @@ document.querySelector(".pancakes").addEventListener("click", function (event) {
 
     document.querySelector(".album-cover-page").setAttribute("src", "assets/pancakes.svg")
     document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
- 
+
     getPlaylistTracks()
 
 
@@ -715,7 +716,7 @@ function searchSpotify(id) {
                 document.querySelector(".album-cover").setAttribute("src", response.tracks[3].album.images[0].url)
 
             })
-            document.querySelector(".popular-songs5").addEventListener("click",function (event) {
+            document.querySelector(".popular-songs5").addEventListener("click", function (event) {
                 event.preventDefault();
                 document.querySelector("#preview-player").setAttribute("src", response.tracks[4].preview_url)
                 document.querySelector(".now-playing-song").innerText = (response.tracks[4].name)
@@ -1069,7 +1070,7 @@ function getAlbumInfo() {
                 document.querySelector(".release-date").innerText = (releaseYear[0] + "-" + response.total_tracks + " Tracks")
                 document.querySelector(".label").html(response.label)
 
-                document.querySelector(".by-artist-album").addEventListener("click",function (event) {
+                document.querySelector(".by-artist-album").addEventListener("click", function (event) {
                     event.preventDefault();
                     let backToArtist = document.querySelector(".by-artist-album").innerText()
                     searchSpotifyNameClone(response.artists[0].id)
@@ -1128,7 +1129,7 @@ function searchRelatedArtists(id) {
                 searchAlbumCovers(response.artists[0].id);
                 searchSpotifyNameClone(response.artists[0].id); //this one doesn't work
             })
-            document.querySelector(".circle2").addEventListener("click",function (event) {
+            document.querySelector(".circle2").addEventListener("click", function (event) {
                 event.preventDefault();
                 searchRelatedArtists(response.artists[1].id)
                 searchSpotify(response.artists[1].id);
@@ -1163,7 +1164,7 @@ function timeConversiaddEventListener(ms) {
 }
 
 var allHomeButtons = document.getElementsByClassName("home")
-function homeclick (event){
+function homeclick(event) {
     event.preventDefault();
     document.querySelector(".grid-container4").style.display = "inline-grid";
     document.querySelector(".grid-container").style.display = "hidden";
@@ -1174,7 +1175,7 @@ for (var i = 0; i < allHomeButtons.length; i++) {
 }
 
 var allPlaylists = document.getElementsByTagName("ul")
-function playlistClick (event){
+function playlistClick(event) {
     event.preventDefault();
     console.log("JESUS")
 
@@ -1193,7 +1194,7 @@ for (var i = 0; i < allPlaylists.length; i++) {
 }
 
 var allTopAlbums = document.getElementsByClassName("top-albums")
-function topAlbumsClick (){
+function topAlbumsClick() {
     getAlbumInfo()
     getAlbumTracklist();
     searchAlbumCovers();
@@ -1215,7 +1216,7 @@ for (var i = 0; i < allBrowseButtons.length; i++) {
     allBrowseButtons[i].addEventListener('click', browseClick, false);
 }
 
-function browseClick(event){
+function browseClick(event) {
     event.preventDefault();
     document.querySelector(".grid-container").style.display = "inline-grid"
     document.querySelector(".grid-container3").style.display = "none"
@@ -1248,7 +1249,7 @@ document.querySelector(".play-button").addEventListener("click", function (event
 })
 
 
-document.querySelector(".popular-songs").addEventListener("click",function (event) {
+document.querySelector(".popular-songs").addEventListener("click", function (event) {
     event.preventDefault();
     document.querySelector(".play-button").setAttribute("src", "assets/Component 60 – 2.svg")
 
