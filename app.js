@@ -569,20 +569,20 @@ function getPlaylistTracks() {
                 console.log(response)
                 for (let i = 0; i < response.items.length + 1; i++) {
                     let newTime = timeConversiaddEventListener(response.items[i].track.duration_ms)
-                    let trackTime = document.querySelector("<p>").innerText = (newTime).addClass("track-time")
+                    let trackTime = document.createElement("<p>").innerText = (newTime).classList.add("track-time")
                     let results = response.items[i].track.name
-                    let tracklistDiv = document.querySelector("<div>")
-                    tracklistDisplay = document.querySelector("<p>").innerText = (results).addClass("playlist-track")
-                    let tracklistArtist = document.querySelector("<p>").innerText = (response.items[i].track.artists[0].name).addClass("playlist-artist")
+                    let tracklistDiv = document.createElement("<div>")
+                    tracklistDisplay = document.createElement("<p>").innerText = (results).classList.add("playlist-track")
+                    let tracklistArtist = document.createElement("<p>").innerText = (response.items[i].track.artists[0].name).classList.add("playlist-artist")
                     document.querySelector(tracklistArtist).setAttribute("value", response.items[i].track.artists[0].id)
-                    let trackHr = document.querySelector("<hr>")
-                    tracklistDiv.html(tracklistDisplay)
-                    document.querySelector(".track-list").appendChild(tracklistDiv)
-                    document.querySelector(".track-list").appendChild(trackHr)
+                    let trackHr = document.createElement("<hr>")
+                    tracklistDiv.innerHTML(tracklistDisplay)
+                    document.getElementsByClassName("track-list").appendChild(tracklistDiv)
+                    document.getElementsByClassName("track-list").appendChild(trackHr)
                     document.querySelector(tracklistDiv).appendChild(trackTime)
                     document.querySelector(tracklistDiv).appendChild(tracklistArtist)
-                    document.querySelector(".next-track").addClass("next-track-playlist")
-                    document.querySelector(".previous-track").addClass("previous-track-playlist")
+                    document.getElementsByClassName(".next-track").classList.add("next-track-playlist")
+                    document.getElementsByClassName(".previous-track").classList.add("previous-track-playlist")
 
 
                     document.querySelector(".playlist-track").addEventListener("click", function (event) {
