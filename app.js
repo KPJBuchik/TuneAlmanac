@@ -1,32 +1,32 @@
-const hash = window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce(function (initial, item) {
-        if (item) {
-            var parts = item.split('=');
-            initial[parts[0]] = decodeURIComponent(parts[1]);
-        }
-        return initial;
-    }, {});
-window.location.hash = '';
+// const hash = window.location.hash
+//     .substring(1)
+//     .split('&')
+//     .reduce(function (initial, item) {
+//         if (item) {
+//             var parts = item.split('=');
+//             initial[parts[0]] = decodeURIComponent(parts[1]);
+//         }
+//         return initial;
+//     }, {});
+// window.location.hash = '';
 
-// Set token
-let _token = hash.access_token;
+// // Set token
+// let _token = hash.access_token;
 
-const authEndpoint = 'https://accounts.spotify.com/authorize';
+// const authEndpoint = 'https://accounts.spotify.com/authorize';
 
-// Replace with your app's client ID, redirect URI and desired scopes
-const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
-const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
-const scopes = [
-    'user-read-email', 'user-library-read'
+// // Replace with your app's client ID, redirect URI and desired scopes
+// const clientId = '2059ac459b3c47d49c492a2a7b7f4734';
+// const redirectUri = 'https://kpjbuchik.github.io/TuneAlmanac/';
+// const scopes = [
+//     'user-read-email', 'user-library-read'
 
-];
+// ];
 
-// If there is no token, redirect to Spotify authorization
-if (!_token) {
-    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-}
+// // If there is no token, redirect to Spotify authorization
+// if (!_token) {
+//     window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+// }
 
 var count = 0
 
@@ -53,9 +53,19 @@ function getUserProfile() {
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
             console.log("1" + response)
+            var allUserName = document.getElementsByClassName(".user-name")
+            var allUserImage = document.getElementsByClassName(".user-image2")
+            for (i = 0; index < allUserName.length; i++) {
+                allUserName[i].innerText = response.display_name;
+            }
+            for (i = 0; index < allUserImage.length; i++) {
+                allUserName[i].setAttribute("src", response.images[0].url)
+            }
+            
+            
             //document.querySelector(".user-name").innerText(response.display_name)
-            document.querySelector(".user-name").innerText = (response.display_name)
-            document.querySelector(".user-image2").setAttribute("src", response.images[0].url)
+            // allUserName.innerText = (response.display_name)
+            // allUserImage.setAttribute("src", response.images[0].url)
         }
     });
 
