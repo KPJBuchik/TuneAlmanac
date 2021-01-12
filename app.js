@@ -329,25 +329,25 @@ function getPlaylists() {
             }
             // document.querySelector
 
-            function playlistClick (event){
+            function playlistSideClick (event){
                 event.preventDefault();
                 var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
                 for (i = 0; i < allAlbumCoverPage.length; i++) {
-                    allAlbumCoverPage[i].setAttribute("src", response.items[0].images[0].url)
+                    allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
                 }
                 var allAlbumPageName=document.getElementsByClassName("album-page-name")
                 for (i = 0; i < allAlbumPageName.length; i++) {
-                    allAlbumPageName[i].innerText = (response.items[0].name)
+                    allAlbumPageName[i].innerText = (response.items[i].name)
                 }
                 var allByAristAlbum = document.getElementsByClassName("by-artist-album")
                 for (i = 0; i < allByAristAlbum.length; i++) {
-                    allByAristAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
+                    allByAristAlbum[i].innerText = ("Created by" + " " + response.items[i].owner.display_name)
                 }
             }
 
             var allPlaylistLinks = document.getElementsByClassName("playlist")
             for (var i = 0; i < allPlaylistLinks.length; i++) {
-                allPlaylistLinks[i].addEventListener('click', playlistClick, false);
+                allPlaylistLinks[i].addEventListener('click', playlistSideClick, false);
             }
 
 
