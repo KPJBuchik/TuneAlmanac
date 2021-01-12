@@ -329,10 +329,20 @@ function getPlaylists() {
             }
             // document.querySelector
 
-            function playlistClick (){
-                document.getElementsByClassName("album-cover-page").setAttribute("src", response.items[i].images[0].url)
-                document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
-                document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
+            function playlistClick (event){
+                event.preventDefault();
+                var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
+                for (i = 0; i < allAlbumCoverPage.length; i++) {
+                    allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
+                }
+                var allAlbumPageName=document.getElementsByClassName("album-page-name")
+                for (i = 0; i < allAlbumPageName.length; i++) {
+                    allAlbumPageName[i].innerText = (response.items[i].name)
+                }
+                var allByAristAlbum = document.getElementsByClassName("by-artist-album")
+                for (i = 0; i < allByAristAlbum.length; i++) {
+                    allByAristAlbum[i].innerText = ("Created by" + " " + response.items[i].owner.display_name)
+                }
             }
 
             var allPlaylistLinks = document.getElementsByTagName("ul")
