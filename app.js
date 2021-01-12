@@ -244,14 +244,40 @@ function getPlaylists() {
         success: function (response) {
 
             var allPlaylistList = document.getElementsByClassName("playlist")
-            for (i = 0; i < 16; i++) {
+            for (i = 0; i < allPlaylistList.length; i++) {
                 allPlaylistList[i].innerText = (response.items[i].name)
             }
-            for (i = 0; i < 16; i++) {
-                allPlaylistList[i].setAttribute("value", response.items[0].id);
+
+            for (i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[i].id);
             }
 
-           
+            var allPlaylistList2 = document.getElementsByClassName("playlist2")
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList3 = document.getElementsByClassName("playlist3")
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList4 = document.getElementsByClassName("playlist4")
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[i].id);
+            }
+
+
           
             // document.querySelector("ul").innerText = (response.items[0].name)
             // document.querySelector("ul").setAttribute("value", response.items[0].id)
