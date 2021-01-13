@@ -1176,7 +1176,7 @@ function getAlbumInfo() {
                 document.querySelector(".album-page-name").innerText = (response.name)
                 document.querySelector(".by-artist-album").innerText = (response.artists[0].name)
                 document.querySelector(".release-date").innerText = (releaseYear[0] + "-" + response.total_tracks + " Tracks")
-                document.querySelector(".label").innerHTML(response.label)
+                document.querySelector(".label").DOCUMENT_TYPE_NODEinnerHTML=(response.label)
 
                 document.querySelector(".by-artist-album").addEventListener("click", function (event) {
                     event.preventDefault();
