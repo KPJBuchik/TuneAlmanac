@@ -1152,7 +1152,7 @@ for (var i = 0; i < allAlbumCoverInfo.length; i++) {
 
 function getAlbumInfo() {
     // document.getElementsByClassName("uni-pic").addEventListener("click", function () {
-        var albumId = document.querySelector(this).setAttribute("value");
+        var albumId = $(this).attr("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId
 
         $.ajax({
