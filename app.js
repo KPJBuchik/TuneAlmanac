@@ -185,7 +185,7 @@ function getTop() {
                 allSavedAlbums[i].setAttribute("src", response.items[i].album.images[0].url)
             }
             for (i = 1; i < allSavedAlbums.length; i++) {
-                allSavedAlbum[i].setAttribute("value", response.items[i].album.id)
+                allSavedAlbums[i].setAttribute("value", response.items[i].album.id)
             }
 
             var allSavedArtists = document.getElementsByClassName("picks-artist")
