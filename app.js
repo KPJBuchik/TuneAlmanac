@@ -184,6 +184,9 @@ function getTop() {
             for (i = 1; i < allSavedAlbums.length; i++) {
                 allSavedAlbums[i].setAttribute("src", response.items[i].album.images[0].url)
             }
+            for (i = 1; i < allSavedAlbums.length; i++) {
+                allSavedAlbum[i].setAttribute("value", response.items[i].album.id)
+            }
 
             var allSavedArtists = document.getElementsByClassName("picks-artist")
             for (i = 1; i < allSavedArtists.length; i++) {
@@ -249,6 +252,10 @@ function getTop() {
             var allOnDayArtist = document.getElementsByClassName("on-this-day-artist-name")
             for (i = 1; i < allOnDayArtist.length; i++) {
                 allOnDayArtist[i].innerHTML = (response.items[i].album.artists[0].name)
+            }
+
+            for (i = 1; i < allOnDayCover.length; i++) {
+                allOnDayCover[i].setAttribute("value", response.items[i].album.id)
             }
 
 
@@ -1186,12 +1193,15 @@ function getAlbumInfo() {
                     searchSpotify(response.artists[0].id);
                     searchAlbumCovers(response.artists[0].id);
 
-                    document.querySelector(".grid-container2").style.display = "inline-grid";
-                    document.querySelector(".grid-container3").style.display = "none";
-                    $(".track-list").empty()
+                    // document.querySelector(".grid-container2").style.display = "inline-grid";
+                    // document.querySelector(".grid-container3").style.display = "none";
+                    // $(".track-list").empty()
 
                 })
-
+                document.querySelector(".grid-container2").style.display = "inline-grid";
+                document.querySelector(".grid-container3").style.display = "none";
+                $(".track-list").empty()
+                
             }
         })
     }
