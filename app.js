@@ -1144,11 +1144,14 @@ function getAlbumTracklist() {
 
 
 }
+var allAlbumCoverInfo = document.getElementsByClassName("uni-pic")
 
-
+for (var i = 0; i < allAlbumCoverInfo.length; i++) {
+    allAlbumCoverInfo[i].addEventListener('click', getAlbumInfo, false);
+}
 
 function getAlbumInfo() {
-    document.getElementsByClassName("uni-pic").addEventListener("click", function () {
+    // document.getElementsByClassName("uni-pic").addEventListener("click", function () {
         var albumId = document.querySelector(this).setAttribute("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId
 
@@ -1191,10 +1194,10 @@ function getAlbumInfo() {
 
             }
         })
-    })
+    }
 
 
-}
+// }
 
 
 //get artists related artists
