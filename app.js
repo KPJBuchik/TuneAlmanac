@@ -1067,11 +1067,14 @@ function searchAlbumCovers(id) {
 
 
 }
-
+var imageTime=  document.getElementsByClassName("image-results")
+for (var i = 0; i < imageTime.length; i++) {
+    imageTime[i].addEventListener('click', getAlbumTracklist, false);
+}
 
 
 function getAlbumTracklist() {
-    document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick(function () {
+    // document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick(function () {
 
         var albumId = document.querySelector(this).setAttribute("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
@@ -1147,7 +1150,7 @@ function getAlbumTracklist() {
 
             }
         })
-    })
+    // })
 
 
 }
@@ -1193,14 +1196,11 @@ function getAlbumInfo() {
                     searchSpotify(response.artists[0].id);
                     searchAlbumCovers(response.artists[0].id);
 
-                    // document.querySelector(".grid-container2").style.display = "inline-grid";
-                    // document.querySelector(".grid-container3").style.display = "none";
-                    // $(".track-list").empty()
+                    document.querySelector(".grid-container2").style.display = "inline-grid";
+                    document.querySelector(".grid-container3").style.display = "none";
+                    $(".track-list").empty()
 
                 })
-                document.querySelector(".grid-container2").style.display = "inline-grid";
-                document.querySelector(".grid-container3").style.display = "none";
-                $(".track-list").empty()
                 
             }
         })
