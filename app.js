@@ -1067,15 +1067,14 @@ function searchAlbumCovers(id) {
 
 
 }
-var imageTime=  document.getElementsByClassName("image-results")
-for (var i = 0; i < imageTime.length; i++) {
-    imageTime[i].addEventListener('click', getAlbumTracklist, false);
-}
 
 
 function getAlbumTracklist() {
     // document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick(function () {
-
+        var imageTime=  document.getElementsByClassName("image-results")
+        for (var i = 0; i < imageTime.length; i++) {
+            imageTime[i].addEventListener('click', getAlbumTracklist, false);
+        }
         var albumId = $(this).attr("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
 
