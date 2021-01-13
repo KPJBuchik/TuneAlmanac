@@ -1076,7 +1076,7 @@ for (var i = 0; i < imageTime.length; i++) {
 function getAlbumTracklist() {
     // document.querySelector(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").onClick(function () {
 
-        var albumId = document.querySelector(this).setAttribute("value");
+        var albumId = $(this).attr("value");
         var queryUrl = "https://api.spotify.com/v1/albums/" + albumId + "/tracks"
 
         $.ajax({
