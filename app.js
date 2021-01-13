@@ -561,9 +561,9 @@ function getPlaylists() {
 
 function getPlaylistTracks() {
 
-    document.querySelector("ul, .genre-img").click(function () {
+    document.querySelector("ul").click(function () {
 
-        var playlistId = document.querySelector(this).setAttribute("value")
+        var playlistId = $(this).setAttribute("value")
 
 
         var queryUrl = "https://api.spotify.com/v1/playlists/" + playlistId + "/tracks"
