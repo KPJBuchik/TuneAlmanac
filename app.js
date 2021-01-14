@@ -569,7 +569,7 @@ for (var i = 0; i < allPlaylistTracks.length; i++) {
 function getPlaylistTracks() {
 
         
-         var playlistId = document.getAttribute(".playlist")
+         var playlistId = allPlaylistTracks.getAttribute("value")
       
 
 
