@@ -586,8 +586,8 @@ function getPlaylistTracks() {
                     let trackTime = document.createElement("p").innerText = (newTime).classList.add("track-time")
                     let results = response.items[i].track.name
                     let tracklistDiv = document.createElement("div")
-                    tracklistDisplay = document.createElement("p").innerText = (results).classList.add("playlist-track")
-                    let tracklistArtist = document.createElement("p").innerText = (response.items[i].track.artists[0].name).classList.add("playlist-artist")
+                    tracklistDisplay = document.createElement("p").classList.add("playlist-track").innerText = (results)
+                    let tracklistArtist = document.createElement("p").classList.add("playlist-artist").innerText = (response.items[i].track.artists[0].name)
                     document.querySelector(tracklistArtist).setAttribute("value", response.items[i].track.artists[0].id)
                     let trackHr = document.createElement("hr")
                     tracklistDiv.innerHTML(tracklistDisplay)
