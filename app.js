@@ -559,7 +559,7 @@ function getPlaylists() {
 }
 
 for (var i = 0; i < allPlaylistTracks.length; i++) {
-    allPlaylistTracks[i].setAttribute("value");
+    allPlaylistTracks[i].getAttribute("value");
 }
 var allPlaylistTracks = document.getElementsByClassName("playlist")
 for (var i = 0; i < allPlaylistTracks.length; i++) {
@@ -569,7 +569,7 @@ for (var i = 0; i < allPlaylistTracks.length; i++) {
 function getPlaylistTracks() {
 
         
-         var playlistId = document.getElementsByClassName("playlist").setAttribute("value")
+         var playlistId = document.getElementsByClassName("playlist").getAttribute("value")
       
 
 
