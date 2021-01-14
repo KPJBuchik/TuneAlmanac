@@ -570,7 +570,7 @@ function getPlaylistTracks() {
 
         
          var playlistId = allPlaylistTracks.getAttribute("value")
-      
+        console.log(playlistId)
 
 
         var queryUrl = "https://api.spotify.com/v1/playlists/" + playlistId + "/tracks"
