@@ -557,6 +557,10 @@ function getPlaylists() {
         }
     })
 }
+
+for (var i = 0; i < allPlaylistTracks.length; i++) {
+    allPlaylistTracks[i].setAttribute("value");
+}
 var allPlaylistTracks = document.getElementsByClassName("playlist")
 for (var i = 0; i < allPlaylistTracks.length; i++) {
     allPlaylistTracks[i].addEventListener('click', getPlaylistTracks, false);
@@ -565,7 +569,7 @@ for (var i = 0; i < allPlaylistTracks.length; i++) {
 function getPlaylistTracks() {
 
         
-        var playlistId = $(this).attr("value")
+        // var playlistId = $(this).attr("value")
       
 
 
@@ -579,13 +583,13 @@ function getPlaylistTracks() {
                 console.log(response)
                 for (let i = 0; i < response.items.length + 1; i++) {
                     let newTime = timeConversiaddEventListener(response.items[i].track.duration_ms)
-                    let trackTime = document.createElement("<p>").innerText = (newTime).classList.add("track-time")
+                    let trackTime = document.createElement("p").innerText = (newTime).classList.add("track-time")
                     let results = response.items[i].track.name
-                    let tracklistDiv = document.createElement("<div>")
-                    tracklistDisplay = document.createElement("<p>").innerText = (results).classList.add("playlist-track")
-                    let tracklistArtist = document.createElement("<p>").innerText = (response.items[i].track.artists[0].name).classList.add("playlist-artist")
+                    let tracklistDiv = document.createElement("div")
+                    tracklistDisplay = document.createElement("p").innerText = (results).classList.add("playlist-track")
+                    let tracklistArtist = document.createElement("p").innerText = (response.items[i].track.artists[0].name).classList.add("playlist-artist")
                     document.querySelector(tracklistArtist).setAttribute("value", response.items[i].track.artists[0].id)
-                    let trackHr = document.createElement("<hr>")
+                    let trackHr = document.createElement("hr")
                     tracklistDiv.innerHTML(tracklistDisplay)
                     document.getElementsByClassName("track-list").appendChild(tracklistDiv)
                     document.getElementsByClassName("track-list").appendChild(trackHr)
@@ -605,7 +609,7 @@ function getPlaylistTracks() {
                         document.querySelector(".now-playing-song").innerText = (response.items[i].track.name)
 
                         document.querySelector("#preview-player").setAttribute("src", response.items[i].track.preview_url)
-                        document.querySelector(".now-playing-artist").html(response.items[i].track.artist.name) //this makes it work for some reasons
+                        document.querySelector(".now-playing-artist").innerHTML=(response.items[i].track.artist.name) //this makes it work for some reasons
 
 
                     })
@@ -620,7 +624,7 @@ function getPlaylistTracks() {
                         searchRelatedArtists(response.items[i].track.artists[0].id)
                         searchSpotify(response.items[i].track.artists[0].id);
                         searchAlbumCovers(response.items[i].track.artists[0].id);
-                        document.querySelector(".now-playing-artist").innerHTML(response.items[i].track.artist.name) //this makes it work for some reasons
+                        document.querySelector(".now-playing-artist").innerHTML=(response.items[i].track.artist.name) //this makes it work for some reasons
 
 
 
@@ -632,7 +636,7 @@ function getPlaylistTracks() {
                         document.querySelector(".now-playing-song").innerText = (response.items[i + 1].track.name)
 
                         document.querySelector("#preview-player").setAttribute("src", response.items[i + 1].track.preview_url)
-                        document.querySelector(".now-playing-artist").innerHTML(response.items[i++].track.artist.name) //this makes it work for 
+                        document.querySelector(".now-playing-artist").innerHTML=(response.items[i++].track.artist.name) //this makes it work for 
 
 
                     })
