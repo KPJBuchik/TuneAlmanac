@@ -569,11 +569,11 @@ for (var i = 0; i < allPlaylistTracks.length; i++) {
 function getPlaylistTracks() {
 
         
-         var playlistId = document.getElementsByClassName("playlist").getAttribute("value")
+         var playlistId = document.getAttribute("playlist")
       
 
 
-        var queryUrl = "https://api.spotify.com/v1/playlists/" + document.getElementsByClassName("playlist").getAttribute("value") + "/tracks"
+        var queryUrl = "https://api.spotify.com/v1/playlists/" + playlistId + "/tracks"
 
         $.ajax({
             url: queryUrl,
