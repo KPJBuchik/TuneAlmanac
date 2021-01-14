@@ -557,11 +557,11 @@ function getPlaylists() {
         }
     })
 }
+var allPlaylistTracks = document.getElementsByClassName("playlist")
 
 for (var i = 0; i < allPlaylistTracks.length; i++) {
     allPlaylistTracks[i].getAttribute("value");
 }
-var allPlaylistTracks = document.getElementsByClassName("playlist")
 for (var i = 0; i < allPlaylistTracks.length; i++) {
     allPlaylistTracks[i].addEventListener('click', getPlaylistTracks, false);
 }
@@ -573,7 +573,7 @@ function getPlaylistTracks() {
       
 
 
-        var queryUrl = "https://api.spotify.com/v1/playlists/" + playlistId + "/tracks"
+        var queryUrl = "https://api.spotify.com/v1/playlists/" + document.getElementsByClassName("playlist").getAttribute("value") + "/tracks"
 
         $.ajax({
             url: queryUrl,
