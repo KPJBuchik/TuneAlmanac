@@ -873,7 +873,6 @@ function searchAlbumCovers(id) {
 }
 
 
-$(document).ready(
 
     function getAlbumTracklist() {
         $(".image-results, .on-this-day-cover, .album-picks-for-you, .recent-album-cover").click(function () {
@@ -957,7 +956,7 @@ $(document).ready(
 
     }
 
-)
+
 
 $(document).ready(
     function getAlbumInfo() {
