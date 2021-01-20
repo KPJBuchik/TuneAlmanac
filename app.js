@@ -176,7 +176,7 @@ function getTop() {
         }
     })
 }
-
+//click event
 var allPlaylistList = document.getElementsByClassName("playlist")
 for (var i = 0; i < allPlaylistList.length; i++) {
     allPlaylistList[i].addEventListener('click', getPlaylistInfo, false);
@@ -190,27 +190,16 @@ function getPlaylistInfo() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
+            for (let i = 0; i < response.items.length + 1; i++) {
 
 
-            console.log("playlistclickhit")
+
+            console.log(response.items[0])
 
             document.getElementsByClassName("album-cover-page").setAttribute("src", response.items[0].images[0].url)
             document.getElementsByClassName("album-page-name").innerText = ("UHHHHH")
             document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
-            // var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
-            // for (i = 0; i < allAlbumCoverPage.length; i++) {
-            //     allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
-            // }
-            // var allAlbumPageName=document.getElementsByClassName("album-page-name")
-            // for (i = 0; i < allAlbumPageName.length; i++) {
-            //     allAlbumPageName[i].innerText = (response.items[i].name)
-            // }
-            // var allByArtistAlbum = document.getElementsByClassName("by-artist-album")
-            // for (i = 0; i < allByArtistAlbum.length; i++) {
-            //     allByArtistAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
-            // }
-
-
+            }
 
 
         }
