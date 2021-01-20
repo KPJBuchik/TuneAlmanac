@@ -81,60 +81,78 @@ $(document).ready(
     function getNewReleases() {
 
         var queryUrl = "https://api.spotify.com/v1/browse/new-releases"
-
-
+    
+    
         $.ajax({
             url: queryUrl,
             type: "GET",
             beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
             success: function (response) {
     
-            console.log(response)
-            // for (let i = 0; i < 6 + 1; i++) {
-
-            $(".recent-album-cover").attr("src", response.albums.items[0].images[0].url)
-            $(".recent-album-cover").attr("value", response.albums.items[0].id)
-
-            $(".new-release-album-name1").html(response.albums.items[0].name)
-            $(".new-release-artist-name1").html(response.albums.items[0].artists[0].name)
-
-            $(".recent-album-cover2").attr("src", response.albums.items[1].images[0].url)
-            $(".recent-album-cover2").attr("value", response.albums.items[1].id)
-
-            $(".new-release-album-name2").html(response.albums.items[1].name)
-            $(".new-release-artist-name2").html(response.albums.items[1].artists[0].name)
-
-
-            $(".recent-album-cover3").attr("src", response.albums.items[2].images[0].url)
-            $(".recent-album-cover3").attr("value", response.albums.items[2].id)
-            $(".new-release-album-name3").html(response.albums.items[2].name)
-            $(".new-release-artist-name3").html(response.albums.items[2].artists[0].name)
-
-
-            $(".recent-album-cover4").attr("src", response.albums.items[3].images[0].url)
-            $(".recent-album-cover4").attr("value", response.albums.items[3].id)
-            $(".new-release-album-name4").html(response.albums.items[3].name)
-            $(".new-release-artist-name4").html(response.albums.items[3].artists[0].name)
-
-
-            $(".recent-album-cover5").attr("src", response.albums.items[4].images[0].url)
-            $(".recent-album-cover5").attr("value", response.albums.items[4].id)
-            $(".new-release-album-name5").html(response.albums.items[4].name)
-            $(".new-release-artist-name5").html(response.albums.items[4].artists[0].name)
-
-            $(".recent-album-cover6").attr("src", response.albums.items[5].images[0].url)
-            $(".recent-album-cover6").attr("value", response.albums.items[5].id)
-            $(".new-release-album-name6").html(response.albums.items[5].name)
-            $(".new-release-artist-name6").html(response.albums.items[5].artists[0].name)
-
-
-
-
-        }
+                console.log(response)
+    
+                var allRecentCovers = document.getElementsByClassName("recent-album-cover")
+                for (i = 1; i < allRecentCovers.length; i++) {
+                    allRecentCovers[i].setAttribute("src", response.albums.items[i].images[0].url)
+                }
+                var allRecentCovers = document.getElementsByClassName("recent-album-cover")
+                for (i = 0; i < allRecentCovers.length; i++) {
+                    allRecentCovers[i].setAttribute("value", response.albums.items[i].id)
+                }
+                var allRecentArtistNames = document.getElementsByClassName("new-release-artist-name")
+                for (i = 1; i < allRecentArtistNames.length; i++) {
+                    allRecentArtistNames[i].innerHTML = (response.albums.items[i].artists[0].name)
+                }
+                var allRecentAlbumNames = document.getElementsByClassName("new-release-album-name")
+                for (i = 1; i < allRecentAlbumNames.length; i++) {
+                    allRecentAlbumNames[i].innerHTML = (response.albums.items[i].name)
+                }
+    
+    
+    
+                // document.querySelector(".recent-album-cover").setAttribute("src", response.albums.items[0].images[0].url)
+    
+                // document.querySelector(".recent-album-cover").setAttribute("value", response.albums.items[0].id)
+    
+                // document.querySelector(".new-release-album-name1").innerHTML = (response.albums.items[0].name)
+                // document.querySelector(".new-release-artist-name1").innerHTML = (response.albums.items[0].artists[0].name)
+    
+                // document.querySelector(".recent-album-cover2").setAttribute("src", response.albums.items[1].images[0].url)
+                // document.querySelector(".recent-album-cover2").setAttribute("value", response.albums.items[1].id)
+    
+                // document.querySelector(".new-release-album-name2").innerHTML = (response.albums.items[1].name)
+                // document.querySelector(".new-release-artist-name2").innerHTML = (response.albums.items[1].artists[0].name)
+    
+    
+                // document.querySelector(".recent-album-cover3").setAttribute("src", response.albums.items[2].images[0].url)
+                // document.querySelector(".recent-album-cover3").setAttribute("value", response.albums.items[2].id)
+                // document.querySelector(".new-release-album-name3").innerHTML = (response.albums.items[2].name)
+                // document.querySelector(".new-release-artist-name3").innerHTML = (response.albums.items[2].artists[0].name)
+    
+    
+                // document.querySelector(".recent-album-cover4").setAttribute("src", response.albums.items[3].images[0].url)
+                // document.querySelector(".recent-album-cover4").setAttribute("value", response.albums.items[3].id)
+                // document.querySelector(".new-release-album-name4").innerHTML = (response.albums.items[3].name)
+                // document.querySelector(".new-release-artist-name4").innerHTML = (response.albums.items[3].artists[0].name)
+    
+    
+                // document.querySelector(".recent-album-cover5").setAttribute("src", response.albums.items[4].images[0].url)
+                // document.querySelector(".recent-album-cover5").setAttribute("value", response.albums.items[4].id)
+                // document.querySelector(".new-release-album-name5").innerHTML = (response.albums.items[4].name)
+                // document.querySelector(".new-release-artist-name5").innerHTML = (response.albums.items[4].artists[0].name)
+    
+                // document.querySelector(".recent-album-cover6").setAttribute("src", response.albums.items[5].images[0].url)
+                // document.querySelector(".recent-album-cover6").setAttribute("value", response.albums.items[5].id)
+                // document.querySelector(".new-release-album-name6").innerHTML = (response.albums.items[5].name)
+                // document.querySelector(".new-release-artist-name6").innerHTML = (response.albums.items[5].artists[0].name)
+    
+    
+    
+    
+            }
+        })
     })
-}
-)
-
+    
 
 $(document).ready(
 
