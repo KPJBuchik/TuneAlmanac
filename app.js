@@ -229,18 +229,21 @@ function getPlaylists() {
 
             function playlistSideClick (event){
                 event.preventDefault();
-                var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
-                for (i = 0; i < allAlbumCoverPage.length; i++) {
-                    allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
-                }
-                var allAlbumPageName=document.getElementsByClassName("album-page-name")
-                for (i = 0; i < allAlbumPageName.length; i++) {
-                    allAlbumPageName[i].innerText = (response.items[i].name)
-                }
-                var allByArtistAlbum = document.getElementsByClassName("by-artist-album")
-                for (i = 0; i < allByArtistAlbum.length; i++) {
-                    allByArtistAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
-                }
+                document.getElementsByClassName("album-cover-page").setAttribute(response.items[0].images[0].url)
+                document.getElementsByClassName("album-page-name").innerText= (response.items[0].name)
+                document.getElementsByClassName("by-artist-album").innerText=("Created by" + " " + response.items[0].owner.display_name)
+                // var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
+                // for (i = 0; i < allAlbumCoverPage.length; i++) {
+                //     allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
+                // }
+                // var allAlbumPageName=document.getElementsByClassName("album-page-name")
+                // for (i = 0; i < allAlbumPageName.length; i++) {
+                //     allAlbumPageName[i].innerText = (response.items[i].name)
+                // }
+                // var allByArtistAlbum = document.getElementsByClassName("by-artist-album")
+                // for (i = 0; i < allByArtistAlbum.length; i++) {
+                //     allByArtistAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
+                // }
             }
 
             var allPlaylistLinks = document.getElementsByClassName("playlist")
