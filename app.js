@@ -50,9 +50,22 @@ function getUserProfile() {
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
             console.log("1" + response)
-            $(".user-name").text(response.display_name)
-            $(".user-image2").attr("src", response.images[0].url)
+            var allUserName = document.getElementsByClassName("user-name")
+
+            for (i = 0; i < allUserName.length; i++) {
+                allUserName[i].innerText = response.display_name;
+            }
+            var allUserImage = document.getElementsByClassName("user-image2")
+
+            for (i = 0; i < allUserImage.length; i++) {
+                allUserImage[i].setAttribute("src", response.images[0].url)
+            }
+
+            //document.querySelector(".user-name").innerText(response.display_name)
+            // allUserName.innerText = (response.display_name)
+            // allUserImage.setAttribute("src", response.images[0].url)
         }
+
     });
 
 
