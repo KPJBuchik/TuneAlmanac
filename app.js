@@ -37,6 +37,7 @@ $(document).ready(function () {
     getUserProfile();
     getAlbumTracklist();
     getNewReleases()
+    getTop()
 });
 //get user image
 function getUserProfile() {
@@ -114,7 +115,6 @@ function getUserProfile() {
     }
 
 
-$(document).ready(
 
     function getTop() {
 
@@ -176,7 +176,7 @@ $(document).ready(
         })
     }
     
-    )
+    
 
 
 //ajax call to populate sidebar with playlists
@@ -191,194 +191,65 @@ function getPlaylists() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            $("ul").text(response.items[0].name)
-            $("ul").attr("value", response.items[0].id)
-            $("ul").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[0].images[0].url)
-                $(".album-page-name").text(response.items[0].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
+
+            var allPlaylistList = document.getElementsByClassName("playlist")
+            for (i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].setAttribute("value", response.items[i].id);
+            }
+
+            var allPlaylistList2 = document.getElementsByClassName("playlist2")
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList2[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList2.length; i++) {
+                allPlaylistList2[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList3 = document.getElementsByClassName("playlist3")
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList3[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList3.length; i++) {
+                allPlaylistList3[i].setAttribute("value", response.items[i].id);
+            }
+            var allPlaylistList4 = document.getElementsByClassName("playlist4")
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList4[i].innerText = (response.items[i].name)
+            }
+
+            for (i = 0; i < allPlaylistList4.length; i++) {
+                allPlaylistList4[i].setAttribute("value", response.items[i].id);
+            }
+            // document.querySelector
+
+            function playlistSideClick (event){
+                event.preventDefault();
+                var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
+                for (i = 0; i < allAlbumCoverPage.length; i++) {
+                    allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
+                }
+                var allAlbumPageName=document.getElementsByClassName("album-page-name")
+                for (i = 0; i < allAlbumPageName.length; i++) {
+                    allAlbumPageName[i].innerText = (response.items[i].name)
+                }
+                var allByArtistAlbum = document.getElementsByClassName("by-artist-album")
+                for (i = 0; i < allByArtistAlbum.length; i++) {
+                    allByArtistAlbum[i].innerText = ("Created by" + " " + response.items[0].owner.display_name)
+                }
+            }
+
+            var allPlaylistLinks = document.getElementsByClassName("playlist")
+            for (var i = 0; i < allPlaylistLinks.length; i++) {
+                allPlaylistLinks[i].addEventListener('click', playlistSideClick, false);
+            }
 
 
-            })
-            $("ul:nth-child(2)").text(response.items[1].name)
-            $("ul:nth-child(2)").attr("value", response.items[1].id)
-            $("ul:nth-child(2)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[1].images[0].url)
-                $(".album-page-name").text(response.items[1].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-
-            $("ul:nth-child(3)").text(response.items[2].name)
-            $("ul:nth-child(3)").attr("value", response.items[2].id)
-            $("ul:nth-child(3)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[2].images[0].url)
-                $(".album-page-name").text(response.items[2].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-            $("ul:nth-child(4)").text(response.items[3].name)
-            $("ul:nth-child(4)").attr("value", response.items[3].id)
-            $("ul:nth-child(4)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[3].images[0].url)
-                $(".album-page-name").text(response.items[3].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(5)").text(response.items[4].name)
-            $("ul:nth-child(5)").attr("value", response.items[4].id)
-            $("ul:nth-child(5)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[4].images[0].url)
-                $(".album-page-name").text(response.items[4].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(6)").text(response.items[5].name)
-            $("ul:nth-child(6)").attr("value", response.items[5].id)
-            $("ul:nth-child(6)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[5].images[0].url)
-                $(".album-page-name").text(response.items[5].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(7)").text(response.items[6].name)
-            $("ul:nth-child(7)").attr("value", response.items[6].id)
-            $("ul:nth-child(7)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[6].images[0].url)
-                $(".album-page-name").text(response.items[6].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(8)").text(response.items[7].name)
-            $("ul:nth-child(8)").attr("value", response.items[7].id)
-            $("ul:nth-child(8)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[7].images[0].url)
-                $(".album-page-name").text(response.items[7].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(9)").text(response.items[8].name)
-            $("ul:nth-child(9)").attr("value", response.items[8].id)
-            $("ul:nth-child(9)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[8].images[0].url)
-                $(".album-page-name").text(response.items[8].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(10)").text(response.items[9].name)
-            $("ul:nth-child(10)").attr("value", response.items[9].id)
-            $("ul:nth-child(10)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[9].images[0].url)
-                $(".album-page-name").text(response.items[9].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(11)").text(response.items[10].name)
-            $("ul:nth-child(11)").attr("value", response.items[10].id)
-            $("ul:nth-child(11)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[10].images[0].url)
-                $(".album-page-name").text(response.items[10].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(12)").text(response.items[11].name)
-            $("ul:nth-child(12)").attr("value", response.items[11].id)
-            $("ul:nth-child(12)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[11].images[0].url)
-                $(".album-page-name").text(response.items[11].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(13)").text(response.items[12].name)
-            $("ul:nth-child(13)").attr("value", response.items[12].id)
-            $("ul:nth-child(13)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[12].images[0].url)
-                $(".album-page-name").text(response.items[12].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(14)").text(response.items[13].name)
-            $("ul:nth-child(14)").attr("value", response.items[13].id)
-            $("ul:nth-child(14)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[13].images[0].url)
-                $(".album-page-name").text(response.items[13].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(15)").text(response.items[14].name)
-            $("ul:nth-child(15)").attr("value", response.items[14].id)
-            $("ul:nth-child(15)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[14].images[0].url)
-                $(".album-page-name").text(response.items[14].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-            $("ul:nth-child(16)").text(response.items[15].name)
-            $("ul:nth-child(16)").attr("value", response.items[15].id)
-            $("ul:nth-child(16)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[15].images[0].url)
-                $(".album-page-name").text(response.items[15].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(17)").text(response.items[16].name)
-            $("ul:nth-child(17)").attr("value", response.items[16].id)
-            $("ul:nth-child(17)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[16].images[0].url)
-                $(".album-page-name").text(response.items[16].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(18)").text(response.items[17].name)
-            $("ul:nth-child(18)").attr("value", response.items[17].id)
-            $("ul:nth-child(18)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[17].images[0].url)
-                $(".album-page-name").text(response.items[17].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
-            $("ul:nth-child(19)").text(response.items[18].name)
-            $("ul:nth-child(19)").attr("value", response.items[18].id)
-            $("ul:nth-child(19)").on("click", function () {
-                $(".album-cover-page").attr("src", response.items[18].images[0].url)
-                $(".album-page-name").text(response.items[18].name)
-                $(".by-artist-album").text("Created by" + " " + response.items[0].owner.display_name)
-
-
-            })
-
+          
 
         }
     })
