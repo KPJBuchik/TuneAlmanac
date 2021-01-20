@@ -56,6 +56,7 @@ function getUserProfile() {
             for (i = 0; i < allUserName.length; i++) {
                 allUserName[i].innerText = response.display_name;
             }
+
             var allUserImage = document.getElementsByClassName("user-image2")
 
             for (i = 0; i < allUserImage.length; i++) {
@@ -148,7 +149,7 @@ function getUserProfile() {
                     allSavedAlbumTitle[i].innerHTML = (response.items[i].album.name)
                 }
     
-    
+
     
                 var allOnDayCover = document.getElementsByClassName("on-this-day-cover")
                 for (i = 1; i < allOnDayCover.length; i++) {
@@ -229,9 +230,9 @@ function getPlaylists() {
 
             function playlistSideClick (){
                 console.log("playlistclickhit")
-                document.getElementsByClassName("album-cover-page").setAttribute("src",response.items[i].images[0].url)
-                document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
-                document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
+                document.getElementsByClassName("album-cover-page").setAttribute("src",response.items[0].images[0].url)
+                document.getElementsByClassName("album-page-name").innerText = (response.items[0].name)
+                document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
                 // var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
                 // for (i = 0; i < allAlbumCoverPage.length; i++) {
                 //     allAlbumCoverPage[i].setAttribute("src", response.items[i].images[0].url)
