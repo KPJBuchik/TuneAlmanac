@@ -228,7 +228,8 @@ function getPlaylists() {
             // document.querySelector
 
             function playlistSideClick (){
-                // document.getElementsByClassName("album-cover-page").setAttribute("src",response.items[i].images[0].url)
+                console.log("playlistclickhit")
+                document.getElementsByClassName("album-cover-page").setAttribute("src",response.items[i].images[0].url)
                 document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
                 document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
                 // var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
