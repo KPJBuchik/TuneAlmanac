@@ -356,16 +356,20 @@ function getPlaylistTracks() {
 
 
 //uhhhhh
+var allGenreImg = document.getElementsByClassName("genre-img")
 
-document.querySelector(".genre-img").addEventListener("click", function (event) {
-    event.preventDefault()
+for (var i = 0; i < allGenreImg.length; i++) {
+    allGenreImg[i].addEventListener('click',genreImgClick , false);
+}
+
+function genreImgClick (){
     document.querySelector(".album-page-title").innerText = "Playlist"
     document.querySelector(".grid-container3").style.display = "inline-grid";
     document.querySelector(".grid-container").style.display = "hidden";
     document.querySelector(".grid-container2").style.display = "hidden";
     getPlaylistTracks()
+}
 
-})
 
 document.querySelector(".cowboy").addEventListener("click", function (event) {
     event.preventDefault()
