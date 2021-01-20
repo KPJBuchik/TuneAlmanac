@@ -246,9 +246,8 @@ function getPlaylists() {
                 // }
             }
 
-            var allPlaylistLinks = document.getElementsByClassName("playlist")
-            for (var i = 0; i < allPlaylistLinks.length; i++) {
-                allPlaylistLinks[i].addEventListener('click', playlistSideClick, false);
+            for (var i = 0; i < allPlaylistList.length; i++) {
+                allPlaylistList[i].addEventListener('click', playlistSideClick, false);
             }
 
 
@@ -964,7 +963,6 @@ $(".home").on("click", function (event) {
 $("ul").on("click", function (event) {
 
     event.preventDefault();
-    console.log("JESUS")
 
     $(".grid-container3").css("display", "inline-grid")
     $(".grid-container").css("display", "hidden")
