@@ -230,7 +230,7 @@ function getPlaylists() {
 
             function playlistSideClick (){
                 console.log("playlistclickhit")
-                document.getElementsByClassName("album-cover-page").setAttribute("src",response.items[0].images[0].url)
+                document.getElementsByClassName("album-cover-page").setAttribute("src", response.items[0].images[0].url)
                 document.getElementsByClassName("album-page-name").innerText = (response.items[0].name)
                 document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
                 // var allAlbumCoverPage = document.getElementsByClassName("album-cover-page")
@@ -356,85 +356,106 @@ function getPlaylistTracks() {
 
 
 //uhhhhh
-$(".genre-img").on("click", function (event) {
-    event.preventDefault()
-    $(".album-page-title").text("Playlist")
 
-    $(".grid-container3").css("display", "inline-grid")
-    $(".grid-container").css("display", "hidden")
-    $(".grid-container2").css("display", "hidden");
+document.querySelector(".genre-img").addEventListener("click", function (event) {
+    event.preventDefault()
+    document.querySelector(".album-page-title").innerText = "Playlist"
+    document.querySelector(".grid-container3").style.display = "inline-grid";
+    document.querySelector(".grid-container").style.display = "hidden";
+    document.querySelector(".grid-container2").style.display = "hidden";
     getPlaylistTracks()
 
 })
 
-$(".cowboy").on("click", function (event) {
+document.querySelector(".cowboy").addEventListener("click", function (event) {
     event.preventDefault()
-    $(".album-page-name").text("Country")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
-
-    $(".album-cover-page").attr("src", "assets/cowboy.svg")
-})
-$(".playground").on("click", function (event) {
-    event.preventDefault()
-
-    $(".album-cover-page").attr("src", "assets/playground.svg")
-    $(".album-page-name").text("Pop Punk")
-
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
+    document.querySelector(".album-page-name").innerText = ("Country")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/cowboy.svg")
+    getPlaylistTracks()
 
 })
 
-$(".psychedelic").on("click", function (event) {
+document.querySelector(".playground").addEventListener("click", function (event) {
     event.preventDefault()
-    $(".album-page-name").text("Psychedelic")
 
-    $(".album-cover-page").attr("src", "assets/Joshua Tree.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/playground.svg")
+    document.querySelector(".album-page-name").innerText = ("Pop Punk")
+
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+
+    getPlaylistTracks()
+
 
 })
 
-$(".rocknroll").on("click", function (event) {
+document.querySelector(".psychedelic").addEventListener("click", function (event) {
     event.preventDefault()
-    $(".album-page-name").text("Road Trip")
+    document.querySelector(".album-page-name").innerText = ("Psychedelic")
 
-    $(".album-cover-page").attr("src", "assets/locked.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/Joshua Tree.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+    getPlaylistTracks()
+
 
 })
 
-$(".metal").on("click", function (event) {
+document.querySelector(".rocknroll").addEventListener("click", function (event) {
     event.preventDefault()
-    $(".album-page-name").text("Metal")
+    document.querySelector(".album-page-name").innerText = ("Road Trip")
 
-    $(".album-cover-page").attr("src", "assets/pitchfork.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/locked.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
 
-})
-$(".shattuck").on("click", function (event) {
-    event.preventDefault()
-    $(".album-page-name").text("Noise Rock")
+    getPlaylistTracks()
 
-    $(".album-cover-page").attr("src", "assets/shattuck.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
-
-})
-$(".jazz").on("click", function (event) {
-    event.preventDefault()
-    $(".album-page-name").text("Jazz")
-
-    $(".album-cover-page").attr("src", "assets/jazz.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
-
-})
-$(".pancakes").on("click", function (event) {
-    event.preventDefault()
-    $(".album-page-name").text("Morning")
-
-    $(".album-cover-page").attr("src", "assets/pancakes.svg")
-    $(".by-artist-album").text("Created by" + " " + "Kevin Buchik")
 
 })
 
+document.querySelector(".metal").addEventListener("click", function (event) {
+    event.preventDefault()
+    document.querySelector(".album-page-name").innerText = ("Metal")
+
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/pitchfork.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+
+    getPlaylistTracks()
+
+
+})
+document.querySelector(".shattuck").addEventListener("click", function (event) {
+    event.preventDefault()
+    document.querySelector(".album-page-name").innerText = ("Noise Rock")
+
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/shattuck.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+
+    getPlaylistTracks()
+
+
+})
+document.querySelector(".jazz").addEventListener("click", function (event) {
+    event.preventDefault()
+    document.querySelector(".album-page-name").innerText = ("Jazz")
+
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/jazz.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+
+    getPlaylistTracks()
+
+
+})
+document.querySelector(".pancakes").addEventListener("click", function (event) {
+    event.preventDefault()
+    document.querySelector(".album-page-name").innerText = ("Morning")
+
+    document.querySelector(".album-cover-page").setAttribute("src", "assets/pancakes.svg")
+    document.querySelector(".by-artist-album").innerText = ("Created by" + " " + "Kevin Buchik")
+
+    getPlaylistTracks()
+
+
+})
 
 //get artists top tracks and album covers
 function searchSpotify(id) {
