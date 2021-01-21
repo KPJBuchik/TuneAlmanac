@@ -189,15 +189,13 @@ function getPlaylistInfo() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            for (let i = 0; i < response.items.length + 1; i++) {
-
-
+            for (let i = 0; i < response.items.length; i++) {
 
             console.log(response.items[0].images[0].url)
 
-            document.getElementById("album-cover-page").src = response.items[i].images[0].url
-            document.getElementById("album-page-name").innerText = response.items[i].name
-            document.getElementById("by-artist-album").innerText = "Created by" + " " + response.items[0].owner.display_name
+            document.getElementById("album-cover-page").src = (response.items[i].images[0].url)
+            document.getElementById("album-page-name").innerText = (response.items[i].name)
+            document.getElementById("by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
             
             }
 
