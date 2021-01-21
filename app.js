@@ -192,7 +192,7 @@ function getPlaylistInfo() {
 
 
 
-            console.log(response.items[0])
+            console.log(response.items[0].images[0].url)
 
             document.getElementsByClassName("album-cover-page").src = response.items[0].images[0].url
             document.getElementsByClassName("album-page-name").innerText = response.items[0].name
