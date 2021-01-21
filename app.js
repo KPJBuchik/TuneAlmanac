@@ -178,9 +178,7 @@ function getTop() {
 }
 //click event
 var allPlaylistList = document.getElementsByClassName("playlist")
-for (var i = 0; i < allPlaylistList.length; i++) {
-    allPlaylistList[i].addEventListener('click', getPlaylistInfo, false);
-}
+
 
 function getPlaylistInfo() {
     var queryUrl = "https://api.spotify.com/v1/me/playlists"
@@ -194,9 +192,9 @@ function getPlaylistInfo() {
 
 
 
-            console.log(response.items[0])
+            console.log("getplaylistinfo"+response.items[0])
 
-            document.getElementsByClassName("album-cover-page").setAttribute("src", response.items[i].images[0].url)
+            document.getElementsByClassName("album-cover-page").src=response.items[i].images[0].url
             document.getElementsByClassName("album-page-name").innerText = ("UHHHHH")
             document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
             }
@@ -205,7 +203,9 @@ function getPlaylistInfo() {
         }
     })
 }
-
+for (var i = 0; i < allPlaylistList.length; i++) {
+    allPlaylistList[i].addEventListener('click', getPlaylistInfo, false);
+}
 
 
     //ajax call to populate sidebar with playlists
