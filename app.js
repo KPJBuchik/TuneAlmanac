@@ -181,6 +181,7 @@ var allPlaylistList = document.getElementsByClassName("playlist")
 
 
 function getPlaylistInfo() {
+
     var queryUrl = "https://api.spotify.com/v1/me/playlists"
 
     $.ajax({
@@ -188,16 +189,15 @@ function getPlaylistInfo() {
         type: "GET",
         beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
         success: function (response) {
-            for (let i = 0; i < response.items.length + 1; i++) {
 
 
 
-            console.log("getplaylistinfo"+response.items[0])
+            console.log(response.items[0])
 
-            document.getElementsByClassName("album-cover-page").src = (response.items[i].images[0].url)
-            document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
-            document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
-            }
+            document.getElementsByClassName("album-cover-page").src = (response.items[0].images[0].url)
+            document.getElementsByClassName("album-page-name").innerText = (response.items[0].name)
+            document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[0].owner.display_name)
+            
 
 
         }
@@ -612,6 +612,7 @@ for (var i = 0; i < allPlaylistList.length; i++) {
                 searchRelatedArtists(response.artists.items[0].id)
                 searchSpotifyNameClone(response.artists.items[0].id)
                 getPlaylistTracks(response.artists.items[0].id)
+                getPlaylistInfo(response.artists.items[0].id)
 
             }
         });
