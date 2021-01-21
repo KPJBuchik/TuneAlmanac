@@ -194,8 +194,8 @@ function getPlaylistInfo() {
 
             console.log("getplaylistinfo"+response.items[0])
 
-            document.getElementsByClassName("album-cover-page").src=response.items[i].images[0].url
-            document.getElementsByClassName("album-page-name").innerText = ("UHHHHH")
+            document.getElementsByClassName("album-cover-page").src = (response.items[i].images[0].url)
+            document.getElementsByClassName("album-page-name").innerText = (response.items[i].name)
             document.getElementsByClassName("by-artist-album").innerText = ("Created by" + " " + response.items[i].owner.display_name)
             }
 
