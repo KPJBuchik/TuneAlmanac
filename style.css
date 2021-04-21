@@ -1,3 +1,4 @@
+
 body{overflow-x:hidden;
 }
 body::-webkit-scrollbar {
@@ -799,8 +800,8 @@ font-size:33px;}
 
 /* album cover page */
 .album-page-title{font-size:14px;}
-#album-page-name{font-size:24px;}
-#album-cover-page{width:225px;
+.album-page-name{font-size:24px;}
+.album-cover-page{width:225px;
 height:225px;
 margin-top:-150px;
 margin-left:20px;
@@ -856,9 +857,9 @@ background-color:white;}
 .more-a-b-a{color:white;
 margin-left:20px;}
 
-#by-artist-album:hover{cursor:pointer;
+.by-artist-album:hover{cursor:pointer;
 color:grey;}
-#by-artist-album{display:inline;}
+.by-artist-album{display:inline;}
 .by{color:#858585;
 display:inline;}
 .label{color:#B3B3B3;
@@ -1063,4 +1064,3 @@ margin-left:150px;}
   .play-button{top: 220px;}
 
 }
-
