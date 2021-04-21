@@ -892,7 +892,7 @@ margin:2px;
 
 .on-this-day{position: relative;
   top: -200px;
-  /* display: inline-block; */
+display:flex;
   margin-top: -955px;
       margin-left: 420px;
 }
