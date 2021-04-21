@@ -1,4 +1,3 @@
-
 body{overflow-x:hidden;
 }
 body::-webkit-scrollbar {
@@ -1038,7 +1037,7 @@ margin-left:150px;}
 
 
 
-@media screen and (min-width: 1400px) {
+/* @media screen and (min-width: 1400px) {
   .c{
     width: 1370px;
   }
@@ -1063,4 +1062,4 @@ margin-left:150px;}
   .grid-container{width:1900px;}
   .play-button{top: 220px;}
 
-}
+} */
