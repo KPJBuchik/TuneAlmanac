@@ -7,46 +7,46 @@ body::-webkit-scrollbar {
 .grid-container {
     background-color: #012121;
     width: 100%;
-    height: 1vh;
+    height: 100vh;
     display: inline-grid;
-    grid-gap: 1px;
-    grid-template-columns:246.297px;
+    grid-gap: 0.143vh;
+    grid-template-columns:19.24195vw;
     grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
    
   }
   .grid-container2 {
     background-color: #012121;
     width: 520%;
-    height: 1vh;
+    height: 100vh;
     display: none;
-    grid-gap: 1px;
-    grid-template-columns:246.297px;
+    grid-gap: 0.143vh;
+    grid-template-columns:19.24195vw;
     grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
     position: relative;
-    top: -700px;
+    top: -100.28vh;
    
   }
   .grid-container3 {
     background-color: #012121;
     width: 520%;
-    height: 1vh;
+    height: 100vh;
     display: none;
-    grid-gap: 1px;
-    grid-template-columns:246.297px;
+    grid-gap: 0.143vh;
+    grid-template-columns:19.24195vw;
     grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
     position: relative;
-    top: -705px;
+    top:-101.0028653295129vh
   }
   
   .grid-container4 {   background-color: #012121;
     width: 520%;
-    height: 1vh;
+    height: 100vh;
     display: none;
-    grid-gap: 1px;
-    grid-template-columns:246.297px;
+    grid-gap: 0.143vh;
+    grid-template-columns:19.24195vw;
     grid-template-rows: auto auto auto auto auto auto auto auto auto 1px;
     position: relative;
-    top: -705px;
+    top:-101.0028653295129vh
   }
 
   .a {
@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
   .a {
     grid-column: 1 / 3;
     grid-row: 1 / 10;
-    max-width: 200px;
+    max-width: 15.625vw
   }
 
   .c {
@@ -66,7 +66,7 @@ body::-webkit-scrollbar {
     background: rgb(1,33,33);
     background: linear-gradient(180deg, rgba(1,33,33,1) 0%, rgba(4,36,36,1) 2%, rgba(85,106,106,1) 100%);
         overflow-x:hidden;
-    margin-left:-50px;
+    margin-left:-3.90625vw;
     white-space:none;
  }
 
@@ -74,11 +74,11 @@ body::-webkit-scrollbar {
   .e {
     grid-column: 2 / 10;
     grid-row: 9/ 11;  
-    max-height:112.11px;
+    max-height:16.0616045vh;
     background-color:#282828;
     position: relative;
-    margin-left:-50px;
-    top:-2px;
+    margin-left:-3.90625vw;
+    top:- 0.28653vh;
   }
 
 
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
   }
   ::-webkit-scrollbar-thumb {
     background-color:  #AF0300;
-    border-radius: 10px;
+    border-radius: 0.78125vw;
   }
   
   
@@ -97,100 +97,94 @@ body::-webkit-scrollbar {
     background-color: #AF0300 !important;
     width:.5em;
   }
-  .validationDefault01, .validationDefault02, .validationDefault03, .validationDefault04{    width: 100px;
+  .validationDefault01, .validationDefault02, .validationDefault03, .validationDefault04{    width: 14.326647564469914vh;
     border: 3px solid #AF0300;
     border-right: 3px solid #AF0300;
     padding: 5px;
-    height: 30px;
+    height: 4.29799426vh;
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #9DBFAF;
-    width:100px;
+    width:7.8125vw;
     position:absolute;
-    left:50px;
-    margin-top:2px;
+    left:3.90625vw;
+    margin-top:0.2865329512vh;
       border-radius: 5px;
 
   }
 .submit-button{
   position: absolute;
-  height: 20px;
-  width: 50px;
-  left: 170px;
-  top: 6px;
-  height: 21px;
-}
-.submit-button{
-  position: absolute;
-  height: 20px;
-  width: 50px;
-  left: 170px;
-  top: 6px;
-  height: 21px;
+  height: 2.865329512893983vh;
+  width: 3.90625vw;
+
+  left: 13.28125vw;
+  top: 0.8595988vh;
+  height: 3.008595988538682vh;
 }
 
+
 .album-cover{
-width:200px;
+width:15.625vw;
 padding-left:0px;
 }
 
 .timestamp{float:left;}
 
-.play-button{    margin-left: 40%;
-  margin-top: -35%;
+.play-button{    margin-left: 32vw;
+  margin-top: -52vh;
   position: relative;
-  top: 125px;}
+  top: 17.908309455587393vh;}
 .play-button:hover{cursor:pointer;
     filter:hue-rotate(30deg);
 }
 
 .next-track{    position: relative;
-  top: -50px;}
+  top: -7.16vh;}
 
 .previous-track{transform: scaleX(-1);
   position: relative;
-  top: -50px;
-margin-left:-115px;}
+  top: -7.16vh;;
+margin-left:-8.984375vw}
 
 .next-track:hover, .previous-track:hover, .repeat:hover, .shuffle:hover{cursor:pointer;
     filter:invert(50%);
 }
-.back-button{margin-left:20px;
-margin-top:10px;}
+.back-button{margin-left: 1.5625vw;
+margin-top:1.4326647564469914vh;}
 .forward-button{transform:scaleX(-1);
-margin-left:20px;}
+margin-left: 1.5625vw;}
 
-.home{margin-left:20px;
-margin-right:20px;
-margin-top: -20px;
+.home{margin-left:1.5625vw;
+margin-right:1.5625vw;
+margin-top: -2.865329512893983vh;
 cursor:pointer}
 
-.browse{margin-right:20px;
-  margin-top: -20px;
+.browse{margin-right:1.5625vw;
+  margin-top: -2.865329512893983vh;
 cursor:pointer}
 .home:hover, .browse:hover, .radio:hover{  filter:invert(100%);
 }
 .user-image{
-    margin-right: 180px;
+    margin-right:14.0625vw;
     float: right;
-    margin-top: 10px;}
+    margin-top:1.4326647564469914vh;}
 .user-image2{border-radius:50%;
-height:50px;
-width:50px;}
+height:7.163323782234957vh;
+width:3.90625vw;}
 
-.user-name{margin-right: -95px;
-  margin-top: 15px;
+.user-name{margin-right:-7.421875vw;
+  margin-top:2.1489971346704873vh;
   font-family: "geeza pro";
   float: right;}
 
 .repeat{position: relative;
-  right: 45px;
-  top: -20px;}
+  right: 3.515625vw;
+  top:-2.865329512893983vh;}
 
 
 .shuffle{position: relative;
-  top: -20px;
-  left: 85px;}
+  top:-2.865329512893983vh;
+  left:6.640625vw;}
 
 .now-playing-artist{color:#707070;
 display:inline;}
@@ -198,28 +192,28 @@ display:inline;}
 display:inline;
 }
 
-.controls{margin-top: 10px;}
+.controls{margin-top:1.4326647564469914vh;}
 
 .sound-controls{float:right;
-margin-right:170px;
-margin-top:-50px;}
+margin-right:13.28125vw;
+margin-top:-7.163323782234957vh;}
 
-.pair{margin-left:10px;}
+.pair{margin-left:0.78125vw;}
 
 .header-image{
-  height:200px;
+  height:28.653295128939828vh;
 width:100%;
 object-fit: fill;
 border-color:#153232;
 }
 .header-image3{
-  height:200px;
+  height:28.653295128939828vh;
 width:100%;
 object-fit: fill;
 border-color:#153232;
 }
 .header-image2{
-  height:200px;
+  height:28.653295128939828vh;
 width:100%;
 object-fit: fill;
 border-color:#153232;
@@ -260,27 +254,27 @@ border-color:#153232;
 }
 .header-controls{
   position:relative; 
-  top:-200px;
+  top: -28.653295128939828vh;
   color:white;
 }
 
 
 .band-header{position:absolute;
-  font-size:5em;
-  margin-left:20px;
+  font-size:11.461318051575931vh;
+  margin-left:1.5625vw;
   font-weight:bolder;
  font-family: "Hoefler Text";
  color:#153232;
-top:135px;}
+top:19.340974212034386vh;}
 
 .band-header2{position:absolute;
-  font-size:5em;
-  margin-left:20px;
+  font-size:11.461318051575931vh;
+  margin-left:1.5625vw;
   font-weight:bolder;
  font-family: "Hoefler Text";
  color:#153232;
  text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
-top:200px;}
+top:28.653295128939828vh;}
 
 hr{background-color:#707070;
 opacity:.5}
@@ -290,36 +284,36 @@ opacity:.5}
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,43,1) 37%, rgba(49,185,84,1) 75%, rgba(44,255,0,1) 100%);
   border-style:none;
   z-index:2;
-  height:35px;
-  width:100px;
+  height:5.01432664756447vh;
+  width:7.8125vw;
   border-radius:4px;
-  top:100px;
-right:550px;
+  top:14.326647564469914vh;
+right: 42.96875vw;
 color:white;}
 
 .overview{color:white;
   position:absolute;
-top:140px;
-font-size:1.5em;
-right:50px;
+top:20.05730659025788vh;
+font-size:3.438395415472779vh;
+right: 3.90625vw;
 font-family:"Helvetica Neue";
-word-spacing:100px;}
+word-spacing:14.326647564469914vh;}
 
 .top-releases{position:relative;
-top:245px;
-font-size:1.5em;
-left:20px;
-margin-right: 702px;}
+top: 35.10028653295129vh;
+font-size:3.438395415472779vh;
+left:1.5625vw;
+margin-right:54.84375vw;}
 
 .top-albums{  
-  width: 120px;
+  width: 9.375vw;
   background-color: #555;
   display:inline-flex;
 position:relative;
 font-family:"geeza pro";
 
-margin-top:25px;
-top:-50px;
+margin-top:3.5816618911174785vh;
+top:-7.163323782234957vh;
 }
 .top-albums:after {
   content: "";
@@ -328,28 +322,28 @@ top:-50px;
 }
 
   .top-album2{
-    margin-top:40px;
+    margin-top: 5.730659025787966vh;
   }
 
   .top-songs{float: right;
-  font-size: 1.5em;
-  margin-right: 490px;
+  font-size:3.438395415472779vh;
+  margin-right: 38.28125vw;
   /* margin-top: -225px; */
   display: block;
   position: relative;
-  top: -220px;}
+  top:-31.51862464183381vh;}
 
 .popular-songs{
   position: initial;
   font-family:"geeza pro";
 
-  font-size:20px!important;
+  font-size:2.865329512893983vh!important;
 color:#A0A0A0;
-margin-right: -250px !important;
+margin-right: -19.53125vw !important;
 white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 300px;
+    width:23.4375vw;
 }
 .popular-songs:hover{cursor:pointer;
 color:white;}
@@ -360,62 +354,62 @@ color:white;}
 
 .timez{color:#A0A0A0;
   position: relative;
-  left: 500px;
-  top: -260px;
-  line-height:2.4;
-  font-size:20px;
+  left: 39.0625vw;
+  top:-37.249283667621775vh;
+  line-height:2.4px;
+  font-size:2.865329512893983vh;
   }
 
 .fans-like{
-  margin-top:10px !important;
-  margin-left: 435px !important;
-    font-size: 1.5em !important;
+  margin-top:1.4326647564469914vh !important;
+  margin-left: 33.984375vw !important;
+    font-size:3.438395415472779vh !important;
 }
-.circles{margin-left:425px;}
+.circles{margin-left:33.984375vw;}
 .related-artists{    position: absolute;
-  top: 500px;
+  top:71.63323782234957vh;
   font-family:"geeza pro";
 }
 
 .related-circle:hover{cursor:pointer}
 .related-circle{
-  margin-left:10px;
+  margin-left:0.78125vw;
 display:inline-block;
-  width:120px;
-height:120px;
+  width:9.375vw;
+height:17.191977077363898vh;
 border-radius:50%;
 background-color:white;}
-.related-img{  width:120px;
-  height:120px;
+.related-img{  width:9.375vw;
+  height:17.191977077363898vh;
 border-radius:50%;}
 
 .name1{
   position: relative;
-  left: 8px;
+  left:  0.625vw;
   }
 
 
 .tab {
   transform: rotate(-90deg);
-  height: 50px;
-  width: 150px;
+  height:7.163323782234957vh;
+  width:11.71875vw;
   border-radius: 15px 15px 0px 0px;
   background-color: #707070;
   position: absolute;
-  left: 480px;
+  left:37.5vw;
   display: inline-block;
   z-index: 2;
-  margin-left: 700px;
+  margin-left:54.6875vw;
 }
 .tab:before { 
 
-  height: 50px;
-  width: 70px;
+  height:7.163323782234957vh;
+  width:5.46875vw;
   border-radius: 10px 10px 0px 0px;
   background-color: #707070;
   content: "";
   position: absolute;
-  left: 104px;
+  left:8.125vw;
   top: 0px;
   -webkit-transform: skewX(40deg);
   transform: skewX(40deg);
@@ -425,26 +419,26 @@ border-radius:50%;}
 
 .tab2 {
   transform: rotate(-90deg);
-  height: 50px;
-  width: 150px;
+  height:7.163323782234957vh;
+  width:11.71875vw;
   border-radius: 15px 15px 0px 0px;
   background-color: #707070;
   position: absolute;
-  left: 480px;
-  top:395px;
+  left:37.5vw;
+  top: 56.59025787965616vh;
   display: inline-block;
   z-index: 2;
-  margin-left: 700px;
+  margin-left:54.6875vw;
 }
 .tab2:before { 
 
-  height: 50px;
-  width: 70px;
+  height:7.163323782234957vh;
+  width:5.46875vw;
   border-radius: 10px 10px 0px 0px;
   background-color: #707070;
   content: "";
   position: absolute;
-  left: 104px;
+  left:8.125vw;
   top: 0px;
   -webkit-transform: skewX(40deg);
   transform: skewX(40deg);
@@ -453,94 +447,94 @@ border-radius:50%;}
 .fa-users{transform: rotate(90deg);
 font-size:2em;
 position:absolute;
-top:10px;
-left:60px;
+top:1.4326647564469914vh;
+left:4.6875vw;
 color:#AF0300;
 
 }
 
 .fa-cog{font-size:2em;
   position:absolute;
-  top:10px;
-  left:70px;
+  top:1.4326647564469914vh;
+  left: 5.46875vw;
   color:#AF0300;}
 
 body{background-color:#282828;;}
 
 
-.image-results{  width: 120px;
-  height:120px;
+.image-results{  width: 9.375vw;
+  height:17.191977077363898vh;
 }
 
 .image-results:hover{cursor:pointer;}
-.release-names{font-size:10px;
+.release-names{font-size:1.4326647564469914vh;
   position:absolute;
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  width:90px;
+  width:7.03125vw;
 
 }
 
-.album-name{    font-size: 10px;
+.album-name{    font-size:1.4326647564469914vh;
   display: inline;
-  bottom: 180px;
+  bottom:25.787965616045845vh;
 
 }
-.album-name2{font-size: 10px;
-  bottom: 180px;
-  left:125px;
+.album-name2{font-size:1.4326647564469914vh;
+  bottom:25.787965616045845vh;
+  left:9.765625vw;
 }
 .album-name3{
-  bottom:180px;
-  left:250px;
+  bottom:25.787965616045845vh;
+  left: 19.53125vw;
 }
 .album-name4{
-  bottom:25px;
+  bottom:3.5816618911174785vh;
 }
 .album-name5{
-  bottom:25px;
-  left:125px;
+  bottom:3.5816618911174785vh;
+  left:9.765625vw;
 
 }
 
 .album-name6{
-  left:180px;
-  bottom:25px;
+  left:14.0625vw;
+  bottom:3.5816618911174785vh;
 
 
 }
 
 .album-name6{
-  bottom:25px;
-  left:250px;
+  bottom:3.5816618911174785vh;
+  left: 19.53125vw;
 }
 
 
 .artist-name{
-  font-size:10px;
+  font-size:1.4326647564469914vh;
   display:inline-flex;
-  margin-left:25px;
-  margin-right:25px;
+  margin-left:1.953125vw;
+  margin-right:1.953125vw;
   position:relative;
 }
 
 
-.name2{left:20px;}
-.name3{left:10px;}
-.name4{left:10px;}
+.name2{left:1.5625vw;}
+.name3{left: 0.78125vw;}
+.name4{left: 0.78125vw;}
 
 #preview-player{
   display:none;
 }
 
 #video-controls{    position: relative;
-  left: 90px;
-  top: -22.5px;
+  left:7.03125vw;
+  top:-3.2234957020057307vh;
 }
 
 .fa-volume-up{color:#AF0300;
-  margin-left: 60px;
+  margin-left:4.6875vw;
   
 }
 
@@ -551,22 +545,22 @@ body{background-color:#282828;;}
   padding: 0px !important;
   background-color: #282828;
 position:absolute;
-top:32px;
+top:4.584527220630372vh;
 color:#5E5E5E;
-right:50px;;
+right:3.90625vw;
 }
 
 
-.lists{margin-left:-35px;;
+.lists{margin-left: -2.734375vw;
 float:left}
 
 
 .vl2 {
   border-left: 1px solid #707070;;
-  height: 500px;
+  height:71.63323782234957vh;
   position: absolute;
-  right: 662px;
-  top: 210px;
+  right:51.71875vw;
+  top:30.08595988538682vh;
   opacity:.5;
 }
 
@@ -576,7 +570,8 @@ float:left}
 /* index.html */
 
 
-
+.pancakes{margin-left:-1.8vw;
+margin-top:-.5vh;}
 .genre-img{
   filter:grayscale(100%);}
 .playground:hover{filter:grayscale(100%);
@@ -585,64 +580,66 @@ cursor:pointer;}
 .genre-img:hover{
   filter:grayscale(50%)
 }
-#title{margin-right: 120px;
-  margin-top: 20px;
+#title{margin-right:9.375vw;
+  margin-top:2.865329512893983vh;
 }
 .genre-icon{
-  top:-200px;
+  top: -28.653295128939828vh;
   position:relative;
   display:block;
 margin:auto auto;}
 .juicebox{   
-  top: -220px;
-  left: 16px;}
+  top:-31.51862464183381vh;
+  left:1.25vw;}
 
-.genre-square{height:220px;
-width:220px;
+.genre-square{height:31.51862464183381vh;
+width:17.1875vw;
 cursor:pointer;
-grid-auto-rows: inherit;}
+}
+.shattuck{margin-top:.5vh;}
+.playground{margin-top:.5vh;}
 
-.genre-square1{  
-  
-    margin-top: -5px;
-  margin-left: -5px;}
-
+.cowboy{margin-top:-.5vh;}
+.rocknroll{margin-top:1vh;}
+.metal{margin-left:-.5vw;}
    .genre-board{
-     margin-left:76px;
-     margin-top: -140px;
+     margin-left:5.9375vw;
+     margin-right:94vw;
+     margin-top:-21.346704871060172vh;
      display: grid;
     grid-template-columns: repeat(4, 0fr);
-    grid-template-rows: repeat(2, 220px);
-    grid-gap: 15px;}
+    grid-template-rows: repeat(2, 17.1875vw);
+    grid-gap: 2.1489971346704873vh;
+  }
 
 
     h3
     {
-      margin-top:-200px;
+      margin-top:-28.653295128939828vh;
       text-align:center;
       color:white;
       font-family:"geeza pro";
       position:relative;}
 
 .browse2{   
-  font-size:3em;
-  margin-left: 700px;
-  margin-top: -40px;
+  font-size:6.876790830945558vh;
+  margin-left:54.6875vw;
+  margin-top: -5.730659025787966vh;
   font-family: "Hoefler Text";
   color:#032626;
   text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
- top:200px;}
+ top:28.653295128939828vh;}
  
 .genre-header{position:absolute;
   text-shadow: -1px 0 #858585, 0 1px #858585, 1px 0 #858585, 0 -1px #858585;
   font-family: "Hoefler Text";
   color:#153232;
-  left:280px;
-  top: 100px;}
+  left:21.875vw;
+  top: 14.326647564469914vh;}
 .sidebar{overflow:auto;
   font-family:"geeza pro";
-      width: 198px;
-height:500px;}
+      width: 15.46875vw;
+height:71.63323782234957vh;}
 
 
 ul:hover{cursor:pointer;
@@ -651,13 +648,13 @@ color:white;}
 {  
   background-color:#707070;
   cursor: pointer;
-  height: 2px;
-  margin-left:25%;
-  margin-top:-10px;
+  height:0.28653295128939826vh;
+  margin-left:22vw;
+  margin-top:-1.4326647564469914vh;
   outline: thin solid #707070;
   overflow: hidden;
   position: absolute;
-  width: 400px;
+  width:31.25vw;
 }
 #custom-seekbar span
 {
@@ -665,13 +662,13 @@ color:white;}
   position: absolute;
   top: 0;
   left: 0;
-  height: 10px;
+  height:1.4326647564469914vh;
   width: 0px;
 }
 
 
-.modal-content{height:270px;
-  width:514px;
+.modal-content{height:38.68194842406877vh;
+  width:40.15625vw;
   border-color: #707070;
   border-width: 5px;
   border-radius:58px;
@@ -684,8 +681,8 @@ color:white;}
 
 
 .eq{ -webkit-appearance: slider-vertical;
-  margin-right: -50px;
-  margin-top:40px;
+  margin-right: -3.90625vw;
+  margin-top: 5.730659025787966vh;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -695,8 +692,8 @@ color:white;}
 .slider::-webkit-slider-thumb {
   -webkit-appearance: slider-vertical;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width:1.953125vw;
+  height: 3.5816618911174785vh;
   background: #4CAF50;
   cursor: pointer;
 }
@@ -704,14 +701,14 @@ color:white;}
 
 .switch {
   position: absolute;
-  top:-5px;
-  left:50px;
+  top:-0.7163323782234957vh;
+  left:3.90625vw;
   display: inline-block;
-  width: 80px;
-  height: 34px;
+  width:6.25vw;
+  height: 3.5816618911174785vh;
 }
 
-.switch2 {left:140px;}
+.switch2 {left:10.9375vw;}
 
 .switch input { 
   opacity: 0;
@@ -734,10 +731,10 @@ color:white;}
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height:3.7249283667621778vh;
+  width:2.03125vw;
+  left: 0.3125vw;
+  bottom:0.5730659025787965vh;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -771,90 +768,90 @@ input:checked + .slider:before {
  .ticks{background-color:red;}
 
 
-.row1-text{margin-top: -185px;
-font-size:33px;}
+.row1-text{margin-top:-26.50429799426934vh;
+font-size:4.7277936962750715vh;}
 
 
-.row2-text{    margin-top: -218px;
-font-size:33px;}
+.row2-text{    margin-top:-31.23209169054441vh;
+font-size:4.7277936962750715vh;}
 
-.pop-punk-text{margin-top:-200px;}
+.pop-punk-text{margin-top:-28.653295128939828vh;}
 
-.country-text{margin-top:-185px;
+.country-text{margin-top:-26.50429799426934vh;
 }
 
-.psych-text{margin-top:-195px;}
+.psych-text{margin-top:-27.936962750716333vh;}
 
-.morning-text{margin-top:-190px;}
+.morning-text{margin-top:-27.22063037249284vh;}
 
-.rock-text{    margin-top: -158px;}
+.rock-text{    margin-top:-22.636103151862464vh;}
 
-.jazz-text{margin-top:-220px;}
+.jazz-text{margin-top:-31.51862464183381vh;}
 
-.metal-text{margin-top:-200px;
+.metal-text{margin-top:-28.653295128939828vh;
 
 }
 
-.noise-rock-text{    margin-top: -190px;}
+.noise-rock-text{    margin-top:-27.22063037249284vh;}
 
 /* album cover page */
-.album-page-title{font-size:14px;}
-.album-page-name{font-size:24px;}
-.album-cover-page{width:225px;
-height:225px;
-margin-top:-150px;
-margin-left:20px;
-box-shadow: 4px 4px 12px;
+.album-page-title{font-size:2.005730659025788vh;}
+.album-page-name{font-size:3.438395415472779vh;}
+.album-cover-page{width:17.578125vw;
+height:32.23495702005731vh;
+margin-top:-21.48997134670487vh;
+margin-left:1.5625vw;
 }
 
 
 .album-info{    color: white;
-  font-size: 1em;
-  margin-top: -180px;
-  margin-left: 255px;
-  line-height:10px;
+  font-size:2.292263610315186vh;
+  margin-top:-25.787965616045845vh;
+  margin-left:19.921875vw;
+  line-height:1.4326647564469914vh;
 }
 
-.track-list{   margin-top: 100px;
-  margin-left:20px;
+.track-list{   margin-top: 14.326647564469914vh;
+  margin-left:1.5625vw;
 color:#B9B9B9;
 line-height:.5px !important;
 }
-.track, .playlist-track{line-height:10px;
-  font-size: 14px;
+.track, .playlist-track{line-height:1.4326647564469914vh;
+  font-size:2.005730659025788vh;
   list-style-type:none;
   display:inline;
 
 }
+.playlist, .playlist2, .playlist3, .playlist4{margin-left:2vw;}
 .track-time{position: relative;
-  top: -5px;
-  left: 950px;}
+  top:-0.7163323782234957vh;
+  left:74.21875vw;}
 .track:hover, .playlist-track:hover, .playlist-artist:hover{
   cursor:pointer;
   color:white;
 }
 .track-list-symbols{color:#707070;
   position: relative;
-  top: 80px;
-  left: 20px;}
-.track-number{font-size: 14px;}
+  top:11.461318051575931vh;
+  left:1.5625vw;}
+.track-number{font-size:2.005730659025788vh;}
   .clock{position: relative;
-    left: 950px;}
+    left:74.21875vw;}
 
 .release-date{color:#858585;
-margin-top:16px;}
+margin-top:2.292263610315186vh;}
 
 .more-albums-by{display:flex;
-margin-top:100px;}
+margin-top:14.326647564469914vh;}
 .more-albums{
-  margin-left:12px;
-  margin-bottom:200px;
-  height:165px;
-width:165px;
+  margin-left:0.9375vw;
+  margin-bottom:28.653295128939828vh;
+  height:23.638968481375358vh;
+width:12.890625vw;
 background-color:white;}
 
 .more-a-b-a{color:white;
-margin-left:20px;}
+margin-left:1.5625vw;}
 
 .by-artist-album:hover{cursor:pointer;
 color:grey;}
@@ -862,39 +859,39 @@ color:grey;}
 .by{color:#858585;
 display:inline;}
 .label{color:#B3B3B3;
-font-size:8px;
-margin-left:20px;}
+font-size:1.146131805157593vh;
+margin-left:1.5625vw;}
 /* home page */
 
-.recent-album-cover{width:148px;
-height:148px;
+.recent-album-cover{width:11.5625vw;
+height:21.20343839541547vh;
 margin:2px;
 
 }
-.recent-album-cover4  {       margin-top: -115px;}
-/* .recent-album-cover2{    margin-top: 20px;}
-.recent-album-cover5{    margin-top: 20px;}
-.recent-album-cover3{margin-top: 20px;}
-.recent-album-cover6{margin-top: 20px;} */
+.recent-album-cover4  {      margin-top:-16.4756446991404vh;}
+/* .recent-album-cover2{    margin-top:2.865329512893983vh;}
+.recent-album-cover5{    margin-top:2.865329512893983vh;}
+.recent-album-cover3{margin-top:2.865329512893983vh;}
+.recent-album-cover6{margin-top:2.865329512893983vh;} */
 
 .recently-played{display: grid;
   position:relative;
-  left:40px;
-  top:-120px;
-  margin-right: 900px;}
+  left:3.125vw;
+  top:-17.191977077363898vh;
+  margin-right:70.3125vw;}
 
   .recently-played2{display: grid;
     position: relative;
-    top: -609px;
-    left: 200px;
-    margin-right: 900px;
+    top:-47.578125vw;
+    left: 15.625vw;
+    margin-right:70.3125vw;
   }
 
 .on-this-day{position: relative;
-  top: -200px;
+  top:-28.653295128939828vh;
 display:flex;
-  margin-top: -955px;
-      margin-left: 420px;
+  margin-top:-136.81948424068767vh;
+      margin-left:32.8125vw;
 }
 
 .on-this-day-album-name{
@@ -905,57 +902,56 @@ display:flex;
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  width:80%;
-}
+  width:15.625vw;}
 
 .on-this-day-artist-name{
-  font-size:13px;
+  font-size:1.8624641833810889vh;
   color:white;
   font-family: 'geeza pro';
-margin-top:-20px;
+margin-top:-2.865329512893983vh;
 }
 
 
 
-.on-this-day-cover{width:120px;
-  height:120px;
-  margin-right: 3px;
-  margin-top: -90px;
+.on-this-day-cover{width:9.375vw;
+  height:17.191977077363898vh;
+  margin-right:0.234375vw;
+  margin-right:-12.893982808022923vh;
 
 }
 
-.picks-for-you{margin-left: 392px;
-  margin-top: -200px;}
+.picks-for-you{margin-left:30.625vw;
+  margin-top:-28.653295128939828vh;}
 
 
-.album-picks-for-you{width:116px;
-height:116px;
-margin-left:28px;
-padding-top:5px;}
+.album-picks-for-you{width:9.0625vw;
+height:16.6189111747851vh;
+margin-left:2.1875vw;
+padding-top:0.7163323782234957vh;}
 
 #new-releases{
   position: relative;
-  top: -635px;
+  top:-90.97421203438395vh;
   margin: 0px;
-  right: 165px;
+  right:12.890625vw;
 }
 .new-release-album-name{    color: white;
   line-height:1vw;
-  margin-top:5px;
-  font-size:16px;
+  margin-top: 0.7163323782234957vh;
+  font-size:2.292263610315186vh;
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
   width:60%;
 
 }
-
-.new-release-artist-name{    font-size: 13px;
+.artist-name-container{margin-bottom:20vh;}
+.new-release-artist-name{    font-size:1.8624641833810889vh;
   color: #B3B3B3;
 line-height:1px;}
 
 .jump-in{    position: absolute;
-  top:80px;}
+  top:11.461318051575931vh;}
 
 
   .image-results:hover, .on-this-day-cover:hover, .album-picks-for-you:hover, .recent-album-cover:hover{cursor:pointer;
@@ -963,45 +959,45 @@ line-height:1px;}
   }
 
   .navigation-line{position: absolute;
-    top: 50px;
-    margin-left: -63px;}
+    top:7.163323782234957vh;
+    margin-left:-4.921875vw;}
 
 
-.move-up{       margin-top: -50px;
-margin-bottom:200px;}
+.move-up{       margin-top:-7.163323782234957vh;
+margin-bottom:28.653295128939828vh;}
 
 .test1{display:inline-block;}
 
 .pick{display:inline-block;}
 
-.picks-album{    margin-left: 28px;
+.picks-album{    margin-left:2.1875vw;
   color:white;
-  font-size:12px;
+  font-size:1.7191977077363896vh;
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  width:100px;
+  width:7.8125vw;
   padding-right:0px;
 }
 
-.picks-artist{margin-left:28px;
-margin-top:-20px;
-font-size:10px;
+.picks-artist{margin-left:2.1875vw;
+margin-top:-2.865329512893983vh;
+font-size:1.4326647564469914vh;
 color:#B3B3B3}
 
 .saved{    color: white;
-  font-size: 24px;
+  font-size:3.438395415472779vh;
   font-family: 'geeza pro';
-  margin-left: 26px;
+  margin-left: 2.03125vw;
 }
 
 
 .vl {
   border-left: 1px solid #707070;
-  height: 100px;
+  height:14.326647564469914vh;
   position: absolute;
-  left:580px;
-  top:100px;
+  left:45.3125vw;
+  top:14.326647564469914vh;
   z-index:0;
   opacity:.3;
 }
@@ -1013,26 +1009,26 @@ color:#B3B3B3}
 }
 
 .searchButton {
-  width: 30px;
-  height: 30px;
+  width:2.34375vw;
+  height:4.2979942693409745vh;
   border: 1px solid #AF0300;
   background: #AF0300;
   text-align: center;
   color: #fff;
   cursor: pointer;
-  font-size: 12px;
+  font-size:1.7191977077363896vh;
   position:absolute;
-  margin-top:2px;
-  left:25px;
+  margin-top:0.28653295128939826vh;
+  left: 1.953125vw;
   border-radius: 5px 0 0 5px;
 
 
 }
 
 
-.construction{height:200px;
-width:150px;
-margin-left:150px;}
+.construction{height:28.653295128939828vh;
+width:11.71875vw;
+margin-left:11.71875vw;}
 
 
 
@@ -1060,6 +1056,6 @@ margin-left:150px;}
     width: 1870px;
   }
   .grid-container{width:1900px;}
-  .play-button{top: 220px;}
+  .play-button{top: 17.1875vw;}
 
 } */
