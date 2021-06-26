@@ -5,7 +5,7 @@ body::-webkit-scrollbar {
 }
 
 .grid-container {
-    background-color: #012121;
+    background-color: #00ACAF;
     width: 100%;
     height: 100vh;
     display: inline-grid;
@@ -15,8 +15,8 @@ body::-webkit-scrollbar {
    
   }
   .grid-container2 {
-    background-color: #012121;
-    width: 520%;
+    background-color: #00ACAF;
+    width: 100%;
     height: 100vh;
     display: none;
     grid-gap: 0.143vh;
@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
    
   }
   .grid-container3 {
-    background-color: #012121;
+    background-color: #00ACAF;
     width: 520%;
     height: 100vh;
     display: none;
@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     top:-101.0028653295129vh
   }
   
-  .grid-container4 {   background-color: #012121;
+  .grid-container4 {   background-color: #00ACAF;
     width: 520%;
     height: 100vh;
     display: none;
