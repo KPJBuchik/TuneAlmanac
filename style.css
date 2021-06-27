@@ -573,11 +573,14 @@ float:left}
 .pancakes{margin-left:-1.8vw;
 margin-top:-.5vh;}
 .genre-img{
+  height:31.51862464183381vh;
+width:17.1875vw;
   filter:grayscale(100%);}
 .playground:hover{filter:grayscale(100%);
 cursor:pointer;}
 
 .genre-img:hover{
+  
   filter:grayscale(50%)
 }
 #title{margin-right:9.375vw;
