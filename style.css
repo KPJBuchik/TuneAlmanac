@@ -387,8 +387,17 @@ border-radius:50%;}
   position: relative;
   left:  0.625vw;
   }
+.tab2:hover{
+  opacity:.7;
 
+  filter:grayscale(100%)
 
+}
+.tab:hover{
+  opacity:.7;
+  filter:grayscale(100%)
+
+}
 .tab {
   transform: rotate(-90deg);
   height:7.163323782234957vh;
@@ -570,41 +579,11 @@ float:left}
 /* index.html */
 
 
-.pancakes{margin-left:-1.8vw;
-margin-top:-.5vh;}
-.genre-img{
-  height:31.51862464183381vh;
-width:17.1875vw;
-  filter:grayscale(100%);}
-.playground:hover{filter:grayscale(100%);
-cursor:pointer;}
 
-.genre-img:hover{
-  
-  filter:grayscale(50%)
-}
 #title{margin-right:9.375vw;
   margin-top:2.865329512893983vh;
 }
-.genre-icon{
-  top: -28.653295128939828vh;
-  position:relative;
-  display:block;
-margin:auto auto;}
-.juicebox{   
-  top:-31.51862464183381vh;
-  left:1.25vw;}
 
-.genre-square{height:31.51862464183381vh;
-width:17.1875vw;
-cursor:pointer;
-}
-.shattuck{margin-top:.5vh;}
-.playground{margin-top:.5vh;}
-
-.cowboy{margin-top:-.5vh;}
-.rocknroll{margin-top:1vh;}
-.metal{margin-left:-.5vw;}
    .genre-board{
      margin-left:5.9375vw;
      margin-right:94vw;
@@ -615,7 +594,18 @@ cursor:pointer;
     grid-gap: 2.1489971346704873vh;
   }
 
-
+  .genre-img{
+    cursor:pointer;
+  
+    height:31.51862464183381vh !important;
+  width:17.1875vw !important;
+    filter:grayscale(100%);}
+  
+  .genre-img:hover{
+    
+    filter:grayscale(50%)
+  }
+  
     h3
     {
       margin-top:-28.653295128939828vh;
@@ -778,22 +768,6 @@ font-size:4.7277936962750715vh;}
 .row2-text{    margin-top:-31.23209169054441vh;
 font-size:4.7277936962750715vh;}
 
-.pop-punk-text{margin-top:-28.653295128939828vh;}
-
-.country-text{margin-top:-26.50429799426934vh;
-}
-
-.psych-text{margin-top:-27.936962750716333vh;}
-
-.morning-text{margin-top:-27.22063037249284vh;}
-
-.rock-text{    margin-top:-22.636103151862464vh;}
-
-.jazz-text{margin-top:-31.51862464183381vh;}
-
-.metal-text{margin-top:-28.653295128939828vh;
-
-}
 
 .noise-rock-text{    margin-top:-27.22063037249284vh;}
 
