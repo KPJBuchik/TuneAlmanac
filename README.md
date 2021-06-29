@@ -11,9 +11,9 @@ Tune Almanac is a Spotify clone with an adjustable EQ built with JQuery and the 
 * Spotify Developer API
 
 ## Screenshots
-![home screenshot](markdown/screenshot1.png "screenshot")
-![initial-design](markdown/screenshot2.png "screenshot")
-![initial-design](markdown/creenshot3.png "screenshot")
+![tracklist screenshot](markdown/screenshot1.png "screenshot")
+![home screenshot](markdown/screenshot2.png "screenshot")
+![eq screenshot](markdown/screenshot3.png "screenshot")
 
 ## Initial Design 
 ![initial-design](markdown/screenshot-design.png "Initial Design")
