@@ -1,7 +1,7 @@
 # TuneAlmanac
 
 
-Tune Almanac is a Spotify clone with an adjustable EQ built with JQuery and the Spotify API with the ability to search for an artist, play a 30 second preview of a song, connect to your personal Spotify account and display previously created playlists. 
+Tune Almanac is a Spotify clone with an adjustable EQ built with JQuery and the Spotify API with the ability to search for an artist, play a 30 second preview of a song, and connects to your personal Spotify account displaying previously created playlists and saved albums.  
 
 ## Technologies
 * HTML/CSS
@@ -11,7 +11,9 @@ Tune Almanac is a Spotify clone with an adjustable EQ built with JQuery and the 
 * Spotify Developer API
 
 ## Screenshots
-
+![home screenshot](markdown/screenshot1.png "screenshot")
+![initial-design](markdown/screenshot2.png "screenshot")
+![initial-design](markdown/creenshot3.png "screenshot")
 
 ## Initial Design 
 ![initial-design](markdown/screenshot-design.png "Initial Design")
