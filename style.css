@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
   }
   .grid-container2 {
     background-color: #00ACAF;
-    width: 100%;
+    width: 520%;
     height: 100vh;
     display: none;
     grid-gap: 0.143vh;
